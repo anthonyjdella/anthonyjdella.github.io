@@ -6,41 +6,23 @@
     <description>Recent content in Portfolios on Anthony Dellavecchia | Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Aug 2020 18:19:35 +0600</lastBuildDate><atom:link href="https://anthonyjdella.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonyjdella.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Recipe App Ux Study</title>
-      <link>https://anthonyjdella.github.io/portfolio/recipe-app-ux-study/</link>
-      <pubDate>Wed, 12 Aug 2020 18:19:35 +0600</pubDate>
+      <title>This Website</title>
+      <link>https://anthonyjdella.github.io/portfolio/this-site/</link>
+      <pubDate>Mon, 27 Sep 2021 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonyjdella.github.io/portfolio/recipe-app-ux-study/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <guid>https://anthonyjdella.github.io/portfolio/this-site/</guid>
+      <description>This site is created with Hugo, a popular open-source static site generator. Hugo is built with Go lang. I wanted to create this site quickly, so I used a pre-built theme called Portio, however I did want to customize it. Therefore, I forked that project and used it as a Git submodule to my source code. I also created a seperate repository to house only the generated static files and deploy the site using GitHub Pages.</description>
     </item>
     
     <item>
-      <title>UX Case Study for Agriculture App</title>
-      <link>https://anthonyjdella.github.io/portfolio/ux-case-study-for-agriculture-app/</link>
-      <pubDate>Wed, 12 Aug 2020 12:13:40 +0000</pubDate>
+      <title>Automated Job Search</title>
+      <link>https://anthonyjdella.github.io/portfolio/web-scraping/</link>
+      <pubDate>Wed, 21 Mar 2018 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonyjdella.github.io/portfolio/ux-case-study-for-agriculture-app/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>Event App Case Study</title>
-      <link>https://anthonyjdella.github.io/portfolio/event-app-case-study/</link>
-      <pubDate>Wed, 12 Aug 2020 18:07:16 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/portfolio/event-app-case-study/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>Case Study One</title>
-      <link>https://anthonyjdella.github.io/portfolio/case-study-one/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/portfolio/case-study-one/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <guid>https://anthonyjdella.github.io/portfolio/web-scraping/</guid>
+      <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.</description>
     </item>
     
   </channel>
