@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portio</title>
+    <title>PortAnthony Dellavecchia | Software Developerio</title>
     <link>https://anthonyjdella.github.io/</link>
-    <description>Recent content on Portio</description>
+    <description>Recent content on PortAnthony Dellavecchia | Software Developerio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Sep 2020 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonyjdella.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Markdown Formatting Demo</title>
-      <link>https://anthonyjdella.github.io/blog/markdown-formatting-demo/</link>
-      <pubDate>Sun, 13 Sep 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/markdown-formatting-demo/</guid>
-      <description>This example Markdown file compliments of markdown-it.github.io
- h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.
-!!!!!! ???? ,, &amp;ndash; &amp;mdash;
-&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;
-Emphasis This is bold text
-This is bold text
-This is italic text</description>
-    </item>
-    
+    <lastBuildDate>Wed, 12 Aug 2020 18:19:35 +0600</lastBuildDate><atom:link href="https://anthonyjdella.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recipe App Ux Study</title>
       <link>https://anthonyjdella.github.io/portfolio/recipe-app-ux-study/</link>
@@ -52,24 +35,6 @@ This is italic text</description>
     </item>
     
     <item>
-      <title>Designer Conference at Florida 2020</title>
-      <link>https://anthonyjdella.github.io/blog/designer-conference-at-florida-2020/</link>
-      <pubDate>Mon, 13 Jul 2020 13:06:26 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/designer-conference-at-florida-2020/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>Benjamin Franklins thoughts about new designers</title>
-      <link>https://anthonyjdella.github.io/blog/benjamin-franklins-thoughts-about-new-designers/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/benjamin-franklins-thoughts-about-new-designers/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
       <title>Case Study One</title>
       <link>https://anthonyjdella.github.io/portfolio/case-study-one/</link>
       <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
@@ -79,57 +44,37 @@ This is italic text</description>
     </item>
     
     <item>
-      <title>Designers thoughts about mobile UI</title>
-      <link>https://anthonyjdella.github.io/blog/designers-thoughts-about-mobile-ui/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      <title>Magic Numbers</title>
+      <link>https://anthonyjdella.github.io/blog/magic-numbers/</link>
+      <pubDate>Tue, 17 Apr 2018 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonyjdella.github.io/blog/designers-thoughts-about-mobile-ui/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <guid>https://anthonyjdella.github.io/blog/magic-numbers/</guid>
+      <description>Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
+I&amp;rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&amp;rsquo;t think of that for &amp;ldquo;magic number&amp;rdquo; situations. It&amp;rsquo;s a pretty simple concept but I just wanted to share what I learned.</description>
     </item>
     
     <item>
-      <title>How to become acreative designer</title>
-      <link>https://anthonyjdella.github.io/blog/how-to-become-acreative-designer/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      <title>How to Never Miss Out on a Job Opening</title>
+      <link>https://anthonyjdella.github.io/blog/how-to-never-miss-out-on-a-job-opening/</link>
+      <pubDate>Sat, 31 Mar 2018 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonyjdella.github.io/blog/how-to-become-acreative-designer/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <guid>https://anthonyjdella.github.io/blog/how-to-never-miss-out-on-a-job-opening/</guid>
+      <description>Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
+How many times have you missed out on job opportunities because you didn’t know a company was hiring for that position? It might be the perfect job for you, but you just didn’t know about it!
+This script will keep you up to date with job postings so you never miss out on the right job opportunity!</description>
     </item>
     
     <item>
-      <title>New designers limitations</title>
-      <link>https://anthonyjdella.github.io/blog/new-designers-limitations/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      <title>Hugo Markdown</title>
+      <link>https://anthonyjdella.github.io/blog/hugo-markdown/</link>
+      <pubDate>Thu, 01 Feb 2018 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonyjdella.github.io/blog/new-designers-limitations/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>Things you must know as a designer</title>
-      <link>https://anthonyjdella.github.io/blog/things-you-must-know-as-a-designer/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/things-you-must-know-as-a-designer/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>World&#39;s Most Famous App Developers and Designers</title>
-      <link>https://anthonyjdella.github.io/blog/world-most-famous-app-developers-and-designers/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/world-most-famous-app-developers-and-designers/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
-    </item>
-    
-    <item>
-      <title>You must know this before becoming a designer</title>
-      <link>https://anthonyjdella.github.io/blog/you-must-know-this-before-becoming-a-designer/</link>
-      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonyjdella.github.io/blog/you-must-know-this-before-becoming-a-designer/</guid>
-      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+      <guid>https://anthonyjdella.github.io/blog/hugo-markdown/</guid>
+      <description>This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
+This example Markdown file compliments of markdown-it.github.io
+ h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.</description>
     </item>
     
   </channel>
