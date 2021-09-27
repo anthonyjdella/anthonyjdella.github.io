@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portio</title>
+    <link>https://anthonyjdella.github.io/</link>
+    <description>Recent content on Portio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Sep 2020 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonyjdella.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Formatting Demo</title>
+      <link>https://anthonyjdella.github.io/blog/markdown-formatting-demo/</link>
+      <pubDate>Sun, 13 Sep 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/markdown-formatting-demo/</guid>
+      <description>This example Markdown file compliments of markdown-it.github.io
+ h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.
+!!!!!! ???? ,, &amp;ndash; &amp;mdash;
+&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;
+Emphasis This is bold text
+This is bold text
+This is italic text</description>
+    </item>
+    
+    <item>
+      <title>Recipe App Ux Study</title>
+      <link>https://anthonyjdella.github.io/portfolio/recipe-app-ux-study/</link>
+      <pubDate>Wed, 12 Aug 2020 18:19:35 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/portfolio/recipe-app-ux-study/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>UX Case Study for Agriculture App</title>
+      <link>https://anthonyjdella.github.io/portfolio/ux-case-study-for-agriculture-app/</link>
+      <pubDate>Wed, 12 Aug 2020 12:13:40 +0000</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/portfolio/ux-case-study-for-agriculture-app/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Event App Case Study</title>
+      <link>https://anthonyjdella.github.io/portfolio/event-app-case-study/</link>
+      <pubDate>Wed, 12 Aug 2020 18:07:16 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/portfolio/event-app-case-study/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Designer Conference at Florida 2020</title>
+      <link>https://anthonyjdella.github.io/blog/designer-conference-at-florida-2020/</link>
+      <pubDate>Mon, 13 Jul 2020 13:06:26 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/designer-conference-at-florida-2020/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Benjamin Franklins thoughts about new designers</title>
+      <link>https://anthonyjdella.github.io/blog/benjamin-franklins-thoughts-about-new-designers/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/benjamin-franklins-thoughts-about-new-designers/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Case Study One</title>
+      <link>https://anthonyjdella.github.io/portfolio/case-study-one/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/portfolio/case-study-one/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Designers thoughts about mobile UI</title>
+      <link>https://anthonyjdella.github.io/blog/designers-thoughts-about-mobile-ui/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/designers-thoughts-about-mobile-ui/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>How to become acreative designer</title>
+      <link>https://anthonyjdella.github.io/blog/how-to-become-acreative-designer/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/how-to-become-acreative-designer/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>New designers limitations</title>
+      <link>https://anthonyjdella.github.io/blog/new-designers-limitations/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/new-designers-limitations/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Things you must know as a designer</title>
+      <link>https://anthonyjdella.github.io/blog/things-you-must-know-as-a-designer/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/things-you-must-know-as-a-designer/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>World&#39;s Most Famous App Developers and Designers</title>
+      <link>https://anthonyjdella.github.io/blog/world-most-famous-app-developers-and-designers/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/world-most-famous-app-developers-and-designers/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>You must know this before becoming a designer</title>
+      <link>https://anthonyjdella.github.io/blog/you-must-know-this-before-becoming-a-designer/</link>
+      <pubDate>Mon, 13 Jul 2020 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonyjdella.github.io/blog/you-must-know-this-before-becoming-a-designer/</guid>
+      <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+  </channel>
+</rss>
