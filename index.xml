@@ -6,7 +6,17 @@
     <description>Recent content on Anthony Dellavecchia | Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Sep 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://www.anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Sep 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://www.anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Build This Site</title>
+      <link>https://www.anthonydellavecchia.com/blog/personal-site.html</link>
+      <pubDate>Tue, 28 Sep 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://www.anthonydellavecchia.com/blog/personal-site.html</guid>
+      <description>This is for my reference, so I remember how to make changes to this site without any hiccups.
+ cd into personal-website directory Make changes.  hugo serve to start local server. Commit and push changes to personal-website repository (source files). If changes are done to the Portio theme, cd into themes/portio .  Commit and push changes to portio-theme repository (theme files).    hugo -t portio to build static files which will go in the /public  directory.</description>
+    </item>
+    
     <item>
       <title>This Website</title>
       <link>https://www.anthonydellavecchia.com/portfolio/this-site.html</link>
