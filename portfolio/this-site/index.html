@@ -121,7 +121,7 @@
           <h1>This Website</h1>
         </div>
         <p>
-          This website was built by myself with the help of Hugo, Portio theme, Netlify, and GitHub Pages.
+          This website was built by myself with the help of Hugo, Portio theme, Firebase, and GitHub Pages.
         </p>
         <div class="case-details-info">
           <div class="case-details-info-item">
@@ -158,7 +158,7 @@
         <div class="case-details-thumb mb-5">
           <img src="https://anthonydellavecchia.com/images/portfolio/this-site.png" alt="case-details" />
         </div>
-        <p>This site is created with <a href="https://gohugo.io/">Hugo</a>, a popular open-source static site generator. Hugo is built with Go lang. I wanted to create this site quickly, so I used a pre-built theme called <a href="https://github.com/StaticMania/portio-hugo">Portio</a>, however I did want to customize it. Therefore, I <a href="https://github.com/anthonyjdella/portio-hugo">forked that project</a> and used it as a Git submodule to my <a href="https://github.com/anthonyjdella/personal-website">source code</a>. I also created a <a href="https://github.com/anthonyjdella/anthonyjdella.github.io">seperate repository</a> to house only the generated static files and deploy the site using <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+        <p>This site is created with <a href="https://gohugo.io/">Hugo</a>, a popular open-source static site generator. Hugo is built with Go lang. I wanted to create this site quickly, so I used a pre-built theme called <a href="https://github.com/StaticMania/portio-hugo">Portio</a>, however I did want to customize it. Therefore, I <a href="https://github.com/anthonyjdella/portio-hugo">forked that project</a> and used it as a Git submodule to my <a href="https://github.com/anthonyjdella/personal-website">source code</a>. I also created a <a href="https://github.com/anthonyjdella/anthonyjdella.github.io">seperate repository</a> to house only the generated static files and deploy the site using <a href="https://pages.github.com/">GitHub Pages</a>. I also set up <a href="https://github.com/features/actions">Github Actions</a> to deploy my code to a hosting platform, <a href="https://firebase.google.com/">Firebase</a>.</p>
 <h4 id="design">Design</h4>
 <p>&ndash; Source code</p>
 <p>&ndash; Source code for Theme</p>
@@ -166,9 +166,10 @@
 <h4 id="build">Build</h4>
 <p>As shown above, there are three code repositories. The Source code for Theme &amp; Static site code are submodules of the source code.</p>
 <p>After making changes, start the server locally with <code>hugo serve</code>.</p>
-<p>After viewing changes, build the static files using <code>hugo</code>.</p>
+<p>After viewing changes, build the static files using <code>hugo</code> or <code>hugo -t portio</code>.</p>
 <p>Push changes in <code>/public</code> to the static site code repository to deploy the site.</p>
 <p>Push changes in <code>/themes/portio</code> to the source code for theme to make changes to the theme.</p>
+<p>GitHub Actions picks up the changes and deploys the site to Firebase, where it is hosted (using a custom domain name).</p>
 
       </div>
     </div>
@@ -260,7 +261,7 @@
 		<div class="row footer__footer">
 			<div class="col-lg-7">
 				<div class="footer__footer_copy text-light">
-					<p>© 2021 • Made with ❤️, Hugo, &amp; Netlify by Anthony Dellavecchia</p>
+					<p>© 2021 • Made with ❤️, Hugo, &amp; Firebase by Anthony Dellavecchia</p>
 				</div>
 			</div>
 			<div class="col-lg-5">
