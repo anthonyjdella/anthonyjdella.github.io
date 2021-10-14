@@ -213,11 +213,28 @@
 <p>I also believe it&rsquo;s important to present your technical solutions in a beautiful and intuitive package. When I&rsquo;m not working in front of my computer, you can find me traveling, watching basketball, being a foodie, or taking photos.</p>
 
                         </div>
+                        <script>
+                        function theme(){
+                            var d = document.getElementById("list");
+                            var displayText = d.options[d.selectedIndex].text;
+                            document.getElementById("resumeRegistry").href = "https://resume.anthonydellavecchia.com/anthonyjdella?customTheme=" + displayText
+                        }
+                        </script>
+
                         <div>
-                            <a class="btn btn-primary mr-3 btn-zoom"
-                                href="https://anthonydellavecchia.com/contact">Hire me</a>
-                            <a class="btn btn-outline-primary btn-zoom" href="https://anthonydellavecchia.com/files/Anthony_Dellavecchia_Resume.pdf">
-                                Download CV </a>
+                            <select class="btn btn-primary mr-3 btn-zoom" id="list" onchange="theme();">
+                                <option value="macchiato" selected="" disabled="" hidden="">Select a theme</option>
+                                <option value=“actual”>Actual</option>
+                                <option value=“elegant”>Elegant</option>
+                                <option value=“github”>GitHub</option>
+                                <option value=“macchiato”>Macchiato</option>
+                                <option value=“rocketspacer”>Rocketspacer</option>
+                                <option value=“simple-red”>Simple-Red</option>
+                                <option value=“spartan”>Spartan</option>
+                                <option value=“stackoverflow”>Stackoverflow</option>
+                            </select>
+                            
+                            <a class="btn btn-outline-primary btn-zoom" id="resumeRegistry" href="https://resume.anthonydellavecchia.com">View My Resume </a>
                         </div>
                     </div>
                 </div>
