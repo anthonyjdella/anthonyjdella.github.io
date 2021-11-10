@@ -230,7 +230,15 @@
 		<div class="row footer__footer">
 			<div class="col-lg-7">
 				<div class="footer__footer_copy text-light">
-					<p>© 2021 • Made with ❤️, Hugo, &amp; Firebase by Anthony Dellavecchia</p>
+					<p>
+						<script>
+							document.write("© " + new Date().getFullYear());
+						</script>
+						• Made with ❤️, Hugo, &amp; Firebase by Anthony Dellavecchia
+					</p>
+					<script>
+						const year = () => {return new Date()};
+                    </script>
 				</div>
 			</div>
 			<div class="col-lg-5">
