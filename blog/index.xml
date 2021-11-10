@@ -6,7 +6,17 @@
     <description>Recent content in Recents Article on Anthony Dellavecchia | Software Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Sep 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing an Animated Logo</title>
+      <link>https://anthonydellavecchia.com/blog/animated-svg/</link>
+      <pubDate>Mon, 25 Oct 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/animated-svg/</guid>
+      <description>Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
+Although I have experience with design tools like Photoshop, Lightroom, and Premiere I have never worked with animation. I found a website called SVGator which animates SVG (Scalable Vector Graphics). The free version has many limitations but I was able to use it to create my animated logo.</description>
+    </item>
+    
     <item>
       <title>How to Build This Site</title>
       <link>https://anthonydellavecchia.com/blog/personal-site/</link>
