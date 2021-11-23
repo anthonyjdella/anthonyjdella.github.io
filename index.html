@@ -64,7 +64,7 @@
 <body id="purple-cursor-2">
   <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a id="purple-cursor" href="https://anthonydellavecchia.com/" class="navbar-brand">
+    <a id="purple-cursor" href="https://anthonydellavecchia.com/#home" class="navbar-brand scroll">
       <img class="poke" src="https://anthonydellavecchia.com/images/contact/avatar.png" alt="site-logo">
       <img class="bubble" src="https://anthonydellavecchia.com/images/contact/bubble.png" alt="bubble">
       <div class="hello-there"> Hello! </div>
@@ -167,8 +167,33 @@
               </div>
             </span>
           </div>
-          <a class="btn btn-lg btn-primary btn-zoom"
-            id="purple-cursor" href="https://anthonydellavecchia.com/contact">Contact me</a>
+          <script>
+            function theme(){
+                var d = document.getElementById("list");
+                var displayText = d.options[d.selectedIndex].text;
+                document.getElementById("resumeRegistry").href = "https://resume.anthonydellavecchia.com/anthonyjdella?customTheme=" + displayText
+            }
+          </script>
+
+            <div>
+                <select class="btn btn-lg btn-outline-primary btn-zoom" id="list" onchange="theme();">
+                    <option value="macchiato" selected="" disabled="" hidden="">Select a theme</option>
+                    <option value=“actual”>Actual</option>
+                    <option value=“caffeine”>Caffeine</option>
+                    <option value="dave">Dave</option>
+                    <option value=“elegant”>Elegant</option>
+                    <option value=“github”>GitHub</option>
+                    <option value="kards">Kards</option>
+                    <option value="mocha-responsive">Mocha-responsive</option>
+                    <option value="orbit">Orbit</option>
+                    <option value=“rocketspacer”>Rocketspacer</option>
+                    <option value=“simple-red”>Simple-Red</option>
+                    <option value=“spartan”>Spartan</option>
+                    <option value=“stackoverflow”>Stackoverflow</option>
+                </select>
+                <a class="btn btn-lg btn-primary btn-zoom" id="resumeRegistry" href="https://resume.anthonydellavecchia.com">View My Resume </a>
+            </div>
+          
         </div>
       </div>
       <div class="col-lg-5">
@@ -253,32 +278,11 @@
 <p>I also believe it&rsquo;s important to present your technical solutions in a beautiful and intuitive package. When I&rsquo;m not working in front of my computer, you can find me traveling, watching basketball, being a foodie, or taking photos.</p>
 
                         </div>
-                        <script>
-                        function theme(){
-                            var d = document.getElementById("list");
-                            var displayText = d.options[d.selectedIndex].text;
-                            document.getElementById("resumeRegistry").href = "https://resume.anthonydellavecchia.com/anthonyjdella?customTheme=" + displayText
-                        }
-                        </script>
+                        
 
                         <div>
-                            <select class="btn btn-primary mr-3 btn-zoom" id="list" onchange="theme();">
-                                <option value="macchiato" selected="" disabled="" hidden="">Select a theme</option>
-                                <option value=“actual”>Actual</option>
-                                <option value=“caffeine”>Caffeine</option>
-                                <option value="dave">Dave</option>
-                                <option value=“elegant”>Elegant</option>
-                                <option value=“github”>GitHub</option>
-                                <option value="kards">Kards</option>
-                                <option value="mocha-responsive">Mocha-responsive</option>
-                                <option value="orbit">Orbit</option>
-                                <option value=“rocketspacer”>Rocketspacer</option>
-                                <option value=“simple-red”>Simple-Red</option>
-                                <option value=“spartan”>Spartan</option>
-                                <option value=“stackoverflow”>Stackoverflow</option>
-                            </select>
                             
-                            <a class="btn btn-outline-primary btn-zoom" id="resumeRegistry" href="https://resume.anthonydellavecchia.com">View My Resume </a>
+                            <a class="btn btn-outline-primary btn-zoom scroll" id="view-my-resume" href="#home">View My Resume </a>
                         </div>
                     </div>
                 </div>
