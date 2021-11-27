@@ -215,7 +215,36 @@
 <li>GitHub pages will automatically deploy to <code>anthonyjdella.github.io</code>.</li>
 <li>GitHub Actions will pick up changes made to the master branch and deploy to <code>anthonydellavecchia.com</code>, which is hosted on Firebase.</li>
 </ol>
+<h3 id="cicd-error-fix">CI/CD Error Fix</h3>
+<h5 id="step-1">STEP 1:</h5>
+<p>If you get the following CI/CD error:</p>
+<pre tabindex="0"><code>Error: fatal: remote error: upload-pack: not our ref 9b3f2092d9959fe1406f9062c5a50a71293636c9
 
+Error: fatal: Fetched in submodule path 'anthonyjdella/public', but it did not contain 9b3f2092d9959fe1406f9062c5a50a71293636c9. Direct fetching of that commit failed.
+
+fatal: 
+  Error: The process '/usr/bin/git' failed with exit code 128
+</code></pre><h5 id="step-2">STEP 2:</h5>
+<p>Go into anthonyjdella/ and run:</p>
+<pre tabindex="0"><code>git submodule  update --init --recursive --remote
+</code></pre><h5 id="step-3">STEP 3:</h5>
+<p>cd public/ then
+git status</p>
+<p>Message will show that the HEAD is detached:</p>
+<pre tabindex="0"><code>HEAD detached at 1b2926f
+</code></pre><h5 id="step-4">STEP 4:</h5>
+<p>Go back into anthonyjdella/ by
+cd ..</p>
+<p>Generate static files:</p>
+<pre tabindex="0"><code>hugo -t portio
+</code></pre><p>cd public/</p>
+<h5 id="step-5">STEP 5:</h5>
+<p>You&rsquo;ll see changes now. Then add and commit them.</p>
+<pre tabindex="0"><code>git commit -m &quot;.....&quot;
+git branch my-temporary-work
+git checkout master
+git merge my-temporary-work
+</code></pre>
               </div>
           </div>
       </div>
