@@ -236,19 +236,65 @@
         <div class="case-details-thumb mb-5">
           <img src="https://anthonydellavecchia.com/images/portfolio/this-site.png" alt="case-details" />
         </div>
-        <p>This site is created with <a href="https://gohugo.io/">Hugo</a>, a popular open-source static site generator. Hugo is built with Go lang. I wanted to create this site quickly, so I used a pre-built theme called <a href="https://github.com/StaticMania/portio-hugo">Portio</a>, however I did want to customize it. Therefore, I <a href="https://github.com/anthonyjdella/portio-hugo">forked that project</a> and used it as a Git submodule to my <a href="https://github.com/anthonyjdella/personal-website">source code</a>. I also created a <a href="https://github.com/anthonyjdella/anthonyjdella.github.io">seperate repository</a> to house only the generated static files and deploy the site using <a href="https://pages.github.com/">GitHub Pages</a>. I also set up <a href="https://github.com/features/actions">Github Actions</a> to deploy my code to a hosting platform, <a href="https://firebase.google.com/">Firebase</a>.</p>
+        <div style="text-align: justify;"><p>Initially, the goal of this site was to quickly create and deploy a personal website. However, over time, I became more and more invested in it. I&rsquo;ve spend HOURS customizing and adding in new features. Check out <a href="https://github.com/users/anthonyjdella/projects/6">this Kanban board</a> which shows how many enhancements I&rsquo;ve made.</p>
+<p>Since my main goal was to <em>quickly</em> create a website, I used <a href="https://gohugo.io/">Hugo</a>, a popular open-source static site generator. Hugo is built with Go lang. I decided to pick it just because of its popularity, speed, and available themes. To quickly make this site, I used a pre-built theme called <a href="https://github.com/StaticMania/portio-hugo">Portio</a>, however I wanted to customize it. And customize it is what I did! Since the start of this project, I&rsquo;ve added a ton of customizations on top of the original theme. For example, I added a dark-mode theme, added a cool slide out menu, added multiple CSS animations, and much more!</p>
+<p>You can see my <a href="https://github.com/anthonyjdella/portio-hugo">forked project</a> which I used as a Git submodule to my <a href="https://github.com/anthonyjdella/personal-website">source code</a>. I also created a <a href="https://github.com/anthonyjdella/anthonyjdella.github.io">seperate repository</a> to house only the generated static files and deploy the site using <a href="https://pages.github.com/">GitHub Pages</a>. I also set up <a href="https://github.com/features/actions">Github Actions</a> to deploy my code to a hosting platform, <a href="https://firebase.google.com/">Firebase</a>.</p>
+<p>I don&rsquo;t do a lot of front-end work at my current job, so this project has helped me brush up on those skills. This website is ever growing and I intent to maintain it for some time. I will continue adding <a href="https://github.com/users/anthonyjdella/projects/6">new features</a>, blog posts, personal projects, and more!</p>
 <h4 id="design">Design</h4>
-<p>&ndash; Source code</p>
-<p>&ndash; Source code for Theme</p>
-<p>&ndash; Static site code</p>
+<ul>
+<li>
+<p><a href="https://github.com/anthonyjdella/personal-website">Source code</a></p>
+</li>
+<li>
+<p><a href="https://github.com/anthonyjdella/portio-hugo">Source code for Theme</a></p>
+</li>
+<li>
+<p><a href="https://github.com/anthonyjdella/anthonyjdella.github.io">Static site code</a></p>
+</li>
+</ul>
+<h4 id="deploy">Deploy</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to Firebase Hosting on merge</span>
+<span style="color:#f92672">&#39;on&#39;</span>:
+  <span style="color:#f92672">push</span>:
+    <span style="color:#f92672">branches</span>:
+      - <span style="color:#ae81ff">master</span>
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">build_and_deploy</span>:
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+    <span style="color:#f92672">steps</span>:
+      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+      - <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">          echo &#39;Deploying to Firebase...&#39;
+</span><span style="color:#e6db74">          cd anthonyjdella</span>          
+      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
+          <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
+          <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
+          <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
+          <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></code></pre></div>
 <h4 id="build">Build</h4>
 <p>As shown above, there are three code repositories. The Source code for Theme &amp; Static site code are submodules of the source code.</p>
+<ul>
+<li>
 <p>After making changes, start the server locally with <code>hugo serve</code>.</p>
+</li>
+<li>
 <p>After viewing changes, build the static files using <code>hugo</code> or <code>hugo -t portio</code>.</p>
-<p>Push changes in <code>/public</code> to the static site code repository to deploy the site.</p>
-<p>Push changes in <code>/themes/portio</code> to the source code for theme to make changes to the theme.</p>
+</li>
+<li>
+<p>Push changes in <code>public/</code> to the static site code repository to deploy the site.</p>
+</li>
+<li>
+<p>Push changes in <code>themes/portio</code> to the source code for theme to make changes to the theme.</p>
+</li>
+<li>
 <p>GitHub Actions picks up the changes and deploys the site to Firebase, where it is hosted (using a custom domain name).</p>
-
+</li>
+</ul>
+</div>
       </div>
     </div>
     <div class="row">

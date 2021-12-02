@@ -43,7 +43,8 @@ Although I have experience with design tools like Photoshop, Lightroom, and Prem
       <pubDate>Mon, 27 Sep 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/portfolio/this-site/</guid>
-      <description>This site is created with Hugo, a popular open-source static site generator. Hugo is built with Go lang. I wanted to create this site quickly, so I used a pre-built theme called Portio, however I did want to customize it. Therefore, I forked that project and used it as a Git submodule to my source code. I also created a seperate repository to house only the generated static files and deploy the site using GitHub Pages.</description>
+      <description>Initially, the goal of this site was to quickly create and deploy a personal website. However, over time, I became more and more invested in it. I&amp;rsquo;ve spend HOURS customizing and adding in new features. Check out this Kanban board which shows how many enhancements I&amp;rsquo;ve made.
+Since my main goal was to quickly create a website, I used Hugo, a popular open-source static site generator. Hugo is built with Go lang.</description>
     </item>
     
     <item>
@@ -73,7 +74,8 @@ This script will keep you up to date with job postings so you never miss out on 
       <pubDate>Wed, 21 Mar 2018 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/portfolio/web-scraping/</guid>
-      <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.</description>
+      <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.
+In summary, it uses Puppeteer, an Automation library that automatically controls Chrome, to visit job seeking websites. Then, it scrapes that data, formats it, and sends those job postings to me via email.</description>
     </item>
     
     <item>
