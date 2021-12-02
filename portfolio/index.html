@@ -50,6 +50,7 @@
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3SHCY6M34"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -57,6 +58,10 @@
 
     gtag('config', 'G-X3SHCY6M34');
   </script>
+    
+    <script src="https://anthonydellavecchia.com/js/darkmode.min.js"></script>
+    
+    <script src="https://anthonydellavecchia.com/js/darktoggle.min.js"></script>
   
 </head>
 
@@ -98,10 +103,27 @@
             class="nav-link text-dark text-sm-center p-2 ">Portfolio</a>
         </li>
         
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/contact"
+            class="nav-link text-dark text-sm-center p-2 ">Contact</a>
+        </li>
+        
       </ul>
-      <div class="navbar-nav">
-        <a id="purple-cursor" href="https://anthonydellavecchia.com/contact" class="btn btn-primary btn-zoom hire_button">Contact</a>
-      </div>
+      <style id="i-hate-this"></style>
+      <div id="mobile-dark-toggle" style="vertical-align: middle;">
+      <label id="purple-cursor" style="margin-bottom: 0px !important; vertical-align: middle;">
+        <input class='toggle-checkbox' type='checkbox' onclick="darkToggleButton();"></input>
+        <div class='toggle-slot'>
+          <div class='sun-icon-wrapper'>
+            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+          </div>
+          <div class='toggle-button'></div>
+          <div class='moon-icon-wrapper'>
+            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+          </div>
+        </div>
+      </label>
+    </div>
     </div>
   </div>
 </nav>
@@ -252,7 +274,18 @@
 		</div>
 	</div>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+	console.log('port count: ' + parseInt(localStorage.getItem("toggleCount")))
 
+		if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+			darkToggleButtonNoIncrement();
+		}
+		else {
+			darkToggleButtonNoIncrement();
+        }
+    });
+</script>
 <section class="footer" id="contact">
 	<div class="footer__background_shape">
 		<svg viewBox="0 0 1920 79">

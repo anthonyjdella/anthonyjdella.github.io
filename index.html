@@ -51,6 +51,7 @@
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3SHCY6M34"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -58,6 +59,10 @@
 
     gtag('config', 'G-X3SHCY6M34');
   </script>
+    
+    <script src="https://anthonydellavecchia.com/js/darkmode.min.js"></script>
+    
+    <script src="https://anthonydellavecchia.com/js/darktoggle.min.js"></script>
   
 </head>
 
@@ -99,10 +104,27 @@
             class="nav-link text-dark text-sm-center p-2 scroll">Portfolio</a>
         </li>
         
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/contact"
+            class="nav-link text-dark text-sm-center p-2 scroll">Contact</a>
+        </li>
+        
       </ul>
-      <div class="navbar-nav">
-        <a id="purple-cursor" href="https://anthonydellavecchia.com/contact" class="btn btn-primary btn-zoom hire_button">Contact</a>
-      </div>
+      <style id="i-hate-this"></style>
+      <div id="mobile-dark-toggle" style="vertical-align: middle;">
+      <label id="purple-cursor" style="margin-bottom: 0px !important; vertical-align: middle;">
+        <input class='toggle-checkbox' type='checkbox' onclick="darkToggleButton();"></input>
+        <div class='toggle-slot'>
+          <div class='sun-icon-wrapper'>
+            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+          </div>
+          <div class='toggle-button'></div>
+          <div class='moon-icon-wrapper'>
+            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+          </div>
+        </div>
+      </label>
+    </div>
     </div>
   </div>
 </nav>
@@ -166,7 +188,7 @@
       <div class="col-lg-7">
         <div class="hero_content">
           <div class="hero_blob">
-            <svg viewBox="0 0 550 550">
+            <svg viewBox="0 0 550 550" class="filter-color">
               <defs>
                 <linearGradient id="a" x1=".069" x2=".753" y1=".116" y2=".858" gradientUnits="objectBoundingBox">
                   <stop offset="0" stop-color="#fff" />
@@ -297,7 +319,7 @@
           <div class="portfolio-item">
             <img src="../images/portfolio/this-site.png" class="portfolio-item-thumb" alt="portfolio-thumb" />
             <div class="portfolio-item-content">
-              <span>Web Development, UX Design</span>
+              <span class="skills-used">Web Development, UX Design</span>
               <h3 class="mb-0">
                 <a class="text-dark" id="purple-cursor" href="https://anthonydellavecchia.com/portfolio/this-site/">This Website</a>
               </h3>
@@ -308,7 +330,7 @@
           <div class="portfolio-item">
             <img src="../images/portfolio/job-search.png" class="portfolio-item-thumb" alt="portfolio-thumb" />
             <div class="portfolio-item-content">
-              <span>Scripting, Nodejs, Automation</span>
+              <span class="skills-used">Scripting, Nodejs, Automation</span>
               <h3 class="mb-0">
                 <a class="text-dark" id="purple-cursor" href="https://anthonydellavecchia.com/portfolio/web-scraping/">Automated Job Search</a>
               </h3>
@@ -341,7 +363,7 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="blog-preview__header_button desktop">
-					<a class="btn btn-outline-secondary  btn-zoom m-3" id="purple-cursor" href="https://anthonydellavecchia.com/blog">See all posts</a>
+					<a class="btn btn-outline-primary  btn-zoom m-3" id="purple-cursor" href="https://anthonydellavecchia.com/blog">See all posts</a>
 				</div>
 			</div>
 		</div>
@@ -532,6 +554,20 @@
 
 <script src="https://anthonydellavecchia.com/js/meny.min.js"></script>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        localStorage.setItem("toggleCount", '0');
+        console.log('home count: ' + parseInt(localStorage.getItem("toggleCount")))
+
+		if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+			darkToggleButtonNoIncrement();
+		}
+		else {
+			darkToggleButtonNoIncrement();
+        }
+    });
+</script>
 
 
   </div>
