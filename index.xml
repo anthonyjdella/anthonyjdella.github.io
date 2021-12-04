@@ -6,7 +6,17 @@
     <description>Recent content on Anthony Dellavecchia | Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Check your Website Users (Minus Yourself)</title>
+      <link>https://anthonydellavecchia.com/blog/exlude-yourself-from-google-analytics/</link>
+      <pubDate>Sat, 04 Dec 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/exlude-yourself-from-google-analytics/</guid>
+      <description>Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
+Google Analytics, or similar type of analytics tool, is a must have for any front-end developer, as it helps them track user engagement.</description>
+    </item>
+    
     <item>
       <title>How to Animate an Emoji with CSS</title>
       <link>https://anthonydellavecchia.com/blog/waving-animation/</link>
