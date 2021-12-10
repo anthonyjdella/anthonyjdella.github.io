@@ -236,7 +236,46 @@
         <div class="case-details-thumb mb-5">
           <img src="https://anthonydellavecchia.com/images/portfolio/firebase.png" alt="case-details" />
         </div>
-        <div style="text-align: justify;"><p>Coming Soon</p>
+        <div style="text-align: justify;"><p><a href="https://jsonresume.org/">JSON Resume</a> is an open source project to standardize JSON-based resumes. JSON is a widely used file format that most developers are familiar with, so this is a great tool for developers. With this initiative, put your resume into a JSON file and it can be used with various front-ends. One resume with multiple themes!</p>
+<p><a href="http://registry.jsonresume.org">http://registry.jsonresume.org</a> is the webpage used for that project. If you append your GitHub username to that URL (e.g. <a href="http://registry.jsonresume.org/anthonyjdella">http://registry.jsonresume.org/anthonyjdella</a>) it will use GitHub APIs to search for that GitHub user and look for a file called <code>resume.json</code> under their public Gists.</p>
+<p>You can then append a theme to the URL (e.g. <a href="https://registry.jsonresume.org/anthonyjdella?theme=spartan">https://registry.jsonresume.org/anthonyjdella?theme=spartan</a>) to view it in multiple themes.</p>
+<p>However, there are some issues with this project.</p>
+<ol>
+<li>You have to use their JSON schema, which is not really customizable.</li>
+<li>The included themes often times don&rsquo;t work or look less than stellar.</li>
+<li>If I want to use it, I have to go to their domain (<code>registry.jsonresume</code>).</li>
+</ol>
+<p>I really like this project but wanted to fix the above issues, so I reverse engineered it to:</p>
+<ol>
+<li>Use my personalized and customized JSON schema.</li>
+<li>Include personalized themes to fit my design preferences.</li>
+<li>Use my own domain (<code>resume.anthonydellavecchia</code>).</li>
+</ol>
+<p>With this project, you can now visit <a href="https://resume.anthonydellavecchia.com">https://resume.anthonydellavecchia.com</a> and append a GitHub username to the end, as well as some themes.</p>
+<p>Some of the themes I&rsquo;ve customized include:</p>
+<ul>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-actual&rdquo;: &ldquo;^1.0.6&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-caffeine&rdquo;: &ldquo;^1.0.4&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-dave&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-elegant&rdquo;: &ldquo;^1.0.9&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-github&rdquo;: &ldquo;^1.0.3&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-kards&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-mocha-responsive&rdquo;: &ldquo;^1.0.1&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-orbit&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-rocketspacer&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-simple-red&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-spartan&rdquo;: &ldquo;^1.0.0&rdquo;,</li>
+<li>&ldquo;@anthonyjdella/jsonresume-theme-anthonyjdella-stackoverflow&rdquo;: &ldquo;^1.0.0&rdquo;</li>
+</ul>
+<p>(These are all deployed as NPM packages, so you can easily install them with <code>npm install</code>)</p>
+<p><img src="/images/portfolio/firebase-db.png" alt="Firebase">
+This is the Firebase database used for this project. Anytime you append a GitHub username to the URL, that data will be added to this database and stored (for speed).</p>
+<p><img src="/images/portfolio/firebase-functions.png" alt="Firebase">
+This is the Firebase Function (called registry) that is an API call triggered by an HTTP request.</p>
+<p><img src="/images/portfolio/firebase-functions-2.png" alt="Firebase">
+You can view the health of the API in this view.</p>
+<p><img src="/images/portfolio/firebase-hosting.png" alt="Firebase">
+By default, Firebase will give you a domain with the projectname-firebaseapp.com. Since I didn&rsquo;t want to use this domain, I connected to to my personal domain in this view. You can also add subdomains which is pretty cool. Since I already own the domain <code>anthonydellavecchia</code>, I can redirect this project to <code>resume.anthonydellavecchia</code>.</p>
 </div>
       </div>
     </div>
