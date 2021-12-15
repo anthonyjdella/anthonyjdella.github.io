@@ -199,7 +199,7 @@
           <h1>LinkedIn to JSON Chrome Extension</h1>
         </div>
         <p>
-          I updated an existing Chrome Extension which scrapes data from your LinkedIn profile and exports it into JSON, which can be used with my the JSON Resume standard.
+          I updated an existing Chrome Extension which collects data from your LinkedIn profile and exports it into JSON, which can be used with the JSON Resume standard.
         </p>
         <div class="case-details-info">
           <div class="case-details-info-item">
@@ -236,7 +236,17 @@
         <div class="case-details-thumb mb-5">
           <img src="https://anthonydellavecchia.com/images/portfolio/extension.png" alt="case-details" />
         </div>
-        <div style="text-align: justify;"><p>Coming Soon!</p>
+        <div style="text-align: justify;"><p><a href="https://github.com/joshuatz/linkedin-to-jsonresume">LinkedIn to JSON Resume</a> is a Chrome Extension that fetches data from your LinkedIn profile and exports the data into JSON. This JSON can then be used with the <a href="https://github.com/jsonresume/resume-schema">JSON Resume Schema</a>. I use LinkedIn a lot and thought that this tool would be a great way to have a <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">&lsquo;single source of truth&rsquo;</a>. So with this, if I keep my LinkedIn up to date, I won&rsquo;t need to manage a resume or JSON file.</p>
+<p><code>In the past, I found it annoying to have to update both a resume and LinkedIn, but with this, I only need to update my LinkedIn!</code></p>
+<p>However, there were some issues with this project.</p>
+<ol>
+<li>It was outdated and used an old version of the JSON Schema.</li>
+<li>The exported JSON had to be based on the supported schema definition.</li>
+</ol>
+<p>Therefore, I updated it to accept the newest JSON schema definition (version 1.0.0) and added support for my customized JSON schema. I created my own schema, so that I could use custom fields for my JSON resume.</p>
+<p>After adding these features, all I have to do is add build the project and add the Extension to my Chrome browser. Then, when I visit a LinkedIn profile, I can easily export that profile into a JSON file.</p>
+<p><img src="/images/portfolio/linkedin.png" alt="Firebase">
+Here, you can see the Chrome Extension in use, when visiting a LinkedIn profile.</p>
 </div>
       </div>
     </div>
