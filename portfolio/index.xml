@@ -6,7 +6,16 @@
     <description>Recent content in Portfolio Projects on Anthony Dellavecchia | Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Oct 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON Resume Themes</title>
+      <link>https://anthonydellavecchia.com/portfolio/themes/</link>
+      <pubDate>Mon, 01 Nov 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/themes/</guid>
+      <description>Coming Soon</description>
+    </item>
+    
     <item>
       <title>JSON Resume</title>
       <link>https://anthonydellavecchia.com/portfolio/json-functions/</link>
