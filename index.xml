@@ -6,7 +6,16 @@
     <description>Recent content on Anthony Dellavecchia | Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Launch Insights</title>
+      <link>https://anthonydellavecchia.com/blog/successful-launch/</link>
+      <pubDate>Tue, 28 Dec 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/successful-launch/</guid>
+      <description>After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data. Sure, I could do this analysis by myself, but why would I?</description>
+    </item>
+    
     <item>
       <title>How to Check your Website Users (Minus Yourself)</title>
       <link>https://anthonydellavecchia.com/blog/exlude-yourself-from-google-analytics/</link>
