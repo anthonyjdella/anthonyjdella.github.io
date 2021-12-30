@@ -207,9 +207,26 @@
 	</div>
 </header>
 
+<input id="search" class="form-control" type="text"
+	aria-label="Case-insensitive search by title, content, or publish date" placeholder="Disabled ..." disabled>
+<div id="search_form">
+	<div class="form-check">
+		<input id="enable_search" class="form-check-input" type="checkbox">
+		<label class="form-check-label" for="enable_search">
+			Enable search
+		</label>
+	</div>
+	<div class="form-check">
+		<input id="regex_mode" class="form-check-input" type="checkbox">
+		<label class="form-check-label" for="regex_mode">
+			Regex mode
+		</label>
+	</div>
+</div>
+
 <section class="section blog-page">
 	<div class="container">
-		<div class="row">
+		<div class="row" id="blogSearch">
 			
 			<div class="col-lg-4">
 				<div class="blog-page__item">
@@ -328,16 +345,15 @@
 	</div>
 </section>
 <script>
-    document.addEventListener('DOMContentLoaded', function(event) {
-	console.log('blog count: ' + parseInt(localStorage.getItem("toggleCount")))
+	document.addEventListener('DOMContentLoaded', function (event) {
+		console.log('blog count: ' + parseInt(localStorage.getItem("toggleCount")))
 
 		if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
 			darkToggleButtonNoIncrement();
-		}
-		else {
+		} else {
 			darkToggleButtonNoIncrement();
-        }
-    });
+		}
+	});
 </script>
 <section class="footer" id="contact">
 	<div class="footer__background_shape">
@@ -515,6 +531,10 @@
     }
   </script>
   <script src="//code.tidio.co/d01aab1ff0ban8zr2s3ucbrzzczl4gdf.js" async></script>
+  
+  
+  <script src="/js/search.1fb6ffd3ed659df4af42fb4f47c603a558c46b39289d36444456e728ec8dff29.js"></script>
+
 </body>
 
 </html>
