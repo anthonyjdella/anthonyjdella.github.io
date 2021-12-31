@@ -66,7 +66,7 @@
 </head>
 
 <body id="purple-cursor-2">
-    <nav class="navbar navbar-expand-lg fixed-top" id="hideNavBar">
+  <nav class="navbar navbar-expand-lg fixed-top" id="hideNavBar">
   <div class="container">
     <a id="purple-cursor" href="https://anthonydellavecchia.com//" class="navbar-brand scroll">
       <img class="poke" src="https://anthonydellavecchia.com/images/contact/avatar.png" alt="site-logo">
@@ -127,7 +127,7 @@
     </div>
   </div>
 </nav>
-    <div class="meny">
+  <div class="meny">
     <strong><u>Follow Anthony @</u></strong><br>
 
     <strong>Coding</strong>
@@ -150,7 +150,7 @@
     <strong>Schedule A Meeting</strong>
     <ul class="fa-ul">
         <li><a href="https://calendly.com/anthonyjdella" target="_blank">Calendly</a></li>
-        <li><a href="mailto:anthony.dellavecchia.tech@gmail.com" target="_blank">Gmail</a></li>
+        <li><a href="mailto:hireme@anthonydellavecchia.com" target="_blank">Gmail</a></li>
     </ul>
 
     <strong>Support Me</strong>
@@ -245,7 +245,7 @@
 <p><img src="/images/blog/devices.png" alt="Image"></p>
 <p>Most viewers came from iPhones, followed by Android devices, then Macs. I had 1 user from a Linux OS!</p>
 <p><img src="/images/blog/os.png" alt="Image"></p>
-<p>Browser compatibility was a big deal for me when designing this site. I actually tested it frequently in Chrome, Safari, and Firefox. Good thing I did this, because early on I had compatibility issues (which I fixed). I was also surprised to see that most visitors came viewed it in Safari.</p>
+<p>Browser compatibility was a big deal for me when designing this site. I actually tested it frequently in Chrome, Safari, and Firefox. Good thing I did this, because early on I had compatibility issues (which I fixed). I was also surprised to see that most visitors viewed it in Safari.</p>
 <p><img src="/images/blog/browser.png" alt="Image"></p>
 <hr>
 <h3 id="conclusion">Conclusion</h3>
@@ -292,6 +292,23 @@
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
+        </div>
+        
+        <div class="next d-flex align-items-center">
+          <div class=" content text-right">
+            <span class="small">Next case</span>
+            <h5 class="title">
+              <a class="text-dark" href="https://anthonydellavecchia.com/blog/email-forwarding/">How to Forward Emails to Your Domain</a>
+            </h5>
+          </div>
+          <div class="icon ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
+              <g data-name="Group 1244" fill="#2d2d2d">
+                <path data-name="Path 1456" d="M12.162 12.725L2.416 26.87l.978 1.41 9.746-14.138z" />
+                <path data-name="Path 1455" d="M2.416 1.415l9.743 14.141.975-1.414L3.39 0z" />
+              </g>
+            </svg>
+          </div>
         </div>
         
       </nav>
@@ -411,7 +428,7 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 									class="fa fa fa-coffee"></i></a>
 						</li>
 						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:anthony.dellavecchia.tech@gmail.com"><i
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:hireme@anthonydellavecchia.com"><i
 									class="fa fa-envelope"></i></a>
 						</li>
 						
@@ -448,10 +465,10 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
     
     var meny = Meny.create({
       
-      menuElement: document.querySelector( '.meny' ),
+      menuElement: document.querySelector('.meny'),
 
       
-      contentsElement: document.querySelector( '.contents' ),
+      contentsElement: document.querySelector('.contents'),
 
       
       position: Meny.getQuery().p || 'left',
@@ -482,17 +499,15 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
     
 
     
-    if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
-      var contents = document.querySelector( '.contents' );
+    if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
+      var contents = document.querySelector('.contents');
       contents.style.padding = '0px';
-      contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+      contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u +
+        '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
     }
   </script>
   <script src="//code.tidio.co/d01aab1ff0ban8zr2s3ucbrzzczl4gdf.js" async></script>
   
-  
-  <script src="/js/search.1fb6ffd3ed659df4af42fb4f47c603a558c46b39289d36444456e728ec8dff29.js"></script>
-
 </body>
 
 </html>

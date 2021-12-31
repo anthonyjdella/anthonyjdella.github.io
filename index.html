@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>Anthony Dellavecchia the Software Engineer</title>
+  <title>Anthony Dellavecchia | Software Engineer</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords" content="Anthony Dellavecchia anthonyjdella software engineer developer full-stack backend back-end frontend front-end designer UX UI product software app web creative portfolio">
@@ -67,7 +67,7 @@
 </head>
 
 <body id="purple-cursor-2">
-    <nav class="navbar navbar-expand-lg fixed-top" id="hideNavBar">
+  <nav class="navbar navbar-expand-lg fixed-top" id="hideNavBar">
   <div class="container">
     <a id="purple-cursor" href="https://anthonydellavecchia.com//" class="navbar-brand scroll">
       <img class="poke" src="https://anthonydellavecchia.com/images/contact/avatar.png" alt="site-logo">
@@ -128,7 +128,7 @@
     </div>
   </div>
 </nav>
-    <div class="meny">
+  <div class="meny">
     <strong><u>Follow Anthony @</u></strong><br>
 
     <strong>Coding</strong>
@@ -151,7 +151,7 @@
     <strong>Schedule A Meeting</strong>
     <ul class="fa-ul">
         <li><a href="https://calendly.com/anthonyjdella" target="_blank">Calendly</a></li>
-        <li><a href="mailto:anthony.dellavecchia.tech@gmail.com" target="_blank">Gmail</a></li>
+        <li><a href="mailto:hireme@anthonydellavecchia.com" target="_blank">Gmail</a></li>
     </ul>
 
     <strong>Support Me</strong>
@@ -409,6 +409,20 @@
 			<div class="col-lg-4">
 				<div class="blog-preview__item">
 					<div class="blog-preview__item-thumb">
+						<img src="https://anthonydellavecchia.com/images/blog/gmail.png" style="object-fit: cover;" alt="post-image">
+					</div>
+					<div class="blog-preview__item-content bg-white">
+						<span class="small">December 30, 2021</span>
+						<h5 class="mb-0">
+							<a class="text-dark" id="purple-cursor" href="https://anthonydellavecchia.com/blog/email-forwarding/">How to Forward Emails to Your Domain</a>
+						</h5>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4">
+				<div class="blog-preview__item">
+					<div class="blog-preview__item-thumb">
 						<img src="https://anthonydellavecchia.com/images/blog/analytics.png" style="object-fit: cover;" alt="post-image">
 					</div>
 					<div class="blog-preview__item-content bg-white">
@@ -429,20 +443,6 @@
 						<span class="small">December 4, 2021</span>
 						<h5 class="mb-0">
 							<a class="text-dark" id="purple-cursor" href="https://anthonydellavecchia.com/blog/exlude-yourself-from-google-analytics/">How to Check your Website Users (Minus Yourself)</a>
-						</h5>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4">
-				<div class="blog-preview__item">
-					<div class="blog-preview__item-thumb">
-						<img src="https://anthonydellavecchia.com/images/blog/wave-emoji.png" style="object-fit: cover;" alt="post-image">
-					</div>
-					<div class="blog-preview__item-content bg-white">
-						<span class="small">December 1, 2021</span>
-						<h5 class="mb-0">
-							<a class="text-dark" id="purple-cursor" href="https://anthonydellavecchia.com/blog/waving-animation/">How to Animate an Emoji with CSS</a>
 						</h5>
 					</div>
 				</div>
@@ -560,7 +560,7 @@
 									class="fa fa fa-coffee"></i></a>
 						</li>
 						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:anthony.dellavecchia.tech@gmail.com"><i
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:hireme@anthonydellavecchia.com"><i
 									class="fa fa-envelope"></i></a>
 						</li>
 						
@@ -611,10 +611,10 @@
     
     var meny = Meny.create({
       
-      menuElement: document.querySelector( '.meny' ),
+      menuElement: document.querySelector('.meny'),
 
       
-      contentsElement: document.querySelector( '.contents' ),
+      contentsElement: document.querySelector('.contents'),
 
       
       position: Meny.getQuery().p || 'left',
@@ -645,17 +645,15 @@
     
 
     
-    if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
-      var contents = document.querySelector( '.contents' );
+    if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
+      var contents = document.querySelector('.contents');
       contents.style.padding = '0px';
-      contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+      contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u +
+        '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
     }
   </script>
   <script src="//code.tidio.co/d01aab1ff0ban8zr2s3ucbrzzczl4gdf.js" async></script>
   
-  
-  <script src="/js/search.1fb6ffd3ed659df4af42fb4f47c603a558c46b39289d36444456e728ec8dff29.js"></script>
-
 </body>
 
 </html>

@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog Posts on Anthony Dellavecchia the Software Engineer</title>
+    <title>Blog Posts on Anthony Dellavecchia | Software Engineer</title>
     <link>https://anthonydellavecchia.com/blog/</link>
-    <description>Recent content in Blog Posts on Anthony Dellavecchia the Software Engineer</description>
+    <description>Recent content in Blog Posts on Anthony Dellavecchia | Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Forward Emails to Your Domain</title>
+      <link>https://anthonydellavecchia.com/blog/email-forwarding/</link>
+      <pubDate>Thu, 30 Dec 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/email-forwarding/</guid>
+      <description>Want to organize your email inbox?
+How about exposing a different email address for different purposes?
+I set up email forwarding so that I can receive emails to my existing Gmail inboxes, but use different email address names.
+For example, these are my different email addresses:
+ hello@anthonydellavecchia.com - general things dev@anthonydellavecchia.com - software development hireme@anthonydellavecchia.com - job seeking photo@anthonydellavecchia.com - photography design@anthonydellavecchia.com - design  What&amp;rsquo;s the Point? Everything is</description>
+    </item>
+    
     <item>
       <title>Launch Insights</title>
       <link>https://anthonydellavecchia.com/blog/successful-launch/</link>
