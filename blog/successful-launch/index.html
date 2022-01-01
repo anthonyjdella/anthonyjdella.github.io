@@ -268,13 +268,13 @@
 
         
         
-        
-        
+        if (window.location.hostname == "localhost")
+            return;
 
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        var disqus_shortname = 'anthonydellavecchia';
+        var disqus_shortname = 'anthonydellavecchia-1';
         console.log('DISQUS SHORTNAME ' + disqus_shortname);
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         console.log(dsq.src);
