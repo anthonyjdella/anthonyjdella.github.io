@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>best-practices on Anthony Dellavecchia the Software Engineer</title>
+    <link>https://anthonydellavecchia.com/tags/best-practices/</link>
+    <description>Recent content in best-practices on Anthony Dellavecchia the Software Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Apr 2018 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/best-practices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Magic Numbers</title>
+      <link>https://anthonydellavecchia.com/blog/magic-numbers/</link>
+      <pubDate>Tue, 17 Apr 2018 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/magic-numbers/</guid>
+      <description>Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
+I&amp;rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&amp;rsquo;t think of that for &amp;ldquo;magic number&amp;rdquo; situations. It&amp;rsquo;s a pretty simple concept but I just wanted to share what I learned.</description>
+    </item>
+    
+  </channel>
+</rss>
