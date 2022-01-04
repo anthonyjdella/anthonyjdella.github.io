@@ -213,9 +213,37 @@
 
 
 
+<div id="hits">
+	
+</div>
+
+<script>
+	const search = instantsearch(options);
+	search.addWidget(
+		instantsearch.widgets.hits({
+		container: '#hits'
+		})
+	);
+	search.start();
+</script>
+
 <section class="section blog-page">
 	<div class="container">
 		<div class="row" id="blogSearch">
+			
+			<div class="col-lg-4">
+				<div class="blog-page__item">
+					<div class="blog-page__item-thumb">
+						<img src="https://anthonydellavecchia.com/images/blog/downtime-logo-black.png" alt="post-image">
+					</div>
+					<div class="blog-page__item-content bg-white">
+						<span class="small">January 4, 2022 &bull; <a href="https://anthonydellavecchia.com/blog/down-time/#disqus_thread">Comments</a></span>
+						<h5 class="mb-0">
+							<a class="text-dark" href="https://anthonydellavecchia.com/blog/down-time/">Is 99% Good?</a>
+						</h5>
+					</div>
+				</div>
+			</div>
 			
 			<div class="col-lg-4">
 				<div class="blog-page__item">
@@ -282,20 +310,6 @@
 						<span class="small">October 25, 2021 &bull; <a href="https://anthonydellavecchia.com/blog/animated-svg/#disqus_thread">Comments</a></span>
 						<h5 class="mb-0">
 							<a class="text-dark" href="https://anthonydellavecchia.com/blog/animated-svg/">Designing an Animated Logo</a>
-						</h5>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4">
-				<div class="blog-page__item">
-					<div class="blog-page__item-thumb">
-						<img src="https://anthonydellavecchia.com/images/allpost/keyboard.jpg" alt="post-image">
-					</div>
-					<div class="blog-page__item-content bg-white">
-						<span class="small">September 28, 2021 &bull; <a href="https://anthonydellavecchia.com/blog/personal-site/#disqus_thread">Comments</a></span>
-						<h5 class="mb-0">
-							<a class="text-dark" href="https://anthonydellavecchia.com/blog/personal-site/">Building This Site</a>
 						</h5>
 					</div>
 				</div>
@@ -475,6 +489,9 @@
 <script src="https://anthonydellavecchia.com/js/meny.min.js"></script>
 
 <script src="https://anthonydellavecchia.com/js/search.min.js" type="module"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
 
 
   </div>

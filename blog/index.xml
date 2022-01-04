@@ -6,7 +6,19 @@
     <description>Recent content in Blog Posts on Anthony Dellavecchia the Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is 99% Good?</title>
+      <link>https://anthonydellavecchia.com/blog/down-time/</link>
+      <pubDate>Tue, 04 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/down-time/</guid>
+      <description>If you ever took at test at school, you&amp;rsquo;d probably be really happy with getting a 99 grade. After all, it&amp;rsquo;s almost a perfect score.
+But when you&amp;rsquo;re talking about software systems, is 99% availability good?
+Well, if your system needs to be available 24/7 everyday, 99% won&amp;rsquo;t cut it.
+Downtime Table Take a look at the below table. It shows how much downtime (in time) equals a given percentage.</description>
+    </item>
+    
     <item>
       <title>How to Forward Emails to Your Domain</title>
       <link>https://anthonydellavecchia.com/blog/email-forwarding/</link>
