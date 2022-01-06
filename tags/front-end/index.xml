@@ -17,5 +17,15 @@
 Step 1: Create HTML &amp;lt;div class=&amp;#34;waving&amp;#34; data-hover=&amp;#34;👋&amp;#34;&amp;gt; Hi &amp;lt;/div&amp;gt; All I&amp;rsquo;ve done here is create a simple div with the text, &amp;ldquo;Hi&amp;rdquo;.</description>
     </item>
     
+    <item>
+      <title>This Website</title>
+      <link>https://anthonydellavecchia.com/portfolio/this-site/</link>
+      <pubDate>Mon, 27 Sep 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/this-site/</guid>
+      <description>Initially, the goal of this site was to quickly create and deploy a personal website. However, over time, I became more and more invested in it. I&amp;rsquo;ve spend HOURS customizing and adding in new features. Check out this Kanban board which shows how many enhancements I&amp;rsquo;ve made.
+Since my main goal was to quickly create a website, I used Hugo, a popular open-source static site generator. Hugo is built with Go lang.</description>
+    </item>
+    
   </channel>
 </rss>

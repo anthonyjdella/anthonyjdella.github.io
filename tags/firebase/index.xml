@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>firebase on Anthony Dellavecchia the Software Engineer</title>
+    <link>https://anthonydellavecchia.com/tags/firebase/</link>
+    <description>Recent content in firebase on Anthony Dellavecchia the Software Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Oct 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON Resume</title>
+      <link>https://anthonydellavecchia.com/portfolio/json-functions/</link>
+      <pubDate>Wed, 20 Oct 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/json-functions/</guid>
+      <description>JSON Resume is an open source project to standardize JSON-based resumes. JSON is a widely used file format that most developers are familiar with, so this is a great tool for developers. With this initiative, put your resume into a JSON file and it can be used with various front-ends. One resume with multiple themes!
+http://registry.jsonresume.org is the webpage used for that project. If you append your GitHub username to that URL (e.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Anthony Dellavecchia the Software Engineer</title>
+    <link>https://anthonydellavecchia.com/tags/html/</link>
+    <description>Recent content in html on Anthony Dellavecchia the Software Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON Resume Themes</title>
+      <link>https://anthonydellavecchia.com/portfolio/themes/</link>
+      <pubDate>Mon, 01 Nov 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/themes/</guid>
+      <description>I customized and tweaked multiple existing themes for my resume, which can be viewed in conjunction with my JSON Resume. I didn&amp;rsquo;t build these from scratch, only customized them to my liking. Currently I have customized 14 themes, all of which can be viewed from the homepage of this site.
+Users can easily view my Resume by selecting a different one from a dropdown menu.
+Each theme is unique and has a different style for different audiences.</description>
+    </item>
+    
+  </channel>
+</rss>

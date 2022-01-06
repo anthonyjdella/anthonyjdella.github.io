@@ -157,7 +157,7 @@
     <strong>Schedule A Meeting</strong>
     <ul class="fa-ul">
         <li><a href="https://calendly.com/anthonyjdella" target="_blank">Calendly</a></li>
-        <li><a href="mailto:hireme@anthonydellavecchia.com" target="_blank">Gmail</a></li>
+        <li><a href="mailto:hireme@anthonydellavecchia.com?subject=I Want to Hire Anthony!&body=Hey Anthony, I really like your website and would love to hire you." target="_blank">Gmail</a></li>
     </ul>
 
     <strong>Support Me</strong>
@@ -234,6 +234,8 @@
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
                   <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#analytics &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#how-to &nbsp; </a>
                 
               </div>
             </div>
@@ -465,7 +467,7 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 									class="fa fa fa-coffee"></i></a>
 						</li>
 						
-						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:hireme@anthonydellavecchia.com"><i
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:hireme@anthonydellavecchia.com?subject=I%20Want%20to%20Hire%20Anthony!&amp;body=Hey%20Anthony,%20I%20really%20like%20your%20website%20and%20would%20love%20to%20hire%20you."><i
 									class="fa fa-envelope"></i></a>
 						</li>
 						
@@ -496,9 +498,17 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 <script src="https://anthonydellavecchia.com/js/meny.min.js"></script>
 
 <script src="https://anthonydellavecchia.com/js/search.min.js" type="module"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+
+
+
+
+
 
 
 

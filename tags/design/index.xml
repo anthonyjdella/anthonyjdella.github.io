@@ -6,7 +6,18 @@
     <description>Recent content in design on Anthony Dellavecchia the Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Oct 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON Resume Themes</title>
+      <link>https://anthonydellavecchia.com/portfolio/themes/</link>
+      <pubDate>Mon, 01 Nov 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/themes/</guid>
+      <description>I customized and tweaked multiple existing themes for my resume, which can be viewed in conjunction with my JSON Resume. I didn&amp;rsquo;t build these from scratch, only customized them to my liking. Currently I have customized 14 themes, all of which can be viewed from the homepage of this site.
+Users can easily view my Resume by selecting a different one from a dropdown menu.
+Each theme is unique and has a different style for different audiences.</description>
+    </item>
+    
     <item>
       <title>Designing an Animated Logo</title>
       <link>https://anthonydellavecchia.com/blog/animated-svg/</link>
@@ -15,6 +26,16 @@
       <guid>https://anthonydellavecchia.com/blog/animated-svg/</guid>
       <description>Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
 Although I have experience with design tools like Photoshop, Lightroom, and Premiere I have never worked with animation. I found a website called SVGator which animates SVG (Scalable Vector Graphics). The free version has many limitations but I was able to use it to create my animated logo.</description>
+    </item>
+    
+    <item>
+      <title>This Website</title>
+      <link>https://anthonydellavecchia.com/portfolio/this-site/</link>
+      <pubDate>Mon, 27 Sep 2021 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/this-site/</guid>
+      <description>Initially, the goal of this site was to quickly create and deploy a personal website. However, over time, I became more and more invested in it. I&amp;rsquo;ve spend HOURS customizing and adding in new features. Check out this Kanban board which shows how many enhancements I&amp;rsquo;ve made.
+Since my main goal was to quickly create a website, I used Hugo, a popular open-source static site generator. Hugo is built with Go lang.</description>
     </item>
     
   </channel>

@@ -18,5 +18,15 @@ How many times have you missed out on job opportunities because you didn’t kno
 This script will keep you up to date with job postings so you never miss out on the right job opportunity!</description>
     </item>
     
+    <item>
+      <title>Automated Job Search</title>
+      <link>https://anthonydellavecchia.com/portfolio/web-scraping/</link>
+      <pubDate>Wed, 21 Mar 2018 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/web-scraping/</guid>
+      <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.
+In summary, it uses Puppeteer, an Automation library that automatically controls Chrome, to visit job seeking websites. Then, it scrapes that data, formats it, and sends those job postings to me via email.</description>
+    </item>
+    
   </channel>
 </rss>

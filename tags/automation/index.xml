@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>automation on Anthony Dellavecchia the Software Engineer</title>
+    <link>https://anthonydellavecchia.com/tags/automation/</link>
+    <description>Recent content in automation on Anthony Dellavecchia the Software Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Mar 2018 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automated Job Search</title>
+      <link>https://anthonydellavecchia.com/portfolio/web-scraping/</link>
+      <pubDate>Wed, 21 Mar 2018 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/web-scraping/</guid>
+      <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.
+In summary, it uses Puppeteer, an Automation library that automatically controls Chrome, to visit job seeking websites. Then, it scrapes that data, formats it, and sends those job postings to me via email.</description>
+    </item>
+    
+  </channel>
+</rss>

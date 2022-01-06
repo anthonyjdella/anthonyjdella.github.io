@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog Posts on Anthony Dellavecchia the Software Engineer</title>
-    <link>https://anthonydellavecchia.com/blog/</link>
-    <description>Recent content in Blog Posts on Anthony Dellavecchia the Software Engineer</description>
+    <title>how-to on Anthony Dellavecchia the Software Engineer</title>
+    <link>https://anthonydellavecchia.com/tags/how-to/</link>
+    <description>Recent content in how-to on Anthony Dellavecchia the Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Is 99% Good?</title>
-      <link>https://anthonydellavecchia.com/blog/down-time/</link>
-      <pubDate>Tue, 04 Jan 2022 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/blog/down-time/</guid>
-      <description>If you ever took a test at school, you&amp;rsquo;d probably be really happy with getting a 99 grade. After all, it&amp;rsquo;s almost a perfect score.
-But when you&amp;rsquo;re talking about software systems, is 99% availability good?
-Well, if your system needs to be available 24/7 everyday, 99% won&amp;rsquo;t cut it.
-Downtime Table Take a look at the below table. It shows how much downtime (in time) equals a given percentage.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 30 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Forward Emails to Your Domain</title>
       <link>https://anthonydellavecchia.com/blog/email-forwarding/</link>
@@ -30,15 +18,6 @@ How about exposing a different email address for different purposes?
 I set up email forwarding so that I can receive emails to my existing Gmail inboxes, but use different email address names.
 For example, these are my different email addresses:
  hello@anthonydellavecchia.com - general things dev@anthonydellavecchia.com - software development hireme@anthonydellavecchia.com - job seeking photo@anthonydellavecchia.com - photography design@anthonydellavecchia.com - design  What&amp;rsquo;s the Point? Everything is</description>
-    </item>
-    
-    <item>
-      <title>Launch Insights</title>
-      <link>https://anthonydellavecchia.com/blog/successful-launch/</link>
-      <pubDate>Tue, 28 Dec 2021 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/blog/successful-launch/</guid>
-      <description>After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data. Sure, I could do this analysis by myself, but why would I?</description>
     </item>
     
     <item>
@@ -72,26 +51,6 @@ Although I have experience with design tools like Photoshop, Lightroom, and Prem
     </item>
     
     <item>
-      <title>Building This Site</title>
-      <link>https://anthonydellavecchia.com/blog/personal-site/</link>
-      <pubDate>Tue, 28 Sep 2021 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/blog/personal-site/</guid>
-      <description>This is for my reference, so I remember how to make changes to this site without any hiccups.
- cd into personal-website directory Make changes.  hugo serve to start local server. Commit and push changes to personal-website repository (source files). If changes are done to the Portio theme, cd into themes/portio .  Commit and push changes to portio-theme repository (theme files).    hugo -t portio to build static files which will go in the /public  directory.</description>
-    </item>
-    
-    <item>
-      <title>Magic Numbers</title>
-      <link>https://anthonydellavecchia.com/blog/magic-numbers/</link>
-      <pubDate>Tue, 17 Apr 2018 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/blog/magic-numbers/</guid>
-      <description>Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
-I&amp;rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&amp;rsquo;t think of that for &amp;ldquo;magic number&amp;rdquo; situations. It&amp;rsquo;s a pretty simple concept but I just wanted to share what I learned.</description>
-    </item>
-    
-    <item>
       <title>How to Never Miss Out on a Job Opening</title>
       <link>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</link>
       <pubDate>Sat, 31 Mar 2018 12:49:27 +0600</pubDate>
@@ -100,19 +59,6 @@ I&amp;rsquo;ve known about the concept of using constants rather than hard-codin
       <description>Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
 How many times have you missed out on job opportunities because you didn’t know a company was hiring for that position? It might be the perfect job for you, but you just didn’t know about it!
 This script will keep you up to date with job postings so you never miss out on the right job opportunity!</description>
-    </item>
-    
-    <item>
-      <title>Hugo Markdown</title>
-      <link>https://anthonydellavecchia.com/blog/hugo-markdown/</link>
-      <pubDate>Thu, 01 Feb 2018 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/blog/hugo-markdown/</guid>
-      <description>This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
-This example Markdown file compliments of markdown-it.github.io
- h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.</description>
     </item>
     
   </channel>
