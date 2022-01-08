@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Anthony Dellavecchia the Software Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how-to</title>
+      <link>https://anthonydellavecchia.com/tags/how-to/</link>
+      <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://anthonydellavecchia.com/tags/javascript/</link>
+      <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webdev</title>
+      <link>https://anthonydellavecchia.com/tags/webdev/</link>
+      <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/webdev/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>devops</title>
       <link>https://anthonydellavecchia.com/tags/devops/</link>
@@ -31,15 +58,6 @@
       <pubDate>Thu, 30 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/domain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>how-to</title>
-      <link>https://anthonydellavecchia.com/tags/how-to/</link>
-      <pubDate>Thu, 30 Dec 2021 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/how-to/</guid>
       <description></description>
     </item>
     
@@ -107,15 +125,6 @@
     </item>
     
     <item>
-      <title>javascript</title>
-      <link>https://anthonydellavecchia.com/tags/javascript/</link>
-      <pubDate>Wed, 20 Oct 2021 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>json</title>
       <link>https://anthonydellavecchia.com/tags/json/</link>
       <pubDate>Wed, 20 Oct 2021 12:49:27 +0600</pubDate>
@@ -139,15 +148,6 @@
       <pubDate>Tue, 28 Sep 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/build/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>webdev</title>
-      <link>https://anthonydellavecchia.com/tags/webdev/</link>
-      <pubDate>Mon, 27 Sep 2021 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/webdev/</guid>
       <description></description>
     </item>
     

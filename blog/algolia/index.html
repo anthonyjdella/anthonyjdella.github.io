@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>Is 99% Good?</title>
+  <title>How to Add Search to Your Hugo Static Site</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -182,12 +182,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
-        <h3 class="breadCrumb__title">Is 99% Good?</h3>
+        <h3 class="breadCrumb__title">How to Add Search to Your Hugo Static Site</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Is 99% Good?</li>
+            <li class="breadcrumb-item active" aria-current="page">How to Add Search to Your Hugo Static Site</li>
           </ol>
         </nav>
       </div>
@@ -221,21 +221,23 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="singleBlog__feature">
-                  <img src=https://anthonydellavecchia.com/images/blog/downtime-logo-black.png alt="feature-image">
+                  <img src=https://anthonydellavecchia.com/images/blog/algolia.png alt="feature-image">
               </div>
           </div>
           <div class="col-lg-12">
             <div class="blog-by">
               <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
                 <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
-                <li class="breadcrumb-item">on January 4, 2022</li>
+                <li class="breadcrumb-item">on January 8, 2022</li>
               </ul>
               <div class="vertical-line"></div>
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#devops &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#javascript &nbsp; </a>
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#resiliency &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#how-to &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#webdev &nbsp; </a>
                 
               </div>
             </div>
@@ -244,49 +246,174 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <p>If you ever took a test at school, you&rsquo;d probably be really happy with getting a 99 grade. After all, it&rsquo;s almost a perfect score.</p>
-<p>But when you&rsquo;re talking about software systems, is 99% availability good?</p>
-<p>Well, if your system needs to be available 24/7 everyday, <strong>99% won&rsquo;t cut it</strong>.</p>
-<h3 id="downtime-table">Downtime Table</h3>
-<p>Take a look at the below table. It shows how much downtime (in time) equals a given percentage.</p>
-<table>
-<thead>
-<tr>
-<th>Availability       </th>
-<th>Annual Downtime</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>99%</td>
-<td>3 days, 15 hours, 40 minutes</td>
-</tr>
-<tr>
-<td>99.9%</td>
-<td>8 hours, 46 minutes</td>
-</tr>
-<tr>
-<td>99.99%</td>
-<td>52 minutes, 36 seconds</td>
-</tr>
-<tr>
-<td>99.999%</td>
-<td>5.26 minutes</td>
-</tr>
-<tr>
-<td> </td>
-<td> </td>
-</tr>
-</tbody>
-</table>
-<h3 id="whats-this-mean">What&rsquo;s this Mean?</h3>
-<p>If your system should be available at all times, a 99% availability means that your system can have almost 4 days of downtime per year! For a system that needs to be available, that is a terribly long time.</p>
-<p>Imagine if you have a business critical system that fails. If it was down for almost 4 days, your company could lose millions/billions of dollars! Take for example, when <a href="https://en.wikipedia.org/wiki/2021_Facebook_outage">Facebook was down in 2021</a> for about 7 hours. Their stock dropped 5%, or $40 billion dollars! This was only for a 7 hour outage. Can you imagine if they had just 99% availability and Facebook was down for 4 days?</p>
-<h3 id="what-should-you-aim-for">What should you aim for?</h3>
-<p>This depends on your system, and usually a probability or downtime measurement (rather than percentage) should be given. &ldquo;Five 9&rsquo;s&rdquo; is a common &ldquo;standard&rdquo; that systems try to aim for. <strong>That is 99.999% availability (hence five 9s)</strong>. Standards is in quotes because it really isn&rsquo;t a standard, it&rsquo;s just what&rsquo;s commonly mentioned in the industry as a goal to achieve.</p>
-<p>Check out this <a href="https://en.wikipedia.org/wiki/High_availability">Wikipedia article</a> for more information.</p>
-<p>Thanks for reading!
-Please react or comment to this article, down below!</p>
+                <p>After writing multiple <a href="https://anthonydellavecchia.com/blog">blog posts</a>, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page. Finding an article would be difficult and a bad user experience. Adding a search bar, as well as tag filters, would fix this issue, so I did some research on how to implement this for <a href="https://anthonydellavecchia.com/">my website</a>.</p>
+<p>I&rsquo;m using Hugo as my static site generator and the documentation isn&rsquo;t the best. Their <a href="https://gohugo.io/tools/search/">docs</a> show multiple options for implementing search, but their explanations are pretty bad. Some options include: using native Javascript, Elasticsearch, lunr.js, etc. But I went with a third-party service, called Algolia, just because I found the documentation to be great.</p>
+<h3 id="summary">Summary</h3>
+<p>To enable searching on a static site, you need to first create a JSON search index which acts as a database for your search results. From there, you update this JSON search index each time you update/create new pages. Then, you access/query the data by using REST API&rsquo;s provided by Algolia. Finally, you display the results on your page.</p>
+<h3 id="getting-started">Getting Started</h3>
+<p>First thing to do is <a href="https://www.algolia.com/users/sign_up">sign up for a free</a> Algolia account (since we&rsquo;re using this service). Algolia is nice because they have great documentation, built-in widgets, provides fast results, and is easy to implement.</p>
+<h3 id="generate-json-search-index">Generate JSON Search Index</h3>
+<h4 id="configure-output-to-json">Configure Output to JSON</h4>
+<p>Hugo can output content into multiple different file formats (like javascript, xml, toml, etc.). So, we want to set up our project to output JSON. Do this by configuring the <code>config.toml/yaml</code>:</p>
+<p><strong>config.toml</strong></p>
+<pre tabindex="0"><code>[outputFormats.Algolia]
+baseName = &quot;algolia&quot;
+isPlainText = true
+mediaType = &quot;application/json&quot;
+notAlternative = true
+
+[params.algolia]
+vars = [&quot;title&quot;, &quot;summary&quot;, &quot;date&quot;, &quot;publishdate&quot;, &quot;permalink&quot;]
+params = [&quot;tags&quot;]
+
+[outputs]
+home = [&quot;HTML&quot;, &quot;Algolia&quot;]
+</code></pre><p>Here, we are creating a custom outputFormat called Algolia, which is of type JSON. We&rsquo;re also giving it some variables which will be used later.</p>
+<h4 id="creating-a-search-index-template">Creating a Search Index Template</h4>
+<p>Next, create a file which will generate the JSON search index output. This file is the template for creating our output JSON. In the <code>layouts/</code> directory, create a file like: <code>search-index.json</code>.</p>
+<p><strong>search-index.json</strong></p>
+<pre tabindex="0"><code>{{- $.Scratch.Add &quot;index&quot; slice -}}
+
+{{- range where .Site.RegularPages &quot;.Type&quot; &quot;blog&quot; -}}
+
+    {{- $.Scratch.Add &quot;index&quot; (dict &quot;objectID&quot; .UniqueID &quot;date&quot; .Date.UTC.Unix &quot;fuzzywordcount&quot; .FuzzyWordCount &quot;kind&quot; .Kind &quot;lastmod&quot; .Lastmod.UTC.Unix &quot;permalink&quot; .Permalink &quot;publishdate&quot; .PublishDate &quot;readingtime&quot; .ReadingTime &quot;relpermalink&quot; .RelPermalink &quot;summary&quot; .Summary &quot;title&quot; .Title &quot;type&quot; .Type &quot;url&quot; .RelPermalink &quot;wordcount&quot; .WordCount &quot;section&quot; .Section &quot;tags&quot; .Params.Tags &quot;authors&quot; .Params.Authors &quot;image&quot; .Params.FeatureImage &quot;writtendate&quot; .Params.WrittenDate)}}
+
+{{- end -}}
+{{- $.Scratch.Get &quot;index&quot; | jsonify -}}
+</code></pre><p>I only want my search look for blog posts, not every static page. To do this, I loop through my pages with the type &ldquo;blog&rdquo;. Then, I create a dictionary which contains multiple key/value pairs of the data that I want. For instance, I want the title of my blog posts, so I create a key (&ldquo;title&rdquo;) and a value (.Title). You can scroll through the code to get an idea of how to scrape other data (like a description, date, etc).</p>
+<h4 id="generating-the-json">Generating the JSON</h4>
+<p>After the template is created, just re-build the project. Doing this will create a JSON file, which will be used as our search index. In my case, I have a Hugo theme called &ldquo;portio&rdquo;. So, to build my project, I run the command <code>hugo -t portio</code>. After running this command, I have a generated JSON file called <code>algolia.json</code> in my build (public) directory.</p>
+<p>You can beautify this file and verify that all of the data is correctly collected. If data is null or not populated correctly, make some changes to <code>search-index.json</code>. Make sure that you&rsquo;re using the correct <a href="https://gohugo.io/variables/">Hugo variables</a>.</p>
+<h3 id="set-up-algolia">Set up Algolia</h3>
+<p>Now, you can head over to the ALgolia interface to create a New Application (using the free plan). Then, within that New Application, create a New Index.</p>
+<p>You&rsquo;ll have to jot down the Application ID, API key, and Index Name.</p>
+<h3 id="send-search-index-to-algolia">Send Search Index to Algolia</h3>
+<p>Now that we have our search index file, we need to upload it to Algolia (so we can use their search algorithms). Using NPM, we have to install Algolia:</p>
+<p><code>npm install atomic-algolia --save</code></p>
+<p>Within your <code>package.json</code>, add a script called <code>algolia: atomic-algolia</code>.</p>
+<p>If you run <code>npm run algolia</code>, it won&rsquo;t work because Algolia doesn&rsquo;t know which project you&rsquo;re uploading this search index to. To fix this, you&rsquo;ll need to run</p>
+<pre tabindex="0"><code>ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_INDEX_NAME={{ YOUR_INDEX NAME }} ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }} npm run algolia
+</code></pre><p>Copy the values of your app id, api key, etc into these brackets. Now, when you run that command, you&rsquo;re search index will be uploaded to Algolia! Check the Algolia interface to make sure your data is present in that service. From the UI, you can configure, manage, and view analytics related to your index.</p>
+<p><img src="/images/blog/algolia-ui.png" alt="Image"></p>
+<p>You can also search within the Algolia UI itself to see how your search will look on your website.
+<img src="/images/blog/algolia-ui2.png" alt="Image"></p>
+<h3 id="displaying-the-search-results">Displaying the Search Results</h3>
+<p>We&rsquo;re going to have to write some Javascript to interact with Algolia API&rsquo;s to interact with our search index. First, we&rsquo;ll have to import Algolia as a module. Easiest way to do this is by adding node modules, but I went with embedding the scripts directly (from a CDN).</p>
+<p>To embed the modules via a CDN, I used JSDelivr, which is a large CDN for Javascript modules. Then I injected these scripts into my HTML:</p>
+<pre tabindex="0"><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch.umd.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css&quot; integrity=&quot;sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=&quot; crossorigin=&quot;anonymous&quot;&gt;
+</code></pre><p>One of these is for a built-in theme, and the others are the modules to use Algolia search.</p>
+<p>Now, create a <code>search.js</code> file which will interact with the Algolia API&rsquo;s to configure some things you&rsquo;ll need.</p>
+<h4 id="initialize-search">Initialize Search</h4>
+<p>Start by initializing Search, by entering your index credentials.</p>
+<pre tabindex="0"><code>const search = instantsearch({
+    indexName: 'your-index-name',
+    routing: true,
+    searchClient: algoliasearch(
+        'your-app-id',
+        'your-api-key'
+    )
+});
+</code></pre><h4 id="display-results">Display Results</h4>
+<p>Go to the HTML page you want your results to be displayed. Then create an empty div which will be where your results are shown:</p>
+<p><code>&lt;div id=&quot;hits&quot;&gt;&lt;/div&gt;</code></p>
+<p>Back in the <code>search.js</code> file, we&rsquo;ll need to link that div to Algolia&rsquo;s API.</p>
+<p>Algolia is built around widgets, one of which is the Hits widget which displays all of your data results. Configure your Hits widget with the below:</p>
+<pre tabindex="0"><code>search.addWidget(
+    instantsearch.widgets.hits({
+        container: '#hits',
+        templates: {
+            empty: '&lt;h3 style=&quot;text-align: center;&quot;&gt;No results found 😔. Search something else.&lt;/h3&gt;'
+        }
+    })
+);
+</code></pre><p>The container finds your HTML element which we defined in our HTML above. After it finds it, it will inject the widget into that HTML.</p>
+<p>An empty template field will display whenever the search results are not found.</p>
+<p>To display the actual results, we&rsquo;ll need to add an item in our template:</p>
+<pre tabindex="0"><code>search.addWidget(
+    instantsearch.widgets.hits({
+        container: '#hits',
+        templates: {
+            empty: '&lt;h3 style=&quot;text-align: center;&quot;&gt;No results found 😔. Search something else.&lt;/h3&gt;',
+            item:
+            `
+            {{ range .Paginator.Pages }}
+                &lt;div class=&quot;image&quot;&gt;
+                    &lt;img src=&quot;{{ image }}&quot;&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;blog&quot;&gt;
+                    &lt;span&gt;{{ writtendate }}&lt;/span&gt;
+                    &lt;h4&gt;
+                        &lt;a href=&quot;{{ permalink }}&quot;&gt;
+                            {{#helpers.highlight}}
+                                { &quot;attribute&quot;: &quot;title&quot;, &quot;highlightedTagName&quot;: &quot;mark&quot; }
+                            {{/helpers.highlight}}
+                        &lt;/a&gt;
+                    &lt;/h4&gt;
+                    &lt;h6&gt;
+                    [ {{tags}} ]
+                    &lt;/h6&gt;
+                &lt;/div&gt;
+            {{ end }}
+            {{ partial &quot;pagination&quot; .}}
+            `
+        }
+    })
+);
+</code></pre><p>Here, I&rsquo;m looping through all of my pages, then displaying an image for each page, followed by the date that the blog was written, and the title of each blog.</p>
+<h4 id="search-bar">Search Bar</h4>
+<p>Results should be displayed now. Next, we&rsquo;ll add the search box which will filter our results.</p>
+<p>In the HTML file, add the following div:</p>
+<p><code>&lt;div id=&quot;search-box&quot;&gt;&lt;/div&gt;</code></p>
+<p>Back in the <code>search.js</code> file, we&rsquo;ll initialize a search box widget:</p>
+<pre tabindex="0"><code>search.addWidget(
+    instantsearch.widgets.searchBox({
+        container: '#search-box',
+        placeholder: &quot;Search for articles&quot;,
+        autofocus: true
+    })
+);
+</code></pre><p>Again, the container will look for the HTML element that you enter, and inject that widget into the HTML.</p>
+<h4 id="adding-other-widgets">Adding Other Widgets</h4>
+<p>As mentioned, Algolia has a <a href="https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/js/">bunch of widgets</a> that you can configure. We&rsquo;ve already added the Hits widget, which displays our results, and the Search Box widget, which displays a search box.</p>
+<p>For my site, I also wanted categories/tags so that users can quickly sort an article by the category. I also wanted pagination below the results so users can navigate through my content.</p>
+<p>Again, we need an empty div in our HTML. So for these, I will add the following in my HTML:</p>
+<pre tabindex="0"><code>&lt;div id=&quot;menu&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;pagination&quot;&gt;&lt;/div&gt;
+</code></pre><p>For the categories/tags, you can use a Refinement List widget. But I went with the Menu widget which is pretty similar. Initialize it with:</p>
+<pre tabindex="0"><code>search.addWidget(
+    instantsearch.widgets.menu({
+        container: '#menu',
+        attribute: 'tags',
+        showMore: true,
+        limit: 3,
+        sortBy: ['count:desc']
+    })
+);
+</code></pre><p>Here, we are filtering by tags, which is a data attribute in my search index JSON. I also enabled a &ldquo;Show More&rdquo; button that shows all of my tags.</p>
+<p>The Pagination widget was added like so:</p>
+<pre tabindex="0"><code>search.addWidget(
+    instantsearch.widgets.pagination({
+        container: '#pagination',
+        scrollTo: false,
+        showFirst: false,
+        showLast: false,
+        showPrevious: true
+    })
+);
+</code></pre><h4 id="customizing-widgets">Customizing Widgets</h4>
+<p>Finally, we&rsquo;ve got a fully functioning Search. But the CSS may not look the way we want it to. You can customize the CSS by overriding the classes to your needs. Remember to test it out for both mobile and desktop devices!</p>
+<h3 id="finished">Finished!</h3>
+<p>Now, we&rsquo;ve got a fully functioning Search on our Hugo site!</p>
+<p>For more information:</p>
+<ul>
+<li><a href="https://forestry.io/blog/search-with-algolia-in-hugo/">https://forestry.io/blog/search-with-algolia-in-hugo/</a></li>
+</ul>
+<p><strong>Thanks for reading! 🙌</strong></p>
+<p><strong>Please react or comment to this article, down below!</strong></p>
 
               </div>
           </div>
@@ -329,7 +456,7 @@ Please react or comment to this article, down below!</p>
           <div class="content">
             <span class="small">Prev case</span>
             <h5 class="title"><a class="text-dark"
-                href="https://anthonydellavecchia.com/blog/email-forwarding/">How to Forward Emails to Your Domain</a></h5>
+                href="https://anthonydellavecchia.com/blog/down-time/">Is 99% Good?</a></h5>
           </div>
         </div>
         
@@ -337,35 +464,18 @@ Please react or comment to this article, down below!</p>
           
           <ul class="unstyle-list big">
             <li>
-              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fdown-time%2f"><i
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2falgolia%2f"><i
                   class="fa fa-facebook-official btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fdown-time%2f"><i
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2falgolia%2f"><i
                   class="fa fa-linkedin-square btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fdown-time%2f"><i
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2falgolia%2f"><i
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
-        </div>
-        
-        <div class="next d-flex align-items-center">
-          <div class=" content text-right">
-            <span class="small">Next case</span>
-            <h5 class="title">
-              <a class="text-dark" href="https://anthonydellavecchia.com/blog/algolia/">How to Add Search to Your Hugo Static Site</a>
-            </h5>
-          </div>
-          <div class="icon ml-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
-              <g data-name="Group 1244" fill="#2d2d2d">
-                <path data-name="Path 1456" d="M12.162 12.725L2.416 26.87l.978 1.41 9.746-14.138z" />
-                <path data-name="Path 1455" d="M2.416 1.415l9.743 14.141.975-1.414L3.39 0z" />
-              </g>
-            </svg>
-          </div>
         </div>
         
       </nav>

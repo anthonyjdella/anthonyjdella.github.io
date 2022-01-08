@@ -288,7 +288,22 @@ cd ..</p>
 git branch my-temporary-work
 git checkout master
 git merge my-temporary-work
-</code></pre>
+</code></pre><h3 id="algolia-search-for-blog-posts">Algolia Search for Blog Posts</h3>
+<p>When creating a new blog post, I need to update my Algolia search index (in JSON).
+To do this,</p>
+<h5 id="step-1-1">STEP 1:</h5>
+<ul>
+<li>Create a new blog</li>
+</ul>
+<h5 id="step-2-1">STEP 2:</h5>
+<ul>
+<li><code>hugo -t portio</code></li>
+</ul>
+<h5 id="step-3-1">STEP 3:</h5>
+<ul>
+<li><code>npm run algolia</code> which will update the JSON</li>
+</ul>
+
               </div>
           </div>
       </div>

@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://anthonydellavecchia.com/</loc>
-    <lastmod>2022-01-04T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/</loc>
-    <lastmod>2022-01-04T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/algolia/</loc>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/how-to/</loc>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/javascript/</loc>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/webdev/</loc>
+    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/devops/</loc>
     <lastmod>2022-01-04T12:49:27+06:00</lastmod>
@@ -17,16 +32,10 @@
     <loc>https://anthonydellavecchia.com/tags/resiliency/</loc>
     <lastmod>2022-01-04T12:49:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
-    <lastmod>2022-01-04T12:49:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/tags/domain/</loc>
     <lastmod>2021-12-30T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/email-forwarding/</loc>
-    <lastmod>2021-12-30T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/how-to/</loc>
     <lastmod>2021-12-30T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/analytics/</loc>
@@ -68,9 +77,6 @@
     <loc>https://anthonydellavecchia.com/tags/firebase/</loc>
     <lastmod>2021-10-20T12:49:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/javascript/</loc>
-    <lastmod>2021-10-20T12:49:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/tags/json/</loc>
     <lastmod>2021-10-20T12:49:27+06:00</lastmod>
   </url><url>
@@ -90,9 +96,6 @@
     <lastmod>2021-09-28T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/portfolio/this-site/</loc>
-    <lastmod>2021-09-27T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/webdev/</loc>
     <lastmod>2021-09-27T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/best-practices/</loc>
