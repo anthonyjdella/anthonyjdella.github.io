@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSON Resume Themes</title>
-      <link>https://anthonydellavecchia.com/portfolio/themes/</link>
+      <link>https://anthonydellavecchia.com/portfolio/json-resume-themes/</link>
       <pubDate>Mon, 01 Nov 2021 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/portfolio/themes/</guid>
+      <guid>https://anthonydellavecchia.com/portfolio/json-resume-themes/</guid>
       <description>I customized and tweaked multiple existing themes for my resume, which can be viewed in conjunction with my JSON Resume. I didn&amp;rsquo;t build these from scratch, only customized them to my liking. Currently I have customized 14 themes, all of which can be viewed from the homepage of this site.
 Users can easily view my Resume by selecting a different one from a dropdown menu.
 Each theme is unique and has a different style for different audiences.</description>
@@ -20,20 +20,20 @@ Each theme is unique and has a different style for different audiences.</descrip
     
     <item>
       <title>JSON Resume</title>
-      <link>https://anthonydellavecchia.com/portfolio/json-functions/</link>
+      <link>https://anthonydellavecchia.com/portfolio/json-resume/</link>
       <pubDate>Wed, 20 Oct 2021 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/portfolio/json-functions/</guid>
+      <guid>https://anthonydellavecchia.com/portfolio/json-resume/</guid>
       <description>JSON Resume is an open source project to standardize JSON-based resumes. JSON is a widely used file format that most developers are familiar with, so this is a great tool for developers. With this initiative, put your resume into a JSON file and it can be used with various front-ends. One resume with multiple themes!
 http://registry.jsonresume.org is the webpage used for that project. If you append your GitHub username to that URL (e.</description>
     </item>
     
     <item>
       <title>LinkedIn to JSON Chrome Extension</title>
-      <link>https://anthonydellavecchia.com/portfolio/linkedin-to-json/</link>
+      <link>https://anthonydellavecchia.com/portfolio/linkedin-to-json-chrome-extension/</link>
       <pubDate>Sun, 10 Oct 2021 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/portfolio/linkedin-to-json/</guid>
+      <guid>https://anthonydellavecchia.com/portfolio/linkedin-to-json-chrome-extension/</guid>
       <description>LinkedIn to JSON Resume is a Chrome Extension that fetches data from your LinkedIn profile and exports the data into JSON. This JSON can then be used with the JSON Resume Schema. I use LinkedIn a lot and thought that this tool would be a great way to have a &amp;lsquo;single source of truth&amp;rsquo;. So with this, if I keep my LinkedIn up to date, I won&amp;rsquo;t need to manage a resume or JSON file.</description>
     </item>
     
@@ -49,10 +49,10 @@ Since my main goal was to quickly create a website, I used Hugo, a popular open-
     
     <item>
       <title>Automated Job Search</title>
-      <link>https://anthonydellavecchia.com/portfolio/web-scraping/</link>
+      <link>https://anthonydellavecchia.com/portfolio/automated-job-search/</link>
       <pubDate>Wed, 21 Mar 2018 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/portfolio/web-scraping/</guid>
+      <guid>https://anthonydellavecchia.com/portfolio/automated-job-search/</guid>
       <description>I wanted to be alerted of new job postings, so I created this script. The source code can be found on GitHub and an article/blog post with instructions on how to build it is found here.
 In summary, it uses Puppeteer, an Automation library that automatically controls Chrome, to visit job seeking websites. Then, it scrapes that data, formats it, and sends those job postings to me via email.</description>
     </item>

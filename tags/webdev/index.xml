@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 08 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Add Search to Your Hugo Static Site</title>
-      <link>https://anthonydellavecchia.com/blog/algolia/</link>
+      <link>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</link>
       <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/blog/algolia/</guid>
+      <guid>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</guid>
       <description>After writing multiple blog posts, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&amp;rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page. Finding an article would be difficult and a bad user experience. Adding a search bar, as well as tag filters, would fix this issue, so I did some research on how to implement this for my website.</description>
     </item>
     

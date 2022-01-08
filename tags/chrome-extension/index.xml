@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 10 Oct 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LinkedIn to JSON Chrome Extension</title>
-      <link>https://anthonydellavecchia.com/portfolio/linkedin-to-json/</link>
+      <link>https://anthonydellavecchia.com/portfolio/linkedin-to-json-chrome-extension/</link>
       <pubDate>Sun, 10 Oct 2021 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/portfolio/linkedin-to-json/</guid>
+      <guid>https://anthonydellavecchia.com/portfolio/linkedin-to-json-chrome-extension/</guid>
       <description>LinkedIn to JSON Resume is a Chrome Extension that fetches data from your LinkedIn profile and exports the data into JSON. This JSON can then be used with the JSON Resume Schema. I use LinkedIn a lot and thought that this tool would be a great way to have a &amp;lsquo;single source of truth&amp;rsquo;. So with this, if I keep my LinkedIn up to date, I won&amp;rsquo;t need to manage a resume or JSON file.</description>
     </item>
     

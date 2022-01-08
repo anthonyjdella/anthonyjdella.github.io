@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>Magic Numbers</title>
+  <title>Is 99% Good?</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -182,12 +182,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
-        <h3 class="breadCrumb__title">Magic Numbers</h3>
+        <h3 class="breadCrumb__title">Is 99% Good?</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Magic Numbers</li>
+            <li class="breadcrumb-item active" aria-current="page">Is 99% Good?</li>
           </ol>
         </nav>
       </div>
@@ -221,19 +221,21 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="singleBlog__feature">
-                  <img src=https://anthonydellavecchia.com/images/single-blog/magic-number.png alt="feature-image">
+                  <img src=https://anthonydellavecchia.com/images/blog/downtime-logo-black.png alt="feature-image">
               </div>
           </div>
           <div class="col-lg-12">
             <div class="blog-by">
               <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
                 <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
-                <li class="breadcrumb-item">on April 17, 2018</li>
+                <li class="breadcrumb-item">on January 4, 2022</li>
               </ul>
               <div class="vertical-line"></div>
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#best-practices &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#devops &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#resiliency &nbsp; </a>
                 
               </div>
             </div>
@@ -242,43 +244,49 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <p>Today, I got feedback from a code review and learned something new. It was about <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">&ldquo;magic numbers&rdquo;</a>, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.</p>
-<p>I&rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&rsquo;t think of that for &ldquo;magic number&rdquo; situations. It&rsquo;s a pretty simple concept but I just wanted to share what I learned.</p>
-<h3 id="magic-numbers-are-bad">Magic Numbers are Bad</h3>
-<p>Magic numbers are language agnostic, but below, you&rsquo;ll see a code snippet in Java WITH magic numbers (the bad way).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MagicNumber</span> <span style="color:#f92672">{</span>
-
-    String pipeDelimitedString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This|is|an|example|of|Magic|Numbers|123 Parker Road|cityline@gmail.com&#34;</span><span style="color:#f92672">;</span>
-    String <span style="color:#f92672">[]</span> splitString <span style="color:#f92672">=</span> pipeDelimitedString<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\|&#34;</span><span style="color:#f92672">);</span>
-
-    obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>7<span style="color:#f92672">]);</span>
-    obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>8<span style="color:#f92672">]);</span>           
-<span style="color:#f92672">}</span> </code></pre></div>
-<p>As you can see, I am simply splitting a pipe delimited string that contains some useful data (Home Address and Email Address).</p>
-<p>splitString[7] refers to the 8th element, or 123 Parker Road, which is a Home Address</p>
-<p>splitString[8] refers to the 9th element, or <a href="mailto:cityline@gmail.com">cityline@gmail.com</a>, which is an Email Address</p>
-<h3 id="why-is-that-bad-well-its-not-easy-to-read">Why is that bad? We’ll it’s not easy to read.</h3>
-<p>splitString[n], where n is a number, may not mean anything from an outsider looking at your code. The numbers 7 &amp; 8 have no meaning!</p>
-<p>Now, you’ll see a code snippet in Java WITHOUT magic numbers (the good way).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MagicNumber</span> <span style="color:#f92672">{</span>
-  
-  String pipeDelimitedString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This|is|an|example|of|Magic|Numbers|123 Parker Road|cityline@gmail.com&#34;</span><span style="color:#f92672">;</span>
-  String <span style="color:#f92672">[]</span> splitString <span style="color:#f92672">=</span> pipeDelimitedString<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\|&#34;</span><span style="color:#f92672">);</span>
-  
-  obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>Constants<span style="color:#f92672">.</span><span style="color:#a6e22e">HOME_ADDRESS</span><span style="color:#f92672">]);</span>
-  obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>Constants<span style="color:#f92672">.</span><span style="color:#a6e22e">EMAIL_ADDRESS</span><span style="color:#f92672">]);</span>           
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Constants</span> <span style="color:#f92672">{</span>
-  
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> HOME_ADDRESS <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> EMAIL_ADDRESS <span style="color:#f92672">=</span> 8<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span> </code></pre></div>
-<p>I’ve created a constants class, with some constants (HOME_ADDRESS = 7 and EMAIL_ADDRESS = 8).</p>
-<p>Constants.HOME_ADDRESS &amp; Constants.EMAIL_ADDRESS are much easier to understand and now have meaning!</p>
-<h3 id="if-you-arent-convinced-whats-easier-to-read">If you aren’t convinced, what’s easier to read:</h3>
-<p>splitString[Constants.HOME_ADDRESS] or splitString[7]?</p>
-<p>Again, this is just ONE example of magic numbers but there are many more. Thanks for reading!</p>
+                <p>If you ever took a test at school, you&rsquo;d probably be really happy with getting a 99 grade. After all, it&rsquo;s almost a perfect score.</p>
+<p>But when you&rsquo;re talking about software systems, is 99% availability good?</p>
+<p>Well, if your system needs to be available 24/7 everyday, <strong>99% won&rsquo;t cut it</strong>.</p>
+<h3 id="downtime-table">Downtime Table</h3>
+<p>Take a look at the below table. It shows how much downtime (in time) equals a given percentage.</p>
+<table>
+<thead>
+<tr>
+<th>Availability       </th>
+<th>Annual Downtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>99%</td>
+<td>3 days, 15 hours, 40 minutes</td>
+</tr>
+<tr>
+<td>99.9%</td>
+<td>8 hours, 46 minutes</td>
+</tr>
+<tr>
+<td>99.99%</td>
+<td>52 minutes, 36 seconds</td>
+</tr>
+<tr>
+<td>99.999%</td>
+<td>5.26 minutes</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h3 id="whats-this-mean">What&rsquo;s this Mean?</h3>
+<p>If your system should be available at all times, a 99% availability means that your system can have almost 4 days of downtime per year! For a system that needs to be available, that is a terribly long time.</p>
+<p>Imagine if you have a business critical system that fails. If it was down for almost 4 days, your company could lose millions/billions of dollars! Take for example, when <a href="https://en.wikipedia.org/wiki/2021_Facebook_outage">Facebook was down in 2021</a> for about 7 hours. Their stock dropped 5%, or $40 billion dollars! This was only for a 7 hour outage. Can you imagine if they had just 99% availability and Facebook was down for 4 days?</p>
+<h3 id="what-should-you-aim-for">What should you aim for?</h3>
+<p>This depends on your system, and usually a probability or downtime measurement (rather than percentage) should be given. &ldquo;Five 9&rsquo;s&rdquo; is a common &ldquo;standard&rdquo; that systems try to aim for. <strong>That is 99.999% availability (hence five 9s)</strong>. Standards is in quotes because it really isn&rsquo;t a standard, it&rsquo;s just what&rsquo;s commonly mentioned in the industry as a goal to achieve.</p>
+<p>Check out this <a href="https://en.wikipedia.org/wiki/High_availability">Wikipedia article</a> for more information.</p>
+<p>Thanks for reading!
+Please react or comment to this article, down below!</p>
 
               </div>
           </div>
@@ -321,7 +329,7 @@
           <div class="content">
             <span class="small">Prev case</span>
             <h5 class="title"><a class="text-dark"
-                href="https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/">How to Never Miss Out on a Job Opening</a></h5>
+                href="https://anthonydellavecchia.com/blog/how-to-forward-emails-to-your-domain/">How to Forward Emails to Your Domain</a></h5>
           </div>
         </div>
         
@@ -329,15 +337,15 @@
           
           <ul class="unstyle-list big">
             <li>
-              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fis-99-good%2f"><i
                   class="fa fa-facebook-official btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fis-99-good%2f"><i
                   class="fa fa-linkedin-square btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fis-99-good%2f"><i
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
@@ -347,7 +355,7 @@
           <div class=" content text-right">
             <span class="small">Next case</span>
             <h5 class="title">
-              <a class="text-dark" href="https://anthonydellavecchia.com/blog/building-this-site/">Building This Site</a>
+              <a class="text-dark" href="https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/">How to Add Search to Your Hugo Static Site</a>
             </h5>
           </div>
           <div class="icon ml-3">

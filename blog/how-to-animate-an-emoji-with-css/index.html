@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>Magic Numbers</title>
+  <title>How to Animate an Emoji with CSS</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -182,12 +182,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
-        <h3 class="breadCrumb__title">Magic Numbers</h3>
+        <h3 class="breadCrumb__title">How to Animate an Emoji with CSS</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Magic Numbers</li>
+            <li class="breadcrumb-item active" aria-current="page">How to Animate an Emoji with CSS</li>
           </ol>
         </nav>
       </div>
@@ -221,19 +221,25 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="singleBlog__feature">
-                  <img src=https://anthonydellavecchia.com/images/single-blog/magic-number.png alt="feature-image">
+                  <img src=https://anthonydellavecchia.com/images/blog/wave-emoji.png alt="feature-image">
               </div>
           </div>
           <div class="col-lg-12">
             <div class="blog-by">
               <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
                 <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
-                <li class="breadcrumb-item">on April 17, 2018</li>
+                <li class="breadcrumb-item">on December 1, 2021</li>
               </ul>
               <div class="vertical-line"></div>
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#best-practices &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#css &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#animation &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#front-end &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#how-to &nbsp; </a>
                 
               </div>
             </div>
@@ -242,43 +248,54 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <p>Today, I got feedback from a code review and learned something new. It was about <a href="https://en.wikipedia.org/wiki/Magic_number_(programming)">&ldquo;magic numbers&rdquo;</a>, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.</p>
-<p>I&rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&rsquo;t think of that for &ldquo;magic number&rdquo; situations. It&rsquo;s a pretty simple concept but I just wanted to share what I learned.</p>
-<h3 id="magic-numbers-are-bad">Magic Numbers are Bad</h3>
-<p>Magic numbers are language agnostic, but below, you&rsquo;ll see a code snippet in Java WITH magic numbers (the bad way).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MagicNumber</span> <span style="color:#f92672">{</span>
+                <p>If you go to the home page of <a href="https://anthonydellavecchia.com">this website</a>, you might find some hidden &ldquo;easter eggs&rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&rsquo;s just a waving hand, that doesn&rsquo;t actually wave. There is no animation, so I wanted to make it move. It&rsquo;s actually pretty easy!</p>
+<h3 id="step-1-create-html">Step 1: Create HTML</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;waving&#34;</span> <span style="color:#a6e22e">data-hover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;👋&#34;</span>&gt;
+        Hi
+    &lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<p>All I&rsquo;ve done here is create a simple div with the text, &ldquo;Hi&rdquo;. Then I&rsquo;ve given it 2 HTML attributes, <code>class</code> and <code>data-hover</code>. The contents within <code>data-hover</code> ( 👋 ) is what will be animated.</p>
+<h3 id="step-2-create-css">Step 2: Create CSS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">before</span> {
+  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>hover);
+}
 
-    String pipeDelimitedString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This|is|an|example|of|Magic|Numbers|123 Parker Road|cityline@gmail.com&#34;</span><span style="color:#f92672">;</span>
-    String <span style="color:#f92672">[]</span> splitString <span style="color:#f92672">=</span> pipeDelimitedString<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\|&#34;</span><span style="color:#f92672">);</span>
+.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">animation-name</span>: wave-animation;
+  <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">3.0</span><span style="color:#66d9ef">s</span>;
+  <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
+  <span style="color:#66d9ef">transform-origin</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
+}
 
-    obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>7<span style="color:#f92672">]);</span>
-    obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>8<span style="color:#f92672">]);</span>           
-<span style="color:#f92672">}</span> </code></pre></div>
-<p>As you can see, I am simply splitting a pipe delimited string that contains some useful data (Home Address and Email Address).</p>
-<p>splitString[7] refers to the 8th element, or 123 Parker Road, which is a Home Address</p>
-<p>splitString[8] refers to the 9th element, or <a href="mailto:cityline@gmail.com">cityline@gmail.com</a>, which is an Email Address</p>
-<h3 id="why-is-that-bad-well-its-not-easy-to-read">Why is that bad? We’ll it’s not easy to read.</h3>
-<p>splitString[n], where n is a number, may not mean anything from an outsider looking at your code. The numbers 7 &amp; 8 have no meaning!</p>
-<p>Now, you’ll see a code snippet in Java WITHOUT magic numbers (the good way).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MagicNumber</span> <span style="color:#f92672">{</span>
-  
-  String pipeDelimitedString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This|is|an|example|of|Magic|Numbers|123 Parker Road|cityline@gmail.com&#34;</span><span style="color:#f92672">;</span>
-  String <span style="color:#f92672">[]</span> splitString <span style="color:#f92672">=</span> pipeDelimitedString<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\|&#34;</span><span style="color:#f92672">);</span>
-  
-  obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>Constants<span style="color:#f92672">.</span><span style="color:#a6e22e">HOME_ADDRESS</span><span style="color:#f92672">]);</span>
-  obj<span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">(</span>splitString<span style="color:#f92672">[</span>Constants<span style="color:#f92672">.</span><span style="color:#a6e22e">EMAIL_ADDRESS</span><span style="color:#f92672">]);</span>           
-<span style="color:#f92672">}</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Constants</span> <span style="color:#f92672">{</span>
-  
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> HOME_ADDRESS <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> EMAIL_ADDRESS <span style="color:#f92672">=</span> 8<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span> </code></pre></div>
-<p>I’ve created a constants class, with some constants (HOME_ADDRESS = 7 and EMAIL_ADDRESS = 8).</p>
-<p>Constants.HOME_ADDRESS &amp; Constants.EMAIL_ADDRESS are much easier to understand and now have meaning!</p>
-<h3 id="if-you-arent-convinced-whats-easier-to-read">If you aren’t convinced, what’s easier to read:</h3>
-<p>splitString[Constants.HOME_ADDRESS] or splitString[7]?</p>
-<p>Again, this is just ONE example of magic numbers but there are many more. Thanks for reading!</p>
+@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">wave-animation</span> {
+  <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">10</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">20</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-8.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">30</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">40</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-4.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">50</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">10.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">60</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+  }
+  <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
+      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+  }
+}</code></pre></div>
+<p><code>.waving:before</code> defines the content of which is to be displayed ( 👋 ).</p>
+<p><code>.waving:hover</code> defines what action happens when we hover over that element. In this case we have an <code>animation-name</code> which is defined below in <code>@keyframes wave-animation</code>. We also give it an animation-duration of <code>3 seconds</code> and tell it to <code>animate infinitely</code>.</p>
+<p><code>@keyframes wave-animation</code> is where we create the actual animation. In this case, I wanted to make the hand wave, so to do this I just want the hand to rotate back and forth. I add different keyframes and tell it to rotate a certain number of degrees in certain intervals. This mimics 👋 actually waving!</p>
+<p>You can apply this basic template to any emoji. Be creative! For example, you can try to animate a rocket 🚀 using CSS. Just think of what type of animation you want it to do (possibly translate up and down).</p>
 
               </div>
           </div>
@@ -321,7 +338,7 @@
           <div class="content">
             <span class="small">Prev case</span>
             <h5 class="title"><a class="text-dark"
-                href="https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/">How to Never Miss Out on a Job Opening</a></h5>
+                href="https://anthonydellavecchia.com/blog/designing-an-animated-logo/">Designing an Animated Logo</a></h5>
           </div>
         </div>
         
@@ -329,15 +346,15 @@
           
           <ul class="unstyle-list big">
             <li>
-              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-animate-an-emoji-with-css%2f"><i
                   class="fa fa-facebook-official btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-animate-an-emoji-with-css%2f"><i
                   class="fa fa-linkedin-square btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fmagic-numbers%2f"><i
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-animate-an-emoji-with-css%2f"><i
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
@@ -347,7 +364,7 @@
           <div class=" content text-right">
             <span class="small">Next case</span>
             <h5 class="title">
-              <a class="text-dark" href="https://anthonydellavecchia.com/blog/building-this-site/">Building This Site</a>
+              <a class="text-dark" href="https://anthonydellavecchia.com/blog/how-to-check-your-website-users/">How to Check your Website Users (Minus Yourself)</a>
             </h5>
           </div>
           <div class="icon ml-3">

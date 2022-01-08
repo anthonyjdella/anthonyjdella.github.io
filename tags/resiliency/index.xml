@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 04 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/resiliency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Is 99% Good?</title>
-      <link>https://anthonydellavecchia.com/blog/down-time/</link>
+      <link>https://anthonydellavecchia.com/blog/is-99-good/</link>
       <pubDate>Tue, 04 Jan 2022 12:49:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/blog/down-time/</guid>
+      <guid>https://anthonydellavecchia.com/blog/is-99-good/</guid>
       <description>If you ever took a test at school, you&amp;rsquo;d probably be really happy with getting a 99 grade. After all, it&amp;rsquo;s almost a perfect score.
 But when you&amp;rsquo;re talking about software systems, is 99% availability good?
 Well, if your system needs to be available 24/7 everyday, 99% won&amp;rsquo;t cut it.

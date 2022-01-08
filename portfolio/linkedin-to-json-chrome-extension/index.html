@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>This Website</title>
+  <title>LinkedIn to JSON Chrome Extension</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -203,10 +203,10 @@
     <div class="row mb-5">
       <div class="col-lg-10 offset-lg-1 text-center">
         <div class="case-details-title">
-          <h1>This Website</h1>
+          <h1>LinkedIn to JSON Chrome Extension</h1>
         </div>
         <p>
-          This website was built by myself with the help of Hugo, Portio theme, Firebase, and GitHub Pages.
+          This Chrome Extension collects data from your LinkedIn profile and exports it into JSON, which can be used with the JSON Resume standard.
         </p>
         <div class="case-details-info">
           <div class="case-details-info-item">
@@ -215,11 +215,11 @@
           </div>
           <div class="case-details-info-item">
             <h5>Service</h5>
-            <p>Web Development, UX Design</p>
+            <p>Chrome Extension, Javascript, JSON</p>
           </div>
           <div class="case-details-info-item">
             <h5>Date</h5>
-            <p>September 27, 2021</p>
+            <p>October 10, 2021</p>
           </div>
         </div>
         <div class="row mb-5">
@@ -227,7 +227,7 @@
             <div class="case-details-service">
               <h3>Challenge</h3>
               <p>
-                I don&#39;t have a personal brand which displays my work, thoughts, skills, and experience.
+                JSON Resume is a standardized JSON-based resume. Someone created an open-source Chrome Extension that looks at your LinkedIn profile and exports the data into JSON. However, this tool was not updated with the most recent JSON Resume Schema, and also did not work with my customized schema.
               </p>
             </div>
           </div>
@@ -235,72 +235,26 @@
             <div class="case-details-service">
               <h3>Solution</h3>
               <p>
-                Create a simple website that showcases my professional skills.
+                Since I created my own JSON Resume schema, I wanted it to work with this tool. So, I added functionality to use my custom schema, as well as v1 of the JSON Resume project.
               </p>
             </div>
           </div>
         </div>
         <div class="case-details-thumb mb-5">
-          <img src="https://anthonydellavecchia.com/images/portfolio/this-site.png" alt="case-details" />
+          <img src="https://anthonydellavecchia.com/images/portfolio/extension3.png" alt="case-details" />
         </div>
-        <div style="text-align: justify;"><p>Initially, the goal of this site was to quickly create and deploy a personal website. However, over time, I became more and more invested in it. I&rsquo;ve spend HOURS customizing and adding in new features. Check out <a href="https://github.com/users/anthonyjdella/projects/6">this Kanban board</a> which shows how many enhancements I&rsquo;ve made.</p>
-<p>Since my main goal was to <em>quickly</em> create a website, I used <a href="https://gohugo.io/">Hugo</a>, a popular open-source static site generator. Hugo is built with Go lang. I decided to pick it just because of its popularity, speed, and available themes. To quickly make this site, I used a pre-built theme called <a href="https://github.com/StaticMania/portio-hugo">Portio</a>, however I wanted to customize it. And customize it is what I did! Since the start of this project, I&rsquo;ve added a ton of customizations on top of the original theme. For example, I added a dark-mode theme, added a cool slide out menu, added multiple CSS animations, and much more!</p>
-<p>You can see my <a href="https://github.com/anthonyjdella/portio-hugo">forked project</a> which I used as a Git submodule to my <a href="https://github.com/anthonyjdella/personal-website">source code</a>. I also created a <a href="https://github.com/anthonyjdella/anthonyjdella.github.io">seperate repository</a> to house only the generated static files and deploy the site using <a href="https://pages.github.com/">GitHub Pages</a>. I also set up <a href="https://github.com/features/actions">Github Actions</a> to deploy my code to a hosting platform, <a href="https://firebase.google.com/">Firebase</a>.</p>
-<p>I don&rsquo;t do a lot of front-end work at my current job, so this project has helped me brush up on those skills. This website is ever growing and I intent to maintain it for some time. I will continue adding <a href="https://github.com/users/anthonyjdella/projects/6">new features</a>, blog posts, personal projects, and more!</p>
-<h4 id="design">Design</h4>
-<ul>
-<li>
-<p><a href="https://github.com/anthonyjdella/personal-website">Source code</a></p>
-</li>
-<li>
-<p><a href="https://github.com/anthonyjdella/portio-hugo">Source code for Theme</a></p>
-</li>
-<li>
-<p><a href="https://github.com/anthonyjdella/anthonyjdella.github.io">Static site code</a></p>
-</li>
-</ul>
-<h4 id="deploy">Deploy</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to Firebase Hosting on merge</span>
-<span style="color:#f92672">&#39;on&#39;</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">master</span>
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build_and_deploy</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
-      - <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">          echo &#39;Deploying to Firebase...&#39;
-</span><span style="color:#e6db74">          cd anthonyjdella</span>          
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
-          <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
-          <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
-          <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
-          <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></code></pre></div>
-<h4 id="build">Build</h4>
-<p>As shown above, there are three code repositories. The Source code for Theme &amp; Static site code are submodules of the source code.</p>
-<ul>
-<li>
-<p>After making changes, start the server locally with <code>hugo serve</code>.</p>
-</li>
-<li>
-<p>After viewing changes, build the static files using <code>hugo</code> or <code>hugo -t portio</code>.</p>
-</li>
-<li>
-<p>Push changes in <code>public/</code> to the static site code repository to deploy the site.</p>
-</li>
-<li>
-<p>Push changes in <code>themes/portio</code> to the source code for theme to make changes to the theme.</p>
-</li>
-<li>
-<p>GitHub Actions picks up the changes and deploys the site to Firebase, where it is hosted (using a custom domain name).</p>
-</li>
-</ul>
+        <div style="text-align: justify;"><p><a href="https://github.com/joshuatz/linkedin-to-jsonresume">LinkedIn to JSON Resume</a> is a Chrome Extension that fetches data from your LinkedIn profile and exports the data into JSON. This JSON can then be used with the <a href="https://github.com/jsonresume/resume-schema">JSON Resume Schema</a>. I use LinkedIn a lot and thought that this tool would be a great way to have a <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">&lsquo;single source of truth&rsquo;</a>. So with this, if I keep my LinkedIn up to date, I won&rsquo;t need to manage a resume or JSON file.</p>
+<p><code>In the past, I found it annoying to have to update both a resume and LinkedIn, but with this, I only need to update my LinkedIn!</code></p>
+<p>However, there were some issues with this project.</p>
+<ol>
+<li>It was outdated and used an old version of the JSON Schema.</li>
+<li>The exported JSON had to be based on the supported schema definition.</li>
+</ol>
+<p>Therefore, I updated it to accept the newest JSON schema definition (version 1.0.0) and added support for my customized JSON schema. I created my own schema, so that I could use custom fields for my JSON resume.</p>
+<p>After adding these features, all I have to do is add build the project and add the Extension to my Chrome browser. Then, when I visit a LinkedIn profile, I can easily export that profile into a JSON file.</p>
+<p><img src="/images/portfolio/linkedin.png" alt="Image">
+Here, you can see the Chrome Extension in use, when visiting a LinkedIn profile.</p>
+<p>View the source code here: <a href="https://github.com/anthonyjdella/customized-linkedin-to-jsonresume">@customized-registry-functions</a></p>
 </div>
       </div>
     </div>
@@ -320,7 +274,7 @@
             <div class="content">
               <span class="small">Prev case</span>
               <h5 class="title"><a class="text-dark"
-                  href="https://anthonydellavecchia.com/portfolio/automated-job-search/">Automated Job Search</a></h5>
+                  href="https://anthonydellavecchia.com/portfolio/this-site/">This Website</a></h5>
             </div>
           </div>
           
@@ -328,15 +282,15 @@
             
             <ul class="unstyle-list big">
               <li>
-                <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2fthis-site%2f"><i
+                <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2flinkedin-to-json-chrome-extension%2f"><i
                     class="fa fa-facebook-official btn-zoom"></i></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2fthis-site%2f"><i
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2flinkedin-to-json-chrome-extension%2f"><i
                     class="fa fa-linkedin-square btn-zoom"></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2fthis-site%2f"><i
+                <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fportfolio%2flinkedin-to-json-chrome-extension%2f"><i
                     class="fa fa-twitter-square btn-zoom"></i></a>
               </li>
             </ul>
@@ -346,7 +300,7 @@
             <div class=" content text-right">
               <span class="small">Next case</span>
               <h5 class="title">
-                <a class="text-dark" href="https://anthonydellavecchia.com/portfolio/linkedin-to-json-chrome-extension/">LinkedIn to JSON Chrome Extension</a>
+                <a class="text-dark" href="https://anthonydellavecchia.com/portfolio/json-resume/">JSON Resume</a>
               </h5>
             </div>
             <div class="icon ml-3">
