@@ -254,7 +254,7 @@
 <h3 id="summary">Summary</h3>
 <p>To enable searching on a static site, you need to first create a JSON search index which acts as a database for your search results. From there, you update this JSON search index each time you update/create new pages. Then, you access/query the data by using REST API&rsquo;s provided by Algolia. Finally, you display the results on your page.</p>
 <h3 id="getting-started">Getting Started</h3>
-<p>First thing to do is <a href="https://www.algolia.com/users/sign_up">sign up for a free</a> Algolia account (since we&rsquo;re using this service). Algolia is nice because they have great documentation, built-in widgets, provides fast results, and is easy to implement.</p>
+<p>The first thing to do is <a href="https://www.algolia.com/users/sign_up">sign up for a free</a> Algolia account (since we&rsquo;re using this service). Algolia is nice because they have great documentation, built-in widgets, provides fast results, and is easy to implement.</p>
 <h3 id="generate-json-search-index">Generate JSON Search Index</h3>
 <h4 id="configure-output-to-json">Configure Output to JSON</h4>
 <p>Hugo can output content into multiple different file formats (like javascript, xml, toml, etc.). So, we want to set up our project to output JSON. Do this by configuring the <code>config.toml/yaml</code>:</p>
@@ -283,7 +283,7 @@ home = [&quot;HTML&quot;, &quot;Algolia&quot;]
 
 {{- end -}}
 {{- $.Scratch.Get &quot;index&quot; | jsonify -}}
-</code></pre><p>I only want my search look for blog posts, not every static page. To do this, I loop through my pages with the type &ldquo;blog&rdquo;. Then, I create a dictionary which contains multiple key/value pairs of the data that I want. For instance, I want the title of my blog posts, so I create a key (&ldquo;title&rdquo;) and a value (.Title). You can scroll through the code to get an idea of how to scrape other data (like a description, date, etc).</p>
+</code></pre><p>I only want my search to look for blog posts, not every static page. To do this, I loop through my pages with the type &ldquo;blog&rdquo;. Then, I create a dictionary which contains multiple key/value pairs of the data that I want. For instance, I want the title of my blog posts, so I create a key (&ldquo;title&rdquo;) and a value (.Title). You can scroll through the code to get an idea of how to scrape other data (like a description, date, etc).</p>
 <h4 id="generating-the-json">Generating the JSON</h4>
 <p>After the template is created, just re-build the project. Doing this will create a JSON file, which will be used as our search index. In my case, I have a Hugo theme called &ldquo;portio&rdquo;. So, to build my project, I run the command <code>hugo -t portio</code>. After running this command, I have a generated JSON file called <code>algolia.json</code> in my build (public) directory.</p>
 <p>You can beautify this file and verify that all of the data is correctly collected. If data is null or not populated correctly, make some changes to <code>search-index.json</code>. Make sure that you&rsquo;re using the correct <a href="https://gohugo.io/variables/">Hugo variables</a>.</p>
