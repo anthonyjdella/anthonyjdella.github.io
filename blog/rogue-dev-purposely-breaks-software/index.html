@@ -306,15 +306,17 @@
 </ul>
 <p>So what? Well, <code>Marak</code>, the creator of <code>colors</code> (mentioned above) added some code into his project to purposely break it. <strong>He added an infinite loop to purposely break his code!</strong></p>
 <p><img src="/images/blog/infinite-loop.png" alt="Image"></p>
-<p><a href="https://github.com/Marak/colors.js/commit/074a0f8ed0c31c35d13d28632bd8a049ff136fb6">(link to Marak&rsquo;s evil commit)</a></p>
+<p><a href="https://github.com/Marak/colors.js/commit/074a0f8ed0c31c35d13d28632bd8a049ff136fb6">(link to Marak&rsquo;s commit)</a></p>
 <p><strong>This is very much intentional and not an accidental bug. It was malicious.</strong></p>
 <hr>
 <h4 id="why-is-breaking-his-own-software-bad">Why is Breaking his own Software Bad?</h4>
 <p>You may be wondering why breaking his own software is bad? Well, Marak knows that his software is being used by other software. So if his breaks, so will theirs. Think of it as a chain reaction. If his breaks, other software that uses it will break too. Because of <a href="https://en.wikipedia.org/wiki/Dependency_hell">&ldquo;dependency hell&rdquo;</a>, this affects millions of developers.</p>
 <h4 id="why-did-marak-do-this">Why Did Marak Do This?</h4>
 <p>Marak was upset that corporations were using his open-source software and not paying for it. It&rsquo;s basically that simple. He posted an <a href="https://web.archive.org/web/20210628030444/https://marak.com/blog/2021-04-25-monetizing-open-source-is-problematic">article on his blog</a>.</p>
+<h4 id="who-is-right">Who is Right?</h4>
+<p>Most developers are against Marak and his actions, however some are supportive. GitHub and NPM actually suspended his account for this. Some supporters argue that these corporations have no right, because it&rsquo;s his personal software. What do you think?</p>
 <h4 id="how-do-you-fix-it">How Do You Fix It?</h4>
-<p>If your software was using <code>colors</code>, you would have to revert to the previous (non-broken) version. But because of this developer&rsquo;s poor work, you should definitely use another package instead. <a href="https://github.com/chalk/chalk">Chalk</a> is another alternative that is recommended.</p>
+<p>If your software was using <code>colors</code>, you would have to revert to the previous (non-broken) version. But because of this developer&rsquo;s outburst, you should definitely use another package instead. <a href="https://github.com/chalk/chalk">Chalk</a> is another alternative that is recommended.</p>
 <p>It&rsquo;s really important to have a dependency management system in place for your projects. Tools like <a href="https://snyk.io/">Snyk</a>, or <a href="https://www.sonarqube.org/">SonarQube</a> will help you detect dependency issues so you can quickly resolve them.</p>
 <p><strong>For more information:</strong></p>
 <ul>
