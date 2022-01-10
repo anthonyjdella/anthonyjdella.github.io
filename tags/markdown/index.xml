@@ -8,16 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Feb 2018 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo Markdown</title>
+      <title>Hugo Markdown 📋</title>
       <link>https://anthonydellavecchia.com/blog/hugo-markdown/</link>
       <pubDate>Thu, 01 Feb 2018 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/hugo-markdown/</guid>
-      <description>This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
+      <description>TLDR: Just some markdown and what it looks like on this site. This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
 This example Markdown file compliments of markdown-it.github.io
  h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.</description>
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-</description>
     </item>
     
   </channel>

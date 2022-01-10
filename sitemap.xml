@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://anthonydellavecchia.com/</loc>
-    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/</loc>
-    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/dependency/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/devops/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/security/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</loc>
     <lastmod>2022-01-08T12:49:27+06:00</lastmod>
@@ -17,14 +32,8 @@
     <loc>https://anthonydellavecchia.com/tags/javascript/</loc>
     <lastmod>2022-01-08T12:49:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
-    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/tags/webdev/</loc>
     <lastmod>2022-01-08T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/devops/</loc>
-    <lastmod>2022-01-04T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/is-99-good/</loc>
     <lastmod>2022-01-04T12:49:27+06:00</lastmod>

@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Add Search to Your Hugo Static Site</title>
+      <title>How to Add Search to Your Hugo Static Site 🔎</title>
       <link>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</link>
       <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</guid>
-      <description>If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
-After writing multiple blog posts, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&amp;rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page. Finding an article would be difficult and a bad user experience.</description>
+      <description>TLDR: Use Algolia to create fast searching of your website&amp;rsquo;s static pages. This tutorial is for sites using Hugo. If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
+After writing multiple blog posts, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&amp;rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page.</description>
     </item>
     
     <item>

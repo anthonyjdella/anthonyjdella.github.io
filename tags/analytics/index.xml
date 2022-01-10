@@ -8,21 +8,21 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Dec 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Launch Insights</title>
+      <title>Launch Insights 🚀</title>
       <link>https://anthonydellavecchia.com/blog/launch-insights/</link>
       <pubDate>Tue, 28 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/launch-insights/</guid>
-      <description>After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data. Sure, I could do this analysis by myself, but why would I?</description>
+      <description>TLDR: Just some analytics about my website users after I shared it on LinkedIn and other social media sites. After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data.</description>
     </item>
     
     <item>
-      <title>How to Check your Website Users (Minus Yourself)</title>
+      <title>How to Check your Website Users (Minus Yourself) 👥</title>
       <link>https://anthonydellavecchia.com/blog/how-to-check-your-website-users/</link>
       <pubDate>Sat, 04 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-check-your-website-users/</guid>
-      <description>Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
+      <description>TLDR: I explain how you can filter out yourself from Google Analytics so you can see real user data. Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
 Google Analytics, or similar type of analytics tool, is a must have for any front-end developer, as it helps them track user engagement.</description>
     </item>
     
