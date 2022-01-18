@@ -6,11 +6,11 @@
     <description>Recent content in django on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MongoDB Atlas Hackathon</title>
       <link>https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/</link>
-      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      <pubDate>Mon, 17 Jan 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/</guid>
       <description>TLDR: I participated in a MongoDB Hackathon and share what I learned about MongoDB and Django.
