@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Anthony Dellavecchia</title>
+    <link>https://anthonydellavecchia.com/tags/nodejs/</link>
+    <description>Recent content in nodejs on Anthony Dellavecchia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Mar 2018 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Never Miss Out on a Job Opening 🤖</title>
+      <link>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</link>
+      <pubDate>Sat, 31 Mar 2018 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</guid>
+      <description>TLDR: I explain how you can write an automated script that looks at job postings from companies and emails you the results.
+ Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
+How many times have you missed out on job opportunities because you didn’t know a company was hiring for that position? It might be the perfect job for you, but you just didn’t know about it!</description>
+    </item>
+    
+  </channel>
+</rss>

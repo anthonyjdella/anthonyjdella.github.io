@@ -143,8 +143,8 @@
     <strong>Software & Coding</strong>
     <ul class="fa-ul">
         <li><a href="https://github.com/anthonyjdella" target="_blank">GitHub</a></li>
-        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev.to</a></li>
-        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev Community</a></li>
+        <li><a href="https://anthonyjdella.hashnode.dev/" target="_blank">Hash Node</a></li>
         <li><a href="https://medium.com/@anthonyjdella" target="_blank">Medium</a></li>
         <li><a href="https://leetcode.com/anthonyjdella/" target="_blank">Leetcode</a></li>
         <li><a href="https://stackoverflow.com/users/story/9465781" target="_blank">Stack Overflow</a></li>
@@ -160,8 +160,9 @@
 
     <strong>Social Media</strong>
     <ul class="fa-ul">
-        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/anthonyjdella" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
     </ul>
 
     <strong>Schedule A Meeting</strong>
@@ -257,7 +258,9 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <h3 id="tldr-these-are-the-commands-i-use-to-build-this-website">TLDR: These are the commands I use to build this website.</h3>
+                <blockquote>
+<p><strong>TLDR:</strong> These are the commands I use to build this website.</p>
+</blockquote>
 <p>This is for my reference, so I remember how to make changes to this site without any hiccups.</p>
 <ol>
 <li><code>cd into personal-website directory</code></li>
@@ -275,8 +278,8 @@
 <li>GitHub pages will automatically deploy to <code>anthonyjdella.github.io</code>.</li>
 <li>GitHub Actions will pick up changes made to the master branch and deploy to <code>anthonydellavecchia.com</code>, which is hosted on Firebase.</li>
 </ol>
-<h3 id="cicd-error-fix">CI/CD Error Fix</h3>
-<h5 id="step-1">STEP 1:</h5>
+<h2 id="cicd-error-fix">CI/CD Error Fix</h2>
+<h3 id="step-1">STEP 1:</h3>
 <p>If you get the following CI/CD error:</p>
 <pre tabindex="0"><code>Error: fatal: remote error: upload-pack: not our ref 9b3f2092d9959fe1406f9062c5a50a71293636c9
 
@@ -284,42 +287,57 @@ Error: fatal: Fetched in submodule path 'anthonyjdella/public', but it did not c
 
 fatal: 
   Error: The process '/usr/bin/git' failed with exit code 128
-</code></pre><h5 id="step-2">STEP 2:</h5>
+</code></pre><h3 id="step-2">STEP 2:</h3>
 <p>Go into anthonyjdella/ and run:</p>
 <pre tabindex="0"><code>git submodule  update --init --recursive --remote
-</code></pre><h5 id="step-3">STEP 3:</h5>
+</code></pre><h3 id="step-3">STEP 3:</h3>
 <p>cd public/ then
 git status</p>
 <p>Message will show that the HEAD is detached:</p>
 <pre tabindex="0"><code>HEAD detached at 1b2926f
-</code></pre><h5 id="step-4">STEP 4:</h5>
+</code></pre><h3 id="step-4">STEP 4:</h3>
 <p>Go back into anthonyjdella/ by
 cd ..</p>
 <p>Generate static files:</p>
 <pre tabindex="0"><code>hugo -t portio
 </code></pre><p>cd public/</p>
-<h5 id="step-5">STEP 5:</h5>
+<h3 id="step-5">STEP 5:</h3>
 <p>You&rsquo;ll see changes now. Then add and commit them.</p>
 <pre tabindex="0"><code>git commit -m &quot;.....&quot;
 git branch my-temporary-work
 git checkout master
 git merge my-temporary-work
-</code></pre><h3 id="algolia-search-for-blog-posts">Algolia Search for Blog Posts</h3>
+</code></pre><h2 id="algolia-search-for-blog-posts">Algolia Search for Blog Posts</h2>
 <p>When creating a new blog post, I need to update my Algolia search index (in JSON).
 To do this,</p>
-<h5 id="step-1-1">STEP 1:</h5>
+<h3 id="step-1-1">STEP 1:</h3>
 <ul>
 <li>Create a new blog</li>
 </ul>
-<h5 id="step-2-1">STEP 2:</h5>
+<h3 id="step-2-1">STEP 2:</h3>
 <ul>
 <li><code>hugo -t portio</code></li>
 </ul>
-<h5 id="step-3-1">STEP 3:</h5>
+<h3 id="step-3-1">STEP 3:</h3>
 <ul>
 <li><code>npm run algolia</code> which will update the JSON</li>
 </ul>
 
+                <h3>Thanks for reading! 🙌</h3>
+                <div class="row" style="align-items: center; border: 3px outset #5468ff;">
+                  <div id="col-md-2">
+                    <img src=https://anthonydellavecchia.com/images/contact/avatar2.png style="width: 100px; margin-left: 1em;margin-right: 2em;">
+                  </div>
+                  <div id="col-md-10">
+                    <strong>Follow me for more content:</strong>
+                      <ul>
+                        <li>Twitter <a href src="https://twitter.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>Dev Community <a href src="https://dev.to/anthonyjdella">@anthonyjdella</a></li>
+                        <li>LinkedIn <a href src="https://www.linkedin.com/in/anthonydellavecchia/">@anthonydellavecchia</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <strong>Please react or comment to this article, down below!</strong>
               </div>
           </div>
       </div>

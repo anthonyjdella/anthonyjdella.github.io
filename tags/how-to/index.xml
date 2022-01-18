@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>how-to on Anthony Dellavecchia the Software Engineer</title>
+    <title>how-to on Anthony Dellavecchia</title>
     <link>https://anthonydellavecchia.com/tags/how-to/</link>
-    <description>Recent content in how-to on Anthony Dellavecchia the Software Engineer</description>
+    <description>Recent content in how-to on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Sat, 08 Jan 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</guid>
-      <description>TLDR: Use Algolia to create fast searching of your website&amp;rsquo;s static pages. This tutorial is for sites using Hugo. If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
+      <description>TLDR: Use Algolia to create fast searching of your website&amp;rsquo;s static pages. This tutorial is for sites using Hugo.
+ If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
 After writing multiple blog posts, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&amp;rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page.</description>
     </item>
     
@@ -23,7 +24,8 @@ After writing multiple blog posts, I quickly realized that more pages meant more
       <pubDate>Thu, 30 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-forward-emails-to-your-domain/</guid>
-      <description>TLDR: Set up Gmail forwarding so it looks like your email address matches your domain name. Want to organize your email inbox?
+      <description>TLDR: Set up Gmail forwarding so it looks like your email address matches your domain name.
+ Want to organize your email inbox?
 How about exposing a different email address for different purposes?
 I set up email forwarding so that I can receive emails to my existing Gmail inboxes, but use different email address names.
 For example, these are my different email addresses:
@@ -36,7 +38,8 @@ For example, these are my different email addresses:
       <pubDate>Sat, 04 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-check-your-website-users/</guid>
-      <description>TLDR: I explain how you can filter out yourself from Google Analytics so you can see real user data. Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
+      <description>TLDR: I explain how you can filter out yourself from Google Analytics so you can see real user data.
+ Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
 Google Analytics, or similar type of analytics tool, is a must have for any front-end developer, as it helps them track user engagement.</description>
     </item>
     
@@ -46,7 +49,8 @@ Google Analytics, or similar type of analytics tool, is a must have for any fron
       <pubDate>Wed, 01 Dec 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-animate-an-emoji-with-css/</guid>
-      <description>TLDR: You can animate an Emoji (or anything else) by using keyframes in CSS. If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move. It&amp;rsquo;s actually pretty easy!</description>
+      <description>TLDR: You can animate an Emoji (or anything else) by using keyframes in CSS.
+ If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move.</description>
     </item>
     
     <item>
@@ -55,7 +59,8 @@ Google Analytics, or similar type of analytics tool, is a must have for any fron
       <pubDate>Mon, 25 Oct 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/designing-an-animated-logo/</guid>
-      <description>TLDR: I make an animated logo (think of a .GIF) and explain how you can make one too. Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
+      <description>TLDR: I make an animated logo (think of a .GIF) and explain how you can make one too.
+ Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
 Although I have experience with design tools like Photoshop, Lightroom, and Premiere I have never worked with animation. I found a website called SVGator which animates SVG (Scalable Vector Graphics).</description>
     </item>
     
@@ -65,7 +70,8 @@ Although I have experience with design tools like Photoshop, Lightroom, and Prem
       <pubDate>Sat, 31 Mar 2018 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</guid>
-      <description>TLDR: I explain how you can write an automated script that looks at job postings from companies and emails you the results. Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
+      <description>TLDR: I explain how you can write an automated script that looks at job postings from companies and emails you the results.
+ Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
 How many times have you missed out on job opportunities because you didn’t know a company was hiring for that position? It might be the perfect job for you, but you just didn’t know about it!</description>
     </item>
     

@@ -3,24 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://anthonydellavecchia.com/</loc>
-    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/back-end/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/</loc>
-    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/dependency/</loc>
-    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+    <loc>https://anthonydellavecchia.com/tags/database/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/django/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/hackathon/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/mongodb/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/nosql/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/python/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2022-01-16T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/devops/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/news/</loc>
+    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/oss/</loc>
     <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</loc>
     <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/security/</loc>
-    <lastmod>2022-01-09T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
     <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</loc>
@@ -114,6 +141,9 @@
     <lastmod>2018-04-17T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</loc>
+    <lastmod>2018-03-31T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/nodejs/</loc>
     <lastmod>2018-03-31T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/scripting/</loc>

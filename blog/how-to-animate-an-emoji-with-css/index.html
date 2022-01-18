@@ -143,8 +143,8 @@
     <strong>Software & Coding</strong>
     <ul class="fa-ul">
         <li><a href="https://github.com/anthonyjdella" target="_blank">GitHub</a></li>
-        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev.to</a></li>
-        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev Community</a></li>
+        <li><a href="https://anthonyjdella.hashnode.dev/" target="_blank">Hash Node</a></li>
         <li><a href="https://medium.com/@anthonyjdella" target="_blank">Medium</a></li>
         <li><a href="https://leetcode.com/anthonyjdella/" target="_blank">Leetcode</a></li>
         <li><a href="https://stackoverflow.com/users/story/9465781" target="_blank">Stack Overflow</a></li>
@@ -160,8 +160,9 @@
 
     <strong>Social Media</strong>
     <ul class="fa-ul">
-        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/anthonyjdella" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
     </ul>
 
     <strong>Schedule A Meeting</strong>
@@ -263,14 +264,16 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <h3 id="tldr-you-can-animate-an-emoji-or-anything-else-by-using-keyframes-in-css">TLDR: You can animate an Emoji (or anything else) by using keyframes in CSS.</h3>
+                <blockquote>
+<p><strong>TLDR:</strong> You can animate an Emoji (or anything else) by using keyframes in CSS.</p>
+</blockquote>
 <p>If you go to the home page of <a href="https://anthonydellavecchia.com">this website</a>, you might find some hidden &ldquo;easter eggs&rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&rsquo;s just a waving hand, that doesn&rsquo;t actually wave. There is no animation, so I wanted to make it move. It&rsquo;s actually pretty easy!</p>
-<h3 id="step-1-create-html">Step 1: Create HTML</h3>
+<h2 id="step-1-create-html">Step 1: Create HTML</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;waving&#34;</span> <span style="color:#a6e22e">data-hover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;👋&#34;</span>&gt;
         Hi
     &lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
 <p>All I&rsquo;ve done here is create a simple div with the text, &ldquo;Hi&rdquo;. Then I&rsquo;ve given it 2 HTML attributes, <code>class</code> and <code>data-hover</code>. The contents within <code>data-hover</code> ( 👋 ) is what will be animated.</p>
-<h3 id="step-2-create-css">Step 2: Create CSS</h3>
+<h2 id="step-2-create-css">Step 2: Create CSS</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">before</span> {
   <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>hover);
 }
@@ -312,7 +315,23 @@
 <p><code>.waving:hover</code> defines what action happens when we hover over that element. In this case we have an <code>animation-name</code> which is defined below in <code>@keyframes wave-animation</code>. We also give it an animation-duration of <code>3 seconds</code> and tell it to <code>animate infinitely</code>.</p>
 <p><code>@keyframes wave-animation</code> is where we create the actual animation. In this case, I wanted to make the hand wave, so to do this I just want the hand to rotate back and forth. I add different keyframes and tell it to rotate a certain number of degrees in certain intervals. This mimics 👋 actually waving!</p>
 <p>You can apply this basic template to any emoji. Be creative! For example, you can try to animate a rocket 🚀 using CSS. Just think of what type of animation you want it to do (possibly translate up and down).</p>
+<hr>
 
+                <h3>Thanks for reading! 🙌</h3>
+                <div class="row" style="align-items: center; border: 3px outset #5468ff;">
+                  <div id="col-md-2">
+                    <img src=https://anthonydellavecchia.com/images/contact/avatar2.png style="width: 100px; margin-left: 1em;margin-right: 2em;">
+                  </div>
+                  <div id="col-md-10">
+                    <strong>Follow me for more content:</strong>
+                      <ul>
+                        <li>Twitter <a href src="https://twitter.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>Dev Community <a href src="https://dev.to/anthonyjdella">@anthonyjdella</a></li>
+                        <li>LinkedIn <a href src="https://www.linkedin.com/in/anthonydellavecchia/">@anthonydellavecchia</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <strong>Please react or comment to this article, down below!</strong>
               </div>
           </div>
       </div>

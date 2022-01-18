@@ -143,8 +143,8 @@
     <strong>Software & Coding</strong>
     <ul class="fa-ul">
         <li><a href="https://github.com/anthonyjdella" target="_blank">GitHub</a></li>
-        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev.to</a></li>
-        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev Community</a></li>
+        <li><a href="https://anthonyjdella.hashnode.dev/" target="_blank">Hash Node</a></li>
         <li><a href="https://medium.com/@anthonyjdella" target="_blank">Medium</a></li>
         <li><a href="https://leetcode.com/anthonyjdella/" target="_blank">Leetcode</a></li>
         <li><a href="https://stackoverflow.com/users/story/9465781" target="_blank">Stack Overflow</a></li>
@@ -160,8 +160,9 @@
 
     <strong>Social Media</strong>
     <ul class="fa-ul">
-        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/anthonyjdella" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
     </ul>
 
     <strong>Schedule A Meeting</strong>
@@ -261,17 +262,19 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <h3 id="tldr-use-algolia-to-create-fast-searching-of-your-websites-static-pages-this-tutorial-is-for-sites-using-hugo">TLDR: Use Algolia to create fast searching of your website&rsquo;s static pages. This tutorial is for sites using Hugo.</h3>
+                <blockquote>
+<p><strong>TLDR:</strong> Use Algolia to create fast searching of your website&rsquo;s static pages. This tutorial is for sites using Hugo.</p>
+</blockquote>
 <p>If you view my <a href="https://anthonydellavecchia.com/blog">Blog section</a>, you&rsquo;ll see a search bar that I&rsquo;ve just added.</p>
 <p><img src="/images/blog/search.png" alt="Image"></p>
 <p>After writing multiple <a href="https://anthonydellavecchia.com/blog">blog posts</a>, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page. Finding an article would be difficult and a bad user experience. Adding a search bar, as well as tag filters, would fix this issue, so I did some research on how to implement this for <a href="https://anthonydellavecchia.com/">my website</a>.</p>
 <p>I&rsquo;m using Hugo as my static site generator and the documentation isn&rsquo;t the best. Their <a href="https://gohugo.io/tools/search/">docs</a> show multiple options for implementing search, but their explanations are pretty bad. Some options include: using native Javascript, Elasticsearch, lunr.js, etc. But I went with a third-party service, called Algolia, just because I found the documentation to be great.</p>
-<h3 id="summary">Summary</h3>
+<h2 id="summary">Summary</h2>
 <p>To enable searching on a static site, you need to first create a JSON search index which acts as a database for your search results. From there, you update this JSON search index each time you update/create new pages. Then, you access/query the data by using REST API&rsquo;s provided by Algolia. Finally, you display the results on your page.</p>
-<h3 id="getting-started">Getting Started</h3>
+<h2 id="getting-started">Getting Started</h2>
 <p>The first thing to do is <a href="https://www.algolia.com/users/sign_up">sign up for a free</a> Algolia account (since we&rsquo;re using this service). Algolia is nice because they have great documentation, built-in widgets, provides fast results, and is easy to implement.</p>
-<h3 id="generate-json-search-index">Generate JSON Search Index</h3>
-<h4 id="configure-output-to-json">Configure Output to JSON</h4>
+<h2 id="generate-json-search-index">Generate JSON Search Index</h2>
+<h3 id="configure-output-to-json">Configure Output to JSON</h3>
 <p>Hugo can output content into multiple different file formats (like javascript, xml, toml, etc.). So, we want to set up our project to output JSON. Do this by configuring the <code>config.toml/yaml</code>:</p>
 <p><strong>config.toml</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">outputFormats</span>.<span style="color:#a6e22e">Algolia</span>]
@@ -287,7 +290,7 @@
 [<span style="color:#a6e22e">outputs</span>]
 <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;Algolia&#34;</span>]</code></pre></div>
 <p>Here, we are creating a custom outputFormat called Algolia, which is of type JSON. We&rsquo;re also giving it some variables which will be used later.</p>
-<h4 id="creating-a-search-index-template">Creating a Search Index Template</h4>
+<h3 id="creating-a-search-index-template">Creating a Search Index Template</h3>
 <p>Next, create a file which will generate the JSON search index output. This file is the template for creating our output JSON. In the <code>layouts/</code> directory, create a file like: <code>search-index.json</code>.</p>
 <p><strong>search-index.json</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">slice</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
@@ -299,13 +302,13 @@
 {<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">end</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
 {<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Get</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">jsonify</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
 <p>I only want my search to look for blog posts, not every static page. To do this, I loop through my pages with the type &ldquo;blog&rdquo;. Then, I create a dictionary which contains multiple key/value pairs of the data that I want. For instance, I want the title of my blog posts, so I create a key (&ldquo;title&rdquo;) and a value (.Title). You can scroll through the code to get an idea of how to scrape other data (like a description, date, etc).</p>
-<h4 id="generating-the-json">Generating the JSON</h4>
+<h3 id="generating-the-json">Generating the JSON</h3>
 <p>After the template is created, just re-build the project. Doing this will create a JSON file, which will be used as our search index. In my case, I have a Hugo theme called &ldquo;portio&rdquo;. So, to build my project, I run the command <code>hugo -t portio</code>. After running this command, I have a generated JSON file called <code>algolia.json</code> in my build (public) directory.</p>
 <p>You can beautify this file and verify that all of the data is correctly collected. If data is null or not populated correctly, make some changes to <code>search-index.json</code>. Make sure that you&rsquo;re using the correct <a href="https://gohugo.io/variables/">Hugo variables</a>.</p>
-<h3 id="set-up-algolia">Set up Algolia</h3>
+<h2 id="set-up-algolia">Set up Algolia</h2>
 <p>Now, you can head over to the ALgolia interface to create a New Application (using the free plan). Then, within that New Application, create a New Index.</p>
 <p>You&rsquo;ll have to jot down the Application ID, API key, and Index Name.</p>
-<h3 id="send-search-index-to-algolia">Send Search Index to Algolia</h3>
+<h2 id="send-search-index-to-algolia">Send Search Index to Algolia</h2>
 <p>Now that we have our search index file, we need to upload it to Algolia (so we can use their search algorithms). Using NPM, we have to install Algolia:</p>
 <p><code>npm install atomic-algolia --save</code></p>
 <p>Within your <code>package.json</code>, add a script called <code>algolia: atomic-algolia</code>.</p>
@@ -315,7 +318,7 @@
 <p><img src="/images/blog/algolia-ui.png" alt="Image"></p>
 <p>You can also search within the Algolia UI itself to see how your search will look on your website.
 <img src="/images/blog/algolia-ui2.png" alt="Image"></p>
-<h3 id="displaying-the-search-results">Displaying the Search Results</h3>
+<h2 id="displaying-the-search-results">Displaying the Search Results</h2>
 <p>We&rsquo;re going to have to write some Javascript to interact with Algolia API&rsquo;s to interact with our search index. First, we&rsquo;ll have to import Algolia as a module. Easiest way to do this is by adding node modules, but I went with embedding the scripts directly (from a CDN).</p>
 <p>To embed the modules via a CDN, I used JSDelivr, which is a large CDN for Javascript modules. Then I injected these scripts into my HTML:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
@@ -324,7 +327,7 @@
 &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;</code></pre></div>
 <p>One of these is for a built-in theme, and the others are the modules to use Algolia search.</p>
 <p>Now, create a <code>search.js</code> file which will interact with the Algolia API&rsquo;s to configure some things you&rsquo;ll need.</p>
-<h4 id="initialize-search">Initialize Search</h4>
+<h3 id="initialize-search">Initialize Search</h3>
 <p>Start by initializing Search, by entering your index credentials.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">instantsearch</span>({
     <span style="color:#a6e22e">indexName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;your-index-name&#39;</span>,
@@ -334,7 +337,7 @@
         <span style="color:#e6db74">&#39;your-api-key&#39;</span>
     )
 });</code></pre></div>
-<h4 id="display-results">Display Results</h4>
+<h3 id="display-results">Display Results</h3>
 <p>Go to the HTML page you want your results to be displayed. Then create an empty div which will be where your results are shown:</p>
 <p><code>&lt;div id=&quot;hits&quot;&gt;&lt;/div&gt;</code></p>
 <p>Back in the <code>search.js</code> file, we&rsquo;ll need to link that div to Algolia&rsquo;s API.</p>
@@ -382,7 +385,7 @@
     })
 );</code></pre></div>
 <p>Here, I&rsquo;m looping through all of my pages, then displaying an image for each page, followed by the date that the blog was written, and the title of each blog.</p>
-<h4 id="search-bar">Search Bar</h4>
+<h3 id="search-bar">Search Bar</h3>
 <p>Results should be displayed now. Next, we&rsquo;ll add the search box which will filter our results.</p>
 <p>In the HTML file, add the following div:</p>
 <p><code>&lt;div id=&quot;search-box&quot;&gt;&lt;/div&gt;</code></p>
@@ -395,7 +398,7 @@
     })
 );</code></pre></div>
 <p>Again, the container will look for the HTML element that you enter, and inject that widget into the HTML.</p>
-<h4 id="adding-other-widgets">Adding Other Widgets</h4>
+<h3 id="adding-other-widgets">Adding Other Widgets</h3>
 <p>As mentioned, Algolia has a <a href="https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/js/">bunch of widgets</a> that you can configure. We&rsquo;ve already added the Hits widget, which displays our results, and the Search Box widget, which displays a search box.</p>
 <p>For my site, I also wanted categories/tags so that users can quickly sort an article by the category. I also wanted pagination below the results so users can navigate through my content.</p>
 <p>Again, we need an empty div in our HTML. So for these, I will add the following in my HTML:</p>
@@ -422,17 +425,31 @@
         <span style="color:#a6e22e">showPrevious</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
     })
 );</code></pre></div>
-<h4 id="customizing-widgets">Customizing Widgets</h4>
+<h3 id="customizing-widgets">Customizing Widgets</h3>
 <p>Finally, we&rsquo;ve got a fully functioning Search. But the CSS may not look the way we want it to. You can customize the CSS by overriding the classes to your needs. Remember to test it out for both mobile and desktop devices!</p>
-<h3 id="finished">Finished!</h3>
+<h2 id="finished">Finished!</h2>
 <p>Now, we&rsquo;ve got a fully functioning Search on our Hugo site!</p>
 <p>For more information:</p>
 <ul>
 <li><a href="https://forestry.io/blog/search-with-algolia-in-hugo/">https://forestry.io/blog/search-with-algolia-in-hugo/</a></li>
 </ul>
-<p><strong>Thanks for reading! 🙌</strong></p>
-<p><strong>Please react or comment to this article, down below!</strong></p>
+<hr>
 
+                <h3>Thanks for reading! 🙌</h3>
+                <div class="row" style="align-items: center; border: 3px outset #5468ff;">
+                  <div id="col-md-2">
+                    <img src=https://anthonydellavecchia.com/images/contact/avatar2.png style="width: 100px; margin-left: 1em;margin-right: 2em;">
+                  </div>
+                  <div id="col-md-10">
+                    <strong>Follow me for more content:</strong>
+                      <ul>
+                        <li>Twitter <a href src="https://twitter.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>Dev Community <a href src="https://dev.to/anthonyjdella">@anthonyjdella</a></li>
+                        <li>LinkedIn <a href src="https://www.linkedin.com/in/anthonydellavecchia/">@anthonydellavecchia</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <strong>Please react or comment to this article, down below!</strong>
               </div>
           </div>
       </div>

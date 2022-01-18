@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Anthony Dellavecchia the Software Engineer</title>
+    <title>Tags on Anthony Dellavecchia</title>
     <link>https://anthonydellavecchia.com/tags/</link>
-    <description>Recent content in Tags on Anthony Dellavecchia the Software Engineer</description>
+    <description>Recent content in Tags on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>dependency</title>
-      <link>https://anthonydellavecchia.com/tags/dependency/</link>
-      <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
+      <title>back-end</title>
+      <link>https://anthonydellavecchia.com/tags/back-end/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/tags/dependency/</guid>
+      <guid>https://anthonydellavecchia.com/tags/back-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://anthonydellavecchia.com/tags/database/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://anthonydellavecchia.com/tags/django/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackathon</title>
+      <link>https://anthonydellavecchia.com/tags/hackathon/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>https://anthonydellavecchia.com/tags/mongodb/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nosql</title>
+      <link>https://anthonydellavecchia.com/tags/nosql/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://anthonydellavecchia.com/tags/python/</link>
+      <pubDate>Sun, 16 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -22,6 +76,24 @@
       <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>news</title>
+      <link>https://anthonydellavecchia.com/tags/news/</link>
+      <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oss</title>
+      <link>https://anthonydellavecchia.com/tags/oss/</link>
+      <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/oss/</guid>
       <description></description>
     </item>
     
@@ -175,6 +247,15 @@
       <pubDate>Tue, 17 Apr 2018 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/best-practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://anthonydellavecchia.com/tags/nodejs/</link>
+      <pubDate>Sat, 31 Mar 2018 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/nodejs/</guid>
       <description></description>
     </item>
     

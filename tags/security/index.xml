@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>security on Anthony Dellavecchia the Software Engineer</title>
+    <title>security on Anthony Dellavecchia</title>
     <link>https://anthonydellavecchia.com/tags/security/</link>
-    <description>Recent content in security on Anthony Dellavecchia the Software Engineer</description>
+    <description>Recent content in security on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Jan 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,8 @@
       <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</guid>
-      <description>TLDR: A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it usable. This affected every other dependency (and developer) using his software.  Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
+      <description>TLDR: A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it crash. This affected every other dependency (and developer) using his software.
+  Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
     </item>
     
   </channel>

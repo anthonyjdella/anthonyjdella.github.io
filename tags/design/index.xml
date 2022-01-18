@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>design on Anthony Dellavecchia the Software Engineer</title>
+    <title>design on Anthony Dellavecchia</title>
     <link>https://anthonydellavecchia.com/tags/design/</link>
-    <description>Recent content in design on Anthony Dellavecchia the Software Engineer</description>
+    <description>Recent content in design on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
@@ -24,7 +24,8 @@ Each theme is unique and has a different style for different audiences.</descrip
       <pubDate>Mon, 25 Oct 2021 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/blog/designing-an-animated-logo/</guid>
-      <description>TLDR: I make an animated logo (think of a .GIF) and explain how you can make one too. Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
+      <description>TLDR: I make an animated logo (think of a .GIF) and explain how you can make one too.
+ Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
 Although I have experience with design tools like Photoshop, Lightroom, and Premiere I have never worked with animation. I found a website called SVGator which animates SVG (Scalable Vector Graphics).</description>
     </item>
     

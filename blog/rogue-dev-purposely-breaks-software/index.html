@@ -143,8 +143,8 @@
     <strong>Software & Coding</strong>
     <ul class="fa-ul">
         <li><a href="https://github.com/anthonyjdella" target="_blank">GitHub</a></li>
-        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev.to</a></li>
-        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev Community</a></li>
+        <li><a href="https://anthonyjdella.hashnode.dev/" target="_blank">Hash Node</a></li>
         <li><a href="https://medium.com/@anthonyjdella" target="_blank">Medium</a></li>
         <li><a href="https://leetcode.com/anthonyjdella/" target="_blank">Leetcode</a></li>
         <li><a href="https://stackoverflow.com/users/story/9465781" target="_blank">Stack Overflow</a></li>
@@ -160,8 +160,9 @@
 
     <strong>Social Media</strong>
     <ul class="fa-ul">
-        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/anthonyjdella" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
     </ul>
 
     <strong>Schedule A Meeting</strong>
@@ -252,7 +253,9 @@
                 
                   <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#devops &nbsp; </a>
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#dependency &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#oss &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#news &nbsp; </a>
                 
               </div>
             </div>
@@ -261,9 +264,11 @@
       <div class="row mt-5">
           <div class="col-lg-12">
               <div class="singleBlog__content">
-                <h3 id="tldr-a-software-developer-who-made-some-highly-used-open-source-software-decided-to-go-rogue-and-inject-a-bug-into-his-software-making-it-usable-this-affected-every-other-dependency-and-developer-using-his-software">TLDR: A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it usable. This affected every other dependency (and developer) using his software.</h3>
+                <blockquote>
+<p><em>TLDR:</em> A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it crash. This affected every other dependency (and developer) using his software.</p>
+</blockquote>
 <hr>
-<h4 id="bug-breaks-my-software-deployment">Bug Breaks my Software Deployment</h4>
+<h2 id="bug-breaks-my-software-deployment">Bug Breaks my Software Deployment</h2>
 <p>Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
     <span style="color:#f92672">with</span>:
@@ -278,7 +283,7 @@
 <p><img src="/images/blog/issue.png" alt="Image">
 <em><a href="https://github.com/FirebaseExtended/action-hosting-deploy/issues/188">(link)</a></em></p>
 <hr>
-<h4 id="rogue-developer-marak">Rogue Developer, Marak</h4>
+<h2 id="rogue-developer-marak">Rogue Developer, Marak</h2>
 <p>Well, it turns out, <code>Action-hosting-deploy</code> was using a dependency called <code>colors</code>, created by <a href="https://github.com/Marak">Marak</a> (the rogue developer), which is a tool that colors and styles your node.js console. This npm package gets over 20 million downloads per week, so its very popular! The dependency tree for this GitHub action looks something like this:</p>
 <ul>
 <li>Action-hosting-deploy
@@ -309,16 +314,16 @@
 <p><a href="https://github.com/Marak/colors.js/commit/074a0f8ed0c31c35d13d28632bd8a049ff136fb6">(link to Marak&rsquo;s commit)</a></p>
 <p><strong>This is very much intentional and not an accidental bug. It was malicious.</strong></p>
 <hr>
-<h4 id="why-is-breaking-his-own-software-bad">Why is Breaking his own Software Bad?</h4>
+<h2 id="why-is-breaking-his-own-software-bad">Why is Breaking his own Software Bad?</h2>
 <p>You may be wondering why breaking his own software is bad? Well, Marak knows that his software is being used by other software. So if his breaks, so will theirs. Think of it as a chain reaction. If his breaks, other software that uses it will break too. Because of <a href="https://en.wikipedia.org/wiki/Dependency_hell">&ldquo;dependency hell&rdquo;</a>, this affects millions of developers.</p>
-<h4 id="why-did-marak-do-this">Why Did Marak Do This?</h4>
+<h2 id="why-did-marak-do-this">Why Did Marak Do This?</h2>
 <p>Marak was upset that corporations were using his open-source software and not paying for it. It&rsquo;s basically that simple. He posted an <a href="https://web.archive.org/web/20210628030444/https://marak.com/blog/2021-04-25-monetizing-open-source-is-problematic">article on his blog</a>.</p>
-<h4 id="who-is-right">Who is Right?</h4>
+<h2 id="who-is-right">Who is Right?</h2>
 <p>Most developers are against Marak and his actions, however some are supportive. GitHub and NPM actually suspended his account for this. Some supporters argue that these corporations have no right, because it&rsquo;s his personal software. What do you think?</p>
-<h4 id="how-do-you-fix-it">How Do You Fix It?</h4>
+<h2 id="how-do-you-fix-it">How Do You Fix It?</h2>
 <p>If your software was using <code>colors</code>, you would have to revert to the previous (non-broken) version. But because of this developer&rsquo;s outburst, you should definitely use another package instead. <a href="https://github.com/chalk/chalk">Chalk</a> is another alternative that is recommended.</p>
 <p>It&rsquo;s really important to have a dependency management system in place for your projects. Tools like <a href="https://snyk.io/">Snyk</a>, or <a href="https://www.sonarqube.org/">SonarQube</a> will help you detect dependency issues so you can quickly resolve them.</p>
-<h4 id="future-effects">Future Effects</h4>
+<h2 id="future-effects">Future Effects</h2>
 <p>This might have a big impact on Open Source Software (OSS) and software licensing. Marak&rsquo;s code was licensed with the infamous MIT license, so it&rsquo;s free for commercial use. In the future, will developers be more hesitant to use this license? For example, if you license your software as fair code, it is open source (so others can use it for free) but prevents commercial usage. This seems like the best of both worlds.</p>
 <p>Some Fair Code Licenses include:</p>
 <ol>
@@ -332,9 +337,23 @@
 <li><a href="https://snyk.io/blog/open-source-maintainer-pulls-the-plug-on-npm-packages-colors-and-faker-now-what/">https://snyk.io/blog/open-source-maintainer-pulls-the-plug-on-npm-packages-colors-and-faker-now-what/</a></li>
 <li><a href="https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/">https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/</a></li>
 </ul>
-<p><strong>Thanks for reading! 🙌</strong></p>
-<p><strong>Please react or comment to this article, down below!</strong></p>
+<hr>
 
+                <h3>Thanks for reading! 🙌</h3>
+                <div class="row" style="align-items: center; border: 3px outset #5468ff;">
+                  <div id="col-md-2">
+                    <img src=https://anthonydellavecchia.com/images/contact/avatar2.png style="width: 100px; margin-left: 1em;margin-right: 2em;">
+                  </div>
+                  <div id="col-md-10">
+                    <strong>Follow me for more content:</strong>
+                      <ul>
+                        <li>Twitter <a href src="https://twitter.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>Dev Community <a href src="https://dev.to/anthonyjdella">@anthonyjdella</a></li>
+                        <li>LinkedIn <a href src="https://www.linkedin.com/in/anthonydellavecchia/">@anthonydellavecchia</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <strong>Please react or comment to this article, down below!</strong>
               </div>
           </div>
       </div>
@@ -396,6 +415,23 @@
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
+        </div>
+        
+        <div class="next d-flex align-items-center">
+          <div class=" content text-right">
+            <span class="small">Next case</span>
+            <h5 class="title">
+              <a class="text-dark" href="https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/">MongoDB Atlas Hackathon</a>
+            </h5>
+          </div>
+          <div class="icon ml-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
+              <g data-name="Group 1244" fill="#2d2d2d">
+                <path data-name="Path 1456" d="M12.162 12.725L2.416 26.87l.978 1.41 9.746-14.138z" />
+                <path data-name="Path 1455" d="M2.416 1.415l9.743 14.141.975-1.414L3.39 0z" />
+              </g>
+            </svg>
+          </div>
         </div>
         
       </nav>
