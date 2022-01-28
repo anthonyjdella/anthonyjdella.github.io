@@ -306,7 +306,7 @@
 <p>After the template is created, just re-build the project. Doing this will create a JSON file, which will be used as our search index. In my case, I have a Hugo theme called &ldquo;portio&rdquo;. So, to build my project, I run the command <code>hugo -t portio</code>. After running this command, I have a generated JSON file called <code>algolia.json</code> in my build (public) directory.</p>
 <p>You can beautify this file and verify that all of the data is correctly collected. If data is null or not populated correctly, make some changes to <code>search-index.json</code>. Make sure that you&rsquo;re using the correct <a href="https://gohugo.io/variables/">Hugo variables</a>.</p>
 <h2 id="set-up-algolia">Set up Algolia</h2>
-<p>Now, you can head over to the ALgolia interface to create a New Application (using the free plan). Then, within that New Application, create a New Index.</p>
+<p>Now, you can head over to the Algolia interface to create a New Application (using the free plan). Then, within that New Application, create a New Index.</p>
 <p>You&rsquo;ll have to jot down the Application ID, API key, and Index Name.</p>
 <h2 id="send-search-index-to-algolia">Send Search Index to Algolia</h2>
 <p>Now that we have our search index file, we need to upload it to Algolia (so we can use their search algorithms). Using NPM, we have to install Algolia:</p>
@@ -315,6 +315,7 @@
 <p>If you run <code>npm run algolia</code>, it won&rsquo;t work because Algolia doesn&rsquo;t know which project you&rsquo;re uploading this search index to. To fix this, you&rsquo;ll need to run:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ALGOLIA_APP_ID<span style="color:#f92672">={{</span> YOUR_APP_ID <span style="color:#f92672">}}</span> ALGOLIA_ADMIN_KEY<span style="color:#f92672">={{</span> YOUR_ADMIN_KEY <span style="color:#f92672">}}</span> ALGOLIA_INDEX_NAME<span style="color:#f92672">={{</span> YOUR_INDEX NAME <span style="color:#f92672">}}</span> ALGOLIA_INDEX_FILE<span style="color:#f92672">={{</span> PATH/TO/algolia.json <span style="color:#f92672">}}</span> npm run algolia</code></pre></div>
 <p>Copy the values of your app id, api key, etc into these brackets. Now, when you run that command, you&rsquo;re search index will be uploaded to Algolia! Check the Algolia interface to make sure your data is present in that service. From the UI, you can configure, manage, and view analytics related to your index.</p>
+<p><strong>NOTE:</strong> I&rsquo;ve stored my keys in a .env file, for security reasons. You shouldn&rsquo;t commit this to Git, so if you&rsquo;re doing this on a new computer, you&rsquo;ll need to add another .env file to your root folder.</p>
 <p><img src="/images/blog/algolia-ui.png" alt="Image"></p>
 <p>You can also search within the Algolia UI itself to see how your search will look on your website.
 <img src="/images/blog/algolia-ui2.png" alt="Image"></p>

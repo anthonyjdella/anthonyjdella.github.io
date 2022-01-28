@@ -6,7 +6,17 @@
     <description>Recent content in design on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fonts for Programmers</title>
+      <link>https://anthonydellavecchia.com/blog/fonts-for-programmers/</link>
+      <pubDate>Thu, 27 Jan 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/fonts-for-programmers/</guid>
+      <description>TLDR: Developers, the fonts that you use matter! They help you find bugs and lessen eye strain.
+  Why do Fonts Matter? Did you know that there&amp;rsquo;s a whole industry revolved around fonts? Typeface and typography are some terms used in this space, and their goals are to design fonts/letters to improve experiences or give products identity. As developers, we look at code all day long. Shouldn&amp;rsquo;t we try to improve that experience, so that we can be more productive?</description>
+    </item>
+    
     <item>
       <title>Updating My Avatar</title>
       <link>https://anthonydellavecchia.com/blog/updating-my-avatar/</link>
