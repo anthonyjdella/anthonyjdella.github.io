@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>How to Check your Website Users (Minus Yourself) 👥</title>
+  <title>What are APIs?</title>
   <meta name="description" content="Blog and portfolio of Anthony Dellavecchia, a Software Engineer and tech enthusiast">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -198,12 +198,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
-        <h3 class="breadCrumb__title">How to Check your Website Users (Minus Yourself) 👥</h3>
+        <h3 class="breadCrumb__title">What are APIs?</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">How to Check your Website Users (Minus Yourself) 👥</li>
+            <li class="breadcrumb-item active" aria-current="page">What are APIs?</li>
           </ol>
         </nav>
       </div>
@@ -237,21 +237,23 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="singleBlog__feature">
-                  <img src=https://anthonydellavecchia.com/images/blog/googleanalytics.png alt="feature-image">
+                  <img src=https://anthonydellavecchia.com/images/blog/what-are-apis.png alt="feature-image">
               </div>
           </div>
           <div class="col-lg-12">
             <div class="blog-by">
               <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
                 <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
-                <li class="breadcrumb-item">on December 4, 2021</li>
+                <li class="breadcrumb-item">on February 9, 2022</li>
               </ul>
               <div class="vertical-line"></div>
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#analytics &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#api &nbsp; </a>
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#how-to &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#back-end &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#front-end &nbsp; </a>
                 
               </div>
             </div>
@@ -261,33 +263,67 @@
           <div class="col-lg-12">
               <div class="singleBlog__content">
                 <blockquote>
-<p><strong>TLDR:</strong> I explain how you can filter out yourself from Google Analytics so you can see real user data.</p>
+<p><strong>TLDR:</strong> APIs are when software talks to each other. One software sends a request, another software sends back what they asked for.</p>
 </blockquote>
-<p>Google Analytics is a web analytics tool that lets you track &amp; report your website&rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.</p>
-<p>Google Analytics, or similar type of analytics tool, is a must have for any front-end developer, as it helps them track user engagement.</p>
-<p>I have enabled Google Analytics on this site since it&rsquo;s creation, but I noticed that most of the traffic/stats is coming from myself. I love this site, and go on it frequently (afterall, it is my product). But the problem with this, is that this isn&rsquo;t a good representation of my user engagement since, I probably visit the site more than most folks.</p>
-<p>So, I wanted to find out how to exclude myself from Google Analytics, to get a true sense of my actual users.</p>
-<p>The most useful resource I followed was from <a href="https://www.optimizesmart.com/how-to-block-internal-traffic-in-ga4/">here</a>.</p>
-<p>There are two major steps:</p>
-<ol>
-<li>
-<p>Create a Data Filter</p>
-</li>
-<li>
-<p>Define Internal Traffic</p>
-</li>
-<li>
-<p>Enabling a Report that shows My Traffic</p>
-</li>
-</ol>
-<h2 id="create-a-data-filter">Create a Data Filter</h2>
-<p>Basically, this activates an Internal Traffic filter or a Developer Traffic filter. I set mine up for internal traffic because its a little easier to set up. Developer traffic requires you to download a Chrome Extension. Instructions for each option is <a href="https://support.google.com/analytics/answer/10108813">here</a>.</p>
-<h2 id="define-internal-traffic">Define Internal Traffic</h2>
-<p>This assigns an IP address, or range of IP addresses to a property. That property is used in the Data Filter step from above.</p>
-<h2 id="enabling-a-report-that-shows-my-traffic">Enabling a Report that shows My Traffic</h2>
-<p>Then, you go into the Report view of Google Analytics and create a view for the traffic property that you defined.</p>
-<p>Now, when you visit Google Analytics, you have 2 views. Your public facing traffic, and your developer traffic.</p>
-<p>If you want more info, check out the link above.</p>
+<hr>
+<h2 id="why-should-you-care-about-apis">Why should you care about APIs?</h2>
+<p>As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!</p>
+<hr>
+<h2 id="what-are-apis">What are APIs?</h2>
+<p>Before going into any technical details, let&rsquo;s look at a real-world example to give us some context. We will look at an interaction that everyone has experienced, ordering food at a restaurant.</p>
+<p>Think about this situation for a moment. How would you normally order food?</p>
+<p>In its simplest form, you would: make an order, then get your food shortly after (hopefully). In other words, you make a <strong>request, then get back a response</strong> (in the form of food). This basic type of interaction (i.e. making some sort of request, then getting some type of response back) applies to many other contexts. But for now, let&rsquo;s focus on the food ordering example.</p>
+<p>Let&rsquo;s visualize this interaction below:</p>
+<p><img src="/images/blog/order-food.gif" alt="Image"></p>
+<p>So, what does ordering food have to do with APIs?</p>
+<p>At its core, APIs behave in the same way. Think of an API as a way for a piece of software to request information from another <strong>piece of software, then receiving a response back</strong>. Well, what kind of information are we talking about? For the most part, we are talking about data. Any data that some software wants. For example, a website might want to know the weather in a specific location. Or a social media app might want to know what people are up to. Basically, any data that meets your business needs.</p>
+<p>Let&rsquo;s visualize how an API behaves:</p>
+<p><img src="/images/blog/api.gif" alt="Image"></p>
+<p>As you can see, an API helps you request then receive data.</p>
+<p>In the case of our food ordering example, a customer makes a request, which is then sent to the kitchen. The kitchen then processes the order and sends the food back to the customer. The customer doesn&rsquo;t need to know how the kitchen makes their food, just that they receive it and is the order that they asked for.</p>
+<p>APIs work the same way. A system makes a request, which is processed by the receiver. The receiver then sends the response back to the requester. The requester doesn&rsquo;t need to know how the receiver processes the request, just that they receive the response and is the request that they asked for.</p>
+<p>Now that we have an idea of what an API is, what does it stand for?</p>
+<p><strong>A</strong>pplication</p>
+<p><strong>P</strong>rogramming</p>
+<p><strong>I</strong>nterface</p>
+<p>If you look at those three words, one of them might be less clear than the others. I&rsquo;d bet that &ldquo;interface&rdquo; is that word. So, what does it mean?</p>
+<p>Let&rsquo;s look at another example. If you want to listen to sounds from your computer, you have to plug headphones into your computer. But how do you do this? You&rsquo;d plug the headphones into a port. The port, in this example, is an interface between your headphones and the computer. This port exposes functionality to the user, so the user gets what they want (sound). The user doesn&rsquo;t need to understand how this works, just that they get sound.</p>
+<p>Interfaces in software act in the same principle. In the context of software, an Application Programming Interface helps software get information from other software without needing to know how it works, just that they get what they want.</p>
+<p><img src="/images/blog/port.png" alt="Image"></p>
+<p>Do you see how this principle may be beneficial? Since your software just requests and receives what it&rsquo;s looking for, you save time by re-using functionality that already exists. There is no need to re-invent the wheel. Here&rsquo;s an example: why make homemade bread when you can just buy it from a store? Doing so would save you so much time, which helps you ship your product faster.</p>
+<p>Great! Now that we have a better understanding of APIs, let&rsquo;s go into just a bit more detail. I&rsquo;ll go back to our earliest example: ordering food. As you know, there are a few extra steps that you need to take before ordering food. It&rsquo;s not quite as simple as just ordering, then receiving food. These steps can be broken down as follows:</p>
+<ul>
+<li>Step 1: Recognize that you are hungry and would like some food.</li>
+<li>Step 2: Go to a restaurant that serves what you&rsquo;re looking for.</li>
+<li>Step 3: Browse the menu.</li>
+<li>Step 4: Decide what you would like to order.</li>
+<li>Step 5: Speak with a waiter and make your request.</li>
+<li>Step 6: Wait a little while, and eventually your waiter will bring you your order.</li>
+</ul>
+<p>Let&rsquo;s translate each of these steps in the context of APIs:</p>
+<ul>
+<li>Step 1: Recognize that you have data needs and would like to get it without having to build it from scratch.</li>
+<li>Step 2: Do an Internet search to find the API you&rsquo;re looking for.</li>
+<li>Step 3: Browse the API documentation.</li>
+<li>Step 4: Decide what data you need and how you would request it.</li>
+<li>Step 5: Interact with the API and send your request.</li>
+<li>Step 6: Wait a little while, and eventually your API will bring you your data.</li>
+</ul>
+<p>I&rsquo;ll provide more details about each of these steps in a future article, but for now, just understanding what an API is should be enough to get you started.</p>
+<hr>
+<h2 id="where-can-you-find-an-api">Where can you find an API?</h2>
+<p>Sometimes, finding the dish you want to order can be difficult. For example, if you want to eat pasta, you could either visit the restaurant that you&rsquo;ve previously visited, or you might want to look online for a new restaurant with good reviews. Other times, you might not even know what you want to eat.</p>
+<p>This idea also applies to APIs. If you want to use an API, you could either use one that you&rsquo;re familiar with, or you could do a Google search to find what you&rsquo;re looking for. But this can be difficult because there are so many APIs out there. And a lot of times, it can be hard to find the right API that you need. Sometimes, you might just want to browse APIs by categories and see what&rsquo;s out there.</p>
+<p>Well, what if you wanted to make things easier? You might go to a buffet since you know they have all types of food. And what if you could visit an aggregate marketplace for all kinds of APIs? Wouldn&rsquo;t that be so much easier?</p>
+<p>Thankfully, there&rsquo;s a product that does just this! RapidAPI is a marketplace/aggregate of APIs, to help you find the right API for your needs. You can think of it as a buffet of APIs because it&rsquo;s got every possible thing you might need.</p>
+<hr>
+<h2 id="want-to-learn-more">Want to Learn more?</h2>
+<p>This was just an introduction to help beginners understand APIs and why they are important. In a future article, I will go into more detail. I&rsquo;ll explain how you can find the right API for your needs, and how to use them (with code snippets). I hope this helped you! If you liked it, please follow me for more content like this.</p>
+<hr>
+<p><strong>For more information:</strong></p>
+<ul>
+<li><a href="https://roadmap.anthonydellavecchia.com/what-are-apis">Original Article with Animations</a></li>
+</ul>
 <hr>
 
                 <h3>Thanks for reading! 🙌</h3>
@@ -347,7 +383,7 @@
           <div class="content">
             <span class="small">Prev case</span>
             <h5 class="title"><a class="text-dark"
-                href="https://anthonydellavecchia.com/blog/how-to-animate-an-emoji-with-css/">How to Animate an Emoji with CSS 👋</a></h5>
+                href="https://anthonydellavecchia.com/blog/fonts-for-programmers/">Fonts for Programmers</a></h5>
           </div>
         </div>
         
@@ -355,35 +391,18 @@
           
           <ul class="unstyle-list big">
             <li>
-              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-check-your-website-users%2f"><i
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fwhat-are-apis%2f"><i
                   class="fa fa-facebook-official btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-check-your-website-users%2f"><i
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fwhat-are-apis%2f"><i
                   class="fa fa-linkedin-square btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fhow-to-check-your-website-users%2f"><i
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fwhat-are-apis%2f"><i
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
-        </div>
-        
-        <div class="next d-flex align-items-center">
-          <div class=" content text-right">
-            <span class="small">Next case</span>
-            <h5 class="title">
-              <a class="text-dark" href="https://anthonydellavecchia.com/blog/launch-insights/">Launch Insights 🚀</a>
-            </h5>
-          </div>
-          <div class="icon ml-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
-              <g data-name="Group 1244" fill="#2d2d2d">
-                <path data-name="Path 1456" d="M12.162 12.725L2.416 26.87l.978 1.41 9.746-14.138z" />
-                <path data-name="Path 1455" d="M2.416 1.415l9.743 14.141.975-1.414L3.39 0z" />
-              </g>
-            </svg>
-          </div>
         </div>
         
       </nav>

@@ -6,7 +6,18 @@
     <description>Recent content in Blog Posts on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jan 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What are APIs?</title>
+      <link>https://anthonydellavecchia.com/blog/what-are-apis/</link>
+      <pubDate>Wed, 09 Feb 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/what-are-apis/</guid>
+      <description>TLDR: APIs are when software talks to each other. One software sends a request, another software sends back what they asked for.
+  Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
+ What are APIs?</description>
+    </item>
+    
     <item>
       <title>Fonts for Programmers</title>
       <link>https://anthonydellavecchia.com/blog/fonts-for-programmers/</link>
