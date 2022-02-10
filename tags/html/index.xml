@@ -6,7 +6,17 @@
     <description>Recent content in html on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Nov 2021 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Feb 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Rel Showcase</title>
+      <link>https://anthonydellavecchia.com/portfolio/devrel-showcase/</link>
+      <pubDate>Tue, 08 Feb 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/devrel-showcase/</guid>
+      <description>I always enjoy learning new technologies and creating projects. This website (linked here) was created in just a few days as a way to showcase my ability to quickly learn new skills, as well as showcase my technical content creation. Here were my goals:
+ Create a website with React and Next.js Write a Blog post (for beginners) to help others understand APIs Create interactive animations and supplement them with my blog post Curate a list of my favorite blog posts Create a Dev Rel roadmap to plan my future goals Document my thought process and design  My favorite features are:</description>
+    </item>
+    
     <item>
       <title>JSON Resume Themes</title>
       <link>https://anthonydellavecchia.com/portfolio/json-resume-themes/</link>
