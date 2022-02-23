@@ -305,12 +305,12 @@
 <h3 id="virtual-environments-in-python">Virtual Environments in Python</h3>
 <p>Before installing Django, its good to understand <code>venv</code>, a virtual environment for Python. <code>venv</code> is a self-contained directory that has the Python installation plus external packages. Think of it as any other virtual environment. They should <strong>NOT</strong> be committed to your repo (you can put it outside the directory or just add it to <code>.gitignore</code>)!</p>
 <p>Create a <code>venv</code> with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv name-of-virtual-env-directory</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv .name-of-virtual-env-directory</code></pre></div>
 <p>This will create the <code>name-of-virtual-env-directory</code> as well as the Python installation and any packages your project needs.</p>
 <p>A best practice for handling virtual environments is to store them all in the same place. So, you might want to store them in your home directory or wherever your Git repos are stored. i.e.:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv ~/.virtualenvs/project-virtual-env</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv ~/.virtualenvs/.project-virtual-env</code></pre></div>
 <p>After that, you can activate the virtual environment with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~./virtualenvs/project-virtual-env/bin/activate</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~./virtualenvs/.project-virtual-env/bin/activate</code></pre></div>
 <p>Anytime you install a package with <code>pip</code>, it will be installed in the active virtual environment you&rsquo;re in.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip list</code></pre></div>
 <p>Gives a list of all the installed packages within the <strong>venv</strong>.</p>
