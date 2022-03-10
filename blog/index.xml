@@ -6,14 +6,25 @@
     <description>Recent content in Blog Posts on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Feb 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Mar 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What are APIs?</title>
-      <link>https://anthonydellavecchia.com/blog/what-are-apis/</link>
+      <title>What are APIs (Part 2)?</title>
+      <link>https://anthonydellavecchia.com/blog/what-are-apis-2/</link>
+      <pubDate>Thu, 10 Mar 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/what-are-apis-2/</guid>
+      <description>TLDR: A bit more details about APIs (part 1 here) using an easy-to-understand analogy.
+  Recap In my previous article, I explain what an API is (without any code). Let&amp;rsquo;s recap what that article mentions.
+ Think of an API as a customer ordering food at a restaruant  The customer makes a request (with their order) to a waiter The waiter brings that request to the kitchen The kitchen/chef makes the food The waiter delivers the order back to a (happy) customer    I also broke this concept down into a few extra steps.</description>
+    </item>
+    
+    <item>
+      <title>What are APIs (Part 1)?</title>
+      <link>https://anthonydellavecchia.com/blog/what-are-apis-1/</link>
       <pubDate>Wed, 09 Feb 2022 12:00:27 +0600</pubDate>
       
-      <guid>https://anthonydellavecchia.com/blog/what-are-apis/</guid>
-      <description>TLDR: APIs are when software talks to each other. One software sends a request, another software sends back what they asked for.
+      <guid>https://anthonydellavecchia.com/blog/what-are-apis-1/</guid>
+      <description>TLDR: APIs are when applications talks to each other. One application sends a request, another applications sends back what they asked for.
   Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
  What are APIs?</description>
     </item>
