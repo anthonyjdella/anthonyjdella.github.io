@@ -14,8 +14,8 @@
       
       <guid>https://anthonydellavecchia.com/blog/what-are-apis-2/</guid>
       <description>TLDR: A bit more details about APIs (part 1 here) using an easy-to-understand analogy.
-  Recap In my previous article, I explain what an API is (without any code). Let&amp;rsquo;s recap what that article mentions.
- Think of an API as a customer ordering food at a restaruant  The customer makes a request (with their order) to a waiter The waiter brings that request to the kitchen The kitchen/chef makes the food The waiter delivers the order back to a (happy) customer    I also broke this concept down into a few extra steps.</description>
+Recap In my previous article, I explain what an API is (without any code). Let&amp;rsquo;s recap what that article mentions.
+Think of an API as a customer ordering food at a restaruant The customer makes a request (with their order) to a waiter The waiter brings that request to the kitchen The kitchen/chef makes the food The waiter delivers the order back to a (happy) customer I also broke this concept down into a few extra steps.</description>
     </item>
     
     <item>
@@ -25,8 +25,8 @@
       
       <guid>https://anthonydellavecchia.com/blog/what-are-apis-1/</guid>
       <description>TLDR: APIs are when applications talks to each other. One application sends a request, another applications sends back what they asked for.
-  Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
- What are APIs?</description>
+Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
+What are APIs? Before going into any technical details, let&amp;rsquo;s look at a real-world example to give us some context.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/how-to-animate-an-emoji-with-css/</guid>
       <description>TLDR: You can animate an Emoji (or anything else) by using keyframes in CSS.
- If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move.</description>
+If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move. It&amp;rsquo;s actually pretty easy!</description>
     </item>
     
     <item>

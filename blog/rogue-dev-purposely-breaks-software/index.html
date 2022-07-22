@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -270,13 +275,13 @@
 <hr>
 <h2 id="bug-breaks-my-software-deployment">Bug Breaks my Software Deployment</h2>
 <p>Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
-    <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
-        <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
-        <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
-        <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
-        <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></span></span></code></pre></div>
 <p>This is the visual representation of my failed pipeline:
 <img src="/images/blog/cd-fail.png" alt="Image"></p>
 <p>I then went over to the Firebase Extended <a href="https://github.com/FirebaseExtended/action-hosting-deploy">Github repo</a> to see if anyone else was having similar issues. And yep, many others were experiencing the same issue:</p>

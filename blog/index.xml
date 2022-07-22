@@ -14,8 +14,8 @@
       
       <guid>https://anthonydellavecchia.com/blog/what-are-apis-2/</guid>
       <description>TLDR: A bit more details about APIs (part 1 here) using an easy-to-understand analogy.
-  Recap In my previous article, I explain what an API is (without any code). Let&amp;rsquo;s recap what that article mentions.
- Think of an API as a customer ordering food at a restaruant  The customer makes a request (with their order) to a waiter The waiter brings that request to the kitchen The kitchen/chef makes the food The waiter delivers the order back to a (happy) customer    I also broke this concept down into a few extra steps.</description>
+Recap In my previous article, I explain what an API is (without any code). Let&amp;rsquo;s recap what that article mentions.
+Think of an API as a customer ordering food at a restaruant The customer makes a request (with their order) to a waiter The waiter brings that request to the kitchen The kitchen/chef makes the food The waiter delivers the order back to a (happy) customer I also broke this concept down into a few extra steps.</description>
     </item>
     
     <item>
@@ -25,8 +25,8 @@
       
       <guid>https://anthonydellavecchia.com/blog/what-are-apis-1/</guid>
       <description>TLDR: APIs are when applications talks to each other. One application sends a request, another applications sends back what they asked for.
-  Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
- What are APIs?</description>
+Why should you care about APIs? As a developer (or even business) APIs help you save time, and makes your software development process much easier. This enables you to quickly create and release products. If these benefits sound interesting to you, please continue reading!
+What are APIs? Before going into any technical details, let&amp;rsquo;s look at a real-world example to give us some context.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/fonts-for-programmers/</guid>
       <description>TLDR: Developers, the fonts that you use matter! They help you find bugs and lessen eye strain.
-  Why do Fonts Matter? Did you know that there&amp;rsquo;s a whole industry revolved around fonts? Typeface and typography are some terms used in this space, and their goals are to design fonts/letters to improve experiences or give products identity. As developers, we look at code all day long. Shouldn&amp;rsquo;t we try to improve that experience, so that we can be more productive?</description>
+Why do Fonts Matter? Did you know that there&amp;rsquo;s a whole industry revolved around fonts? Typeface and typography are some terms used in this space, and their goals are to design fonts/letters to improve experiences or give products identity. As developers, we look at code all day long. Shouldn&amp;rsquo;t we try to improve that experience, so that we can be more productive?</description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/updating-my-avatar/</guid>
       <description>TLDR: Refreshed my outdated avatar, which I use for social media.
-  New Avatar Since I use an illustrative self-portrait for my social media handles, it&amp;rsquo;s sometimes hard for people to tell what I really look like IRL. Originally, I made my avatar back in 2018 or 2019. But since then, I have a different hairstyle. It&amp;rsquo;s important to make your profile picture (regardless of medium) look like you as much as possible.</description>
+New Avatar Since I use an illustrative self-portrait for my social media handles, it&amp;rsquo;s sometimes hard for people to tell what I really look like IRL. Originally, I made my avatar back in 2018 or 2019. But since then, I have a different hairstyle. It&amp;rsquo;s important to make your profile picture (regardless of medium) look like you as much as possible.</description>
     </item>
     
     <item>
@@ -56,7 +56,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/</guid>
       <description>TLDR: I participated in a MongoDB Hackathon and share what I learned about MongoDB and Django.
-  Hackathon On Dev Community, I saw a post for a Hackathon sponsored by MongoDB and thought I&amp;rsquo;d give it a shot. I have no experience with MongoDB so I thought it&amp;rsquo;d be fun. Unfortunately, I saw the post only a few days before the due date, so I didn&amp;rsquo;t have enough time to finish it.</description>
+Hackathon On Dev Community, I saw a post for a Hackathon sponsored by MongoDB and thought I&amp;rsquo;d give it a shot. I have no experience with MongoDB so I thought it&amp;rsquo;d be fun. Unfortunately, I saw the post only a few days before the due date, so I didn&amp;rsquo;t have enough time to finish it.</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</guid>
       <description>TLDR: A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it crash. This affected every other dependency (and developer) using his software.
-  Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
+Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</guid>
       <description>TLDR: Use Algolia to create fast searching of your website&amp;rsquo;s static pages. This tutorial is for sites using Hugo.
- If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
+If you view my Blog section, you&amp;rsquo;ll see a search bar that I&amp;rsquo;ve just added.
 After writing multiple blog posts, I quickly realized that more pages meant more clutter. If someone wants to find a post, they&amp;rsquo;d have to manually search for it by digging through each page. Imagine if I have 10 pages, with 6 blog posts per page.</description>
     </item>
     
@@ -87,7 +87,7 @@ After writing multiple blog posts, I quickly realized that more pages meant more
       
       <guid>https://anthonydellavecchia.com/blog/is-99-good/</guid>
       <description>TLDR: 99% availability for a software system isn&amp;rsquo;t a good measurement. Instead of using a percentage, use a probability or actual time values.
- If you ever took a test at school, you&amp;rsquo;d probably be really happy with getting a 99 grade. After all, it&amp;rsquo;s almost a perfect score.
+If you ever took a test at school, you&amp;rsquo;d probably be really happy with getting a 99 grade. After all, it&amp;rsquo;s almost a perfect score.
 But when you&amp;rsquo;re talking about software systems, is 99% availability good?
 Well, if your system needs to be available 24/7 everyday, 99% won&amp;rsquo;t cut it.</description>
     </item>
@@ -99,11 +99,11 @@ Well, if your system needs to be available 24/7 everyday, 99% won&amp;rsquo;t cu
       
       <guid>https://anthonydellavecchia.com/blog/how-to-forward-emails-to-your-domain/</guid>
       <description>TLDR: Set up Gmail forwarding so it looks like your email address matches your domain name.
- Want to organize your email inbox?
+Want to organize your email inbox?
 How about exposing a different email address for different purposes?
 I set up email forwarding so that I can receive emails to my existing Gmail inboxes, but use different email address names.
 For example, these are my different email addresses:
- hello@anthonydellavecchia.com - general things dev@anthonydellavecchia.com - software development hireme@anthonydellavecchia.</description>
+hello@anthonydellavecchia.com - general things dev@anthonydellavecchia.com - software development hireme@anthonydellavecchia.</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@ For example, these are my different email addresses:
       
       <guid>https://anthonydellavecchia.com/blog/launch-insights/</guid>
       <description>TLDR: Just some analytics about my website users after I shared it on LinkedIn and other social media sites.
- After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data.</description>
+After working on this website for weeks, on December 20th, I shared the finished product on social media platforms (like LinkedIn). I expected people to view the site, but wasn&amp;rsquo;t sure about the number of users, how engaged they&amp;rsquo;d be, etc. Since I&amp;rsquo;ve Google Analytics built-in, I was curious to get insights from the tool and gather information from that data.</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ For example, these are my different email addresses:
       
       <guid>https://anthonydellavecchia.com/blog/how-to-check-your-website-users/</guid>
       <description>TLDR: I explain how you can filter out yourself from Google Analytics so you can see real user data.
- Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
+Google Analytics is a web analytics tool that lets you track &amp;amp; report your website&amp;rsquo;s traffic. It shows you information such as how many users have visited your site, what devices they use (mobile or computer), how they found your site (direct url, link from other sites), etc.
 Google Analytics, or similar type of analytics tool, is a must have for any front-end developer, as it helps them track user engagement.</description>
     </item>
     
@@ -134,7 +134,7 @@ Google Analytics, or similar type of analytics tool, is a must have for any fron
       
       <guid>https://anthonydellavecchia.com/blog/how-to-animate-an-emoji-with-css/</guid>
       <description>TLDR: You can animate an Emoji (or anything else) by using keyframes in CSS.
- If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move.</description>
+If you go to the home page of this website, you might find some hidden &amp;ldquo;easter eggs&amp;rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&amp;rsquo;s just a waving hand, that doesn&amp;rsquo;t actually wave. There is no animation, so I wanted to make it move. It&amp;rsquo;s actually pretty easy!</description>
     </item>
     
     <item>
@@ -144,7 +144,7 @@ Google Analytics, or similar type of analytics tool, is a must have for any fron
       
       <guid>https://anthonydellavecchia.com/blog/designing-an-animated-logo/</guid>
       <description>TLDR: I make an animated logo (think of a .GIF) and explain how you can make one too.
- Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
+Having an online personal brand is ever so important. Part of this includes having a unified profile picture and logo. You can take this to another level by animating the logo!
 Although I have experience with design tools like Photoshop, Lightroom, and Premiere I have never worked with animation. I found a website called SVGator which animates SVG (Scalable Vector Graphics).</description>
     </item>
     
@@ -155,8 +155,8 @@ Although I have experience with design tools like Photoshop, Lightroom, and Prem
       
       <guid>https://anthonydellavecchia.com/blog/building-this-site/</guid>
       <description>TLDR: These are the commands I use to build this website.
- This is for my reference, so I remember how to make changes to this site without any hiccups.
- cd into personal-website directory Make changes.  hugo serve to start local server. Commit and push changes to personal-website repository (source files). If changes are done to the Portio theme, cd into themes/portio .  Commit and push changes to portio-theme repository (theme files).</description>
+This is for my reference, so I remember how to make changes to this site without any hiccups.
+cd into personal-website directory Make changes. hugo serve to start local server. Commit and push changes to personal-website repository (source files). If changes are done to the Portio theme, cd into themes/portio . Commit and push changes to portio-theme repository (theme files).</description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@ Although I have experience with design tools like Photoshop, Lightroom, and Prem
       
       <guid>https://anthonydellavecchia.com/blog/magic-numbers/</guid>
       <description>TLDR: A software development principle to follow with an example.
- Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
+Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
 I&amp;rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&amp;rsquo;t think of that for &amp;ldquo;magic number&amp;rdquo; situations. It&amp;rsquo;s a pretty simple concept but I just wanted to share what I learned.</description>
     </item>
     
@@ -177,7 +177,7 @@ I&amp;rsquo;ve known about the concept of using constants rather than hard-codin
       
       <guid>https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/</guid>
       <description>TLDR: I explain how you can write an automated script that looks at job postings from companies and emails you the results.
- Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
+Have you ever been disappointed to know that you got rejected from a job because you applied too late? They already hired someone else!
 How many times have you missed out on job opportunities because you didn’t know a company was hiring for that position? It might be the perfect job for you, but you just didn’t know about it!</description>
     </item>
     
@@ -188,9 +188,10 @@ How many times have you missed out on job opportunities because you didn’t kno
       
       <guid>https://anthonydellavecchia.com/blog/hugo-markdown/</guid>
       <description>TLDR: Just some markdown and what it looks like on this site.
- This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
+This is a collection of markdown examples, which also work with Hugo. (For my reference when adding markdown to future blog posts.)
 This example Markdown file compliments of markdown-it.github.io
- h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules    Typographic replacements Enable typographer option to see result.</description>
+h1 Heading 8-) h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Horizontal Rules Typographic replacements Enable typographer option to see result.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-</description>
     </item>
     
   </channel>

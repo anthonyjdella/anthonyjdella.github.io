@@ -14,7 +14,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</guid>
       <description>TLDR: A software developer who made some highly used open source software, decided to go rogue and inject a bug into his software, making it crash. This affected every other dependency (and developer) using his software.
-  Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
+Bug Breaks my Software Deployment Over the weekend, I was deploying some software (to Firebase) with CI/CD pipelines. But for some reason, the pipelines were failing. The failure occurred at this stage of my GitHub Actions workflow:</description>
     </item>
     
   </channel>

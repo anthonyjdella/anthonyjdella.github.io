@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -351,12 +356,12 @@ line 3 of code
 <p>Block code &ldquo;fences&rdquo;</p>
 <pre tabindex="0"><code>Sample text here...
 </code></pre><p>Syntax highlighting</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bar</span>) {
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">++</span>;
-};
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>(<span style="color:#ae81ff">5</span>));
-</code></pre></div><h2 id="tables">Tables</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bar</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>(<span style="color:#ae81ff">5</span>));
+</span></span></code></pre></div><h2 id="tables">Tables</h2>
 <table>
 <thead>
 <tr>
@@ -432,7 +437,7 @@ line 3 of code
 <p>Footnote 1 link<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>Footnote 2 link<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <p>Inline footnote^[Text of inline footnote] definition.</p>
-<p>Duplicated footnote reference<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>Duplicated footnote reference<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <h3 id="definition-listshttpsgithubcommarkdown-itmarkdown-it-deflist"><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
 <dl>
 <dt>Term 1</dt>
@@ -462,18 +467,18 @@ with lazy continuation.</p>
 <p>::: warning
 <em>here be dragons</em>
 :::</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Footnote <strong>can have markup</strong></p>
 <p>and multiple paragraphs.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p>Footnote text.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:2">
+<p>Footnote text.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
                 <h3>Thanks for reading! 🙌</h3>
                 <div class="row" style="align-items: center; border: 3px outset #5468ff;">

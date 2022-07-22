@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -283,10 +288,10 @@
 <p>If you get the following CI/CD error:</p>
 <pre tabindex="0"><code>Error: fatal: remote error: upload-pack: not our ref 9b3f2092d9959fe1406f9062c5a50a71293636c9
 
-Error: fatal: Fetched in submodule path 'anthonyjdella/public', but it did not contain 9b3f2092d9959fe1406f9062c5a50a71293636c9. Direct fetching of that commit failed.
+Error: fatal: Fetched in submodule path &#39;anthonyjdella/public&#39;, but it did not contain 9b3f2092d9959fe1406f9062c5a50a71293636c9. Direct fetching of that commit failed.
 
 fatal: 
-  Error: The process '/usr/bin/git' failed with exit code 128
+  Error: The process &#39;/usr/bin/git&#39; failed with exit code 128
 </code></pre><h3 id="step-2">STEP 2:</h3>
 <p>Go into anthonyjdella/ and run:</p>
 <pre tabindex="0"><code>git submodule  update --init --recursive --remote
@@ -303,7 +308,7 @@ cd ..</p>
 </code></pre><p>cd public/</p>
 <h3 id="step-5">STEP 5:</h3>
 <p>You&rsquo;ll see changes now. Then add and commit them.</p>
-<pre tabindex="0"><code>git commit -m &quot;.....&quot;
+<pre tabindex="0"><code>git commit -m &#34;.....&#34;
 git branch my-temporary-work
 git checkout master
 git merge my-temporary-work

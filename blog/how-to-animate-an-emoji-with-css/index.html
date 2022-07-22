@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -269,48 +274,48 @@
 </blockquote>
 <p>If you go to the home page of <a href="https://anthonydellavecchia.com">this website</a>, you might find some hidden &ldquo;easter eggs&rdquo; around the page. One of which is an emoji that is animated using CSS. 👋 is the emoji. It&rsquo;s just a waving hand, that doesn&rsquo;t actually wave. There is no animation, so I wanted to make it move. It&rsquo;s actually pretty easy!</p>
 <h2 id="step-1-create-html">Step 1: Create HTML</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;waving&#34;</span> <span style="color:#a6e22e">data-hover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;👋&#34;</span>&gt;
-        Hi
-    &lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;waving&#34;</span> <span style="color:#a6e22e">data-hover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;👋&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        Hi
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></div>
 <p>All I&rsquo;ve done here is create a simple div with the text, &ldquo;Hi&rdquo;. Then I&rsquo;ve given it 2 HTML attributes, <code>class</code> and <code>data-hover</code>. The contents within <code>data-hover</code> ( 👋 ) is what will be animated.</p>
 <h2 id="step-2-create-css">Step 2: Create CSS</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">before</span> {
-  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>hover);
-}
-
-.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">hover</span> {
-  <span style="color:#66d9ef">animation-name</span>: wave-animation;
-  <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">3.0</span><span style="color:#66d9ef">s</span>;
-  <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
-  <span style="color:#66d9ef">transform-origin</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
-}
-
-@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">wave-animation</span> {
-  <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">10</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">20</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-8.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">30</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">40</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-4.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">50</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">10.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">60</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
-  }
-  <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
-      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
-  }
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">before</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: attr(data<span style="color:#f92672">-</span>hover);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">waving</span>:<span style="color:#a6e22e">hover</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">animation-name</span>: wave-animation;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">animation-duration</span>: <span style="color:#ae81ff">3.0</span><span style="color:#66d9ef">s</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">animation-iteration-count</span>: <span style="color:#66d9ef">infinite</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">transform-origin</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span> <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">keyframes</span> <span style="color:#f92672">wave-animation</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">0</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">10</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">20</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-8.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">30</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">14.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">40</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">-4.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">50</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate(<span style="color:#ae81ff">10.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">60</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">100</span><span style="color:#f92672">%</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">transform</span>: rotate( <span style="color:#ae81ff">0.0</span><span style="color:#66d9ef">deg</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><code>.waving:before</code> defines the content of which is to be displayed ( 👋 ).</p>
 <p><code>.waving:hover</code> defines what action happens when we hover over that element. In this case we have an <code>animation-name</code> which is defined below in <code>@keyframes wave-animation</code>. We also give it an animation-duration of <code>3 seconds</code> and tell it to <code>animate infinitely</code>.</p>
 <p><code>@keyframes wave-animation</code> is where we create the actual animation. In this case, I wanted to make the hand wave, so to do this I just want the hand to rotate back and forth. I add different keyframes and tell it to rotate a certain number of degrees in certain intervals. This mimics 👋 actually waving!</p>

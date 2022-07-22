@@ -14,7 +14,7 @@
       
       <guid>https://anthonydellavecchia.com/blog/magic-numbers/</guid>
       <description>TLDR: A software development principle to follow with an example.
- Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
+Today, I got feedback from a code review and learned something new. It was about &amp;ldquo;magic numbers&amp;rdquo;, which are unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants.
 I&amp;rsquo;ve known about the concept of using constants rather than hard-coding values, but I didn&amp;rsquo;t think of that for &amp;ldquo;magic number&amp;rdquo; situations. It&amp;rsquo;s a pretty simple concept but I just wanted to share what I learned.</description>
     </item>
     

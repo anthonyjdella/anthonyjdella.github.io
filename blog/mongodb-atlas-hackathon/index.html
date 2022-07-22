@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -305,19 +310,19 @@
 <h3 id="virtual-environments-in-python">Virtual Environments in Python</h3>
 <p>Before installing Django, its good to understand <code>venv</code>, a virtual environment for Python. <code>venv</code> is a self-contained directory that has the Python installation plus external packages. Think of it as any other virtual environment. They should <strong>NOT</strong> be committed to your repo (you can put it outside the directory or just add it to <code>.gitignore</code>)!</p>
 <p>Create a <code>venv</code> with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv .name-of-virtual-env-directory</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python3 -m venv .name-of-virtual-env-directory</span></span></code></pre></div>
 <p>This will create the <code>name-of-virtual-env-directory</code> as well as the Python installation and any packages your project needs.</p>
 <p>A best practice for handling virtual environments is to store them all in the same place. So, you might want to store them in your home directory or wherever your Git repos are stored. i.e.:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m venv ~/.virtualenvs/.project-virtual-env</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python3 -m venv ~/.virtualenvs/.project-virtual-env</span></span></code></pre></div>
 <p>After that, you can activate the virtual environment with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~./virtualenvs/.project-virtual-env/bin/activate</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>source ~./virtualenvs/.project-virtual-env/bin/activate</span></span></code></pre></div>
 <p>Anytime you install a package with <code>pip</code>, it will be installed in the active virtual environment you&rsquo;re in.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip list</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip list</span></span></code></pre></div>
 <p>Gives a list of all the installed packages within the <strong>venv</strong>.</p>
 <p>After installing dependencies into the virtual environment, make sure to deactivate it when you&rsquo;re done. Use command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">deactivate</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>deactivate</span></span></code></pre></div>
 <p><code>pip freeze</code> is similar to <code>pip list</code>, but it also give specific version numbers. Copy the contents of that list into a <code>reqirements.txt</code> file (which is committed into version control AKA Git). Then, when a user clones your project, they run the following, to install all of the project dependencies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install -r requirements.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install -r requirements.txt</span></span></code></pre></div>
 <p>Think of <code>requirements.tx</code> as <code>package.json</code> used in NPM.</p>
 <p>| Another option: <strong>virtualenv</strong> is an even more popular option than <strong>venv</strong>. Look into using it <a href="https://pypi.org/project/virtualenv/">here</a>.</p>
 <h3 id="mongodb">MongoDB</h3>
@@ -367,15 +372,15 @@
 <p>Flask is another popular web framework in Python. It&rsquo;s a better choice to use with NoSql databases. You can also use <a href="https://github.com/django-nonrel/mongodb-engine">django-nonrel</a>, which is a community fork to add NoSQL support to Django. However, it is not supported and uses an old Django version.</p>
 <p>There are 3 options to connect to MongoDB with Django. <strong>Pymongo, MongoEngine, and Djongo</strong>. But by using <strong>PyMongo</strong>, a driver, you can connect MongoDB and Django. Instructions for this are in the subsequent section.</p>
 <p>After activating the virtual env (from above), installing <a href="https://docs.djangoproject.com/en/4.0/topics/install/#installing-official-release">Django</a> can be done with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python -m install Django</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python -m install Django</span></span></code></pre></div>
 <p>View the Django version with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python -m django --version</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python -m django --version</span></span></code></pre></div>
 <p><code>cd</code> into a directory and enter the command to create a project:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">django-admin startproject name-of-project</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>django-admin startproject name-of-project</span></span></code></pre></div>
 <p>To start the server &amp; application:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python manage.py runserver</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python manage.py runserver</span></span></code></pre></div>
 <p>Earlier, we created a project named <code>name-of-project</code>. We can also create apps within the project. Projects can have multiple apps (think of apps as modules). Use this command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python manage.py startapp name-of-app</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python manage.py startapp name-of-app</span></span></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -425,23 +430,23 @@
 <h3 id="pymongo">PyMongo</h3>
 <p>According to <a href="https://www.mongodb.com/compatibility/mongodb-and-django">MongoDB docs</a>, <strong>Pymongo</strong> is the preferred way to use MongoDB with Django. But as mentioned above, there are some other options using <strong>MongoEngine</strong> and <strong>Djongo</strong>.</p>
 <p>Install <strong>PyMongo</strong> with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 -m pip install pymongo</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python3 -m pip install pymongo</span></span></code></pre></div>
 <p>For installation with MongoDB, it might be good to install some optional dependencies with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install pymongo<span style="color:#f92672">[</span>snappy,gssapi,srv,tls<span style="color:#f92672">]</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install pymongo<span style="color:#f92672">[</span>snappy,gssapi,srv,tls<span style="color:#f92672">]</span></span></span></code></pre></div>
 <p>As well as this (for using mongodb+srv://):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install dnspython</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install dnspython</span></span></code></pre></div>
 <p>There&rsquo;s a couple of ways to connect to our database session. One of which involves creating a <code>utils.py</code> file in the PROJECT folder (where <code>manage.py</code> is).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">from pymongo import MongoClient
-
-def get_db_handle<span style="color:#f92672">(</span>db_name, host, port, username, password<span style="color:#f92672">)</span>:
-
- client <span style="color:#f92672">=</span> MongoClient<span style="color:#f92672">(</span>host<span style="color:#f92672">=</span>host,
-                      port<span style="color:#f92672">=</span>int<span style="color:#f92672">(</span>port<span style="color:#f92672">)</span>,
-                      username<span style="color:#f92672">=</span>username,
-                      password<span style="color:#f92672">=</span>password
-                     <span style="color:#f92672">)</span>
-    db_handle <span style="color:#f92672">=</span> client<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;db_name&#39;</span><span style="color:#f92672">]</span>
- <span style="color:#66d9ef">return</span> db_handle, client</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>from pymongo import MongoClient
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_db_handle<span style="color:#f92672">(</span>db_name, host, port, username, password<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> client <span style="color:#f92672">=</span> MongoClient<span style="color:#f92672">(</span>host<span style="color:#f92672">=</span>host,
+</span></span><span style="display:flex;"><span>                      port<span style="color:#f92672">=</span>int<span style="color:#f92672">(</span>port<span style="color:#f92672">)</span>,
+</span></span><span style="display:flex;"><span>                      username<span style="color:#f92672">=</span>username,
+</span></span><span style="display:flex;"><span>                      password<span style="color:#f92672">=</span>password
+</span></span><span style="display:flex;"><span>                     <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    db_handle <span style="color:#f92672">=</span> client<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;db_name&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> db_handle, client</span></span></code></pre></div>
 <blockquote>
 <p>Use env variables to hide the username and password from being exposed. That&rsquo;s out of scope of this tutorial, but if you have questions, just ask.</p>
 </blockquote>

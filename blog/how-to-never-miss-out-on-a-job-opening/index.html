@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -294,10 +299,10 @@ $ npm install file-system --save
 <p><em>Time for some automated fun. No humans allowed!</em></p>
 <h2 id="automation">Automation:</h2>
 <p>Import the external dependencies. We will talk about what constants is later on.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">puppeteer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;puppeteer&#39;</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./../util/constants.js&#34;</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">emailModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./send-email.js&#34;</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">puppeteer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;puppeteer&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./../util/constants.js&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">emailModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./send-email.js&#34;</span>);</span></span></code></pre></div>
 <p>The code is written with asynchronous I/O in mind. Node.js 8 uses <code>async</code> and <code>await</code> keywords, which you will see throughout the script. <code>async</code> means a function returns a resolved Promise. <code>await</code> means wait until the Promise settles and return its result.</p>
 <p>This is basically how the structure works. run() is an async function. When it finishes, the value will be passed in .then((value) =&gt; {}. Then you can do some other things which will be discussed later.</p>
 <pre tabindex="0"><code>async function run() {
@@ -307,9 +312,9 @@ run().then((value) =&gt; {
    //other things
 });
 </code></pre><p>Now comes the web automation part using Chrome Headless. This will automatically launch the headless browser. Set the value to false for testing and true when your script is complete.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">browser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">puppeteer</span>.<span style="color:#a6e22e">launch</span>({
-    <span style="color:#a6e22e">headless</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-});</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">browser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">puppeteer</span>.<span style="color:#a6e22e">launch</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">headless</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
 <p><em>Set to false when running, true when testing (now).</em></p>
 <p>Before looking at more code, lets think of the flow that needs to happen.</p>
 <ol>
@@ -335,135 +340,135 @@ run().then((value) =&gt; {
 <li><code>.click()</code> function to click on a section of the web page.</li>
 <li><code>.waitFor()</code> to wait for the page to load the results.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">newPage</span>();
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#e6db74">&#34;https://statefarm.csod.com/ats/careersite/search.aspx?site=1&amp;c=statefarm&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl02_customFieldWrapper &gt; button&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;body &gt; div &gt; ul &gt; li:nth-child(46) &gt; label &gt; span&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl00_customFieldWrapper_ctl00_txtValue&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">keyboard</span>.<span style="color:#a6e22e">type</span>(<span style="color:#e6db74">&#34;technology&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_btnSearch&#34;</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">newPage</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#e6db74">&#34;https://statefarm.csod.com/ats/careersite/search.aspx?site=1&amp;c=statefarm&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl02_customFieldWrapper &gt; button&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;body &gt; div &gt; ul &gt; li:nth-child(46) &gt; label &gt; span&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl00_customFieldWrapper_ctl00_txtValue&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">keyboard</span>.<span style="color:#a6e22e">type</span>(<span style="color:#e6db74">&#34;technology&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_btnSearch&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);</span></span></code></pre></div>
 <p><em>Selectors as arguments.</em></p>
 <p>You might be wondering what parameters go in those functions. Most of them are selectors. These can be found by using the inspect element in developer tools of your browser (F12).</p>
 <p><img src="/images/single-blog/search-jobs-inspect.png" alt="Image"></p>
 <p><em>Use Developer Tools to copy the selectors of the elements we want to manipulate.</em></p>
 <p>To make this more flexible and readable, you can store these selectors as constants in a separate file. <code>constant.js</code> is a file in the same project directory that contains all of my constants. This is used because I can easily modify them and the code is easier to read.</p>
 <p>The constants are in a new file <code>./util/constants.js</code>. Remember to import them in <code>scrape-state-farm.js</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
-    
-    <span style="color:#a6e22e">STATE_FARM_URI</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://statefarm.csod.com/ats/careersite/search.aspx?site=1&amp;c=statefarm&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_LOC_DRPDWN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl02_customFieldWrapper &gt; button&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_TX_RD_BTN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;body &gt; div &gt; ul &gt; li:nth-child(46) &gt; label &gt; span&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_SRCH_FRM</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl00_customFieldWrapper_ctl00_txtValue&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_SRCH_TECH</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;technology&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_SUBMIT_BTN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_btnSearch&#34;</span>,
-    <span style="color:#a6e22e">SUCCESS_STMT</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;File successfully written! - Check your project directory for the state-farm-jobs.txt file&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_JOB_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00 &gt; ul &gt; li:nth-child(INDEX)&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_JOB_SELECTOR_ID</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00&#34;</span>,
-    <span style="color:#a6e22e">RESULTS_TITLE</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;State Farm Jobs in Texas for Technology\n&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_pgrList_nextPageLink&#34;</span>,
-    <span style="color:#a6e22e">STATE_FARM_PAGE_CONTAINTER_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00 &gt; div.results-paging&#39;</span>
-
-});</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_URI</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://statefarm.csod.com/ats/careersite/search.aspx?site=1&amp;c=statefarm&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_LOC_DRPDWN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl02_customFieldWrapper &gt; button&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_TX_RD_BTN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;body &gt; div &gt; ul &gt; li:nth-child(46) &gt; label &gt; span&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_SRCH_FRM</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_rptCustomFields_ctl00_customFieldWrapper_ctl00_txtValue&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_SRCH_TECH</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;technology&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_SUBMIT_BTN</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_btnSearch&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SUCCESS_STMT</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;File successfully written! - Check your project directory for the state-farm-jobs.txt file&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_JOB_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00 &gt; ul &gt; li:nth-child(INDEX)&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_JOB_SELECTOR_ID</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">RESULTS_TITLE</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;State Farm Jobs in Texas for Technology\n&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_pgrList_nextPageLink&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">STATE_FARM_PAGE_CONTAINTER_SELECTOR</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#ctl00_siteContent_widgetLayout_rptWidgets_ctl03_widgetContainer_ctl00_ctl00 &gt; div.results-paging&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
 <p><em>Before: All of my constants in the constants.js file.</em></p>
 <p>To access the constants by re-writing the code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">newPage</span>();
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_URI</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_LOC_DRPDWN</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_TX_RD_BTN</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SRCH_FRM</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">keyboard</span>.<span style="color:#a6e22e">type</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SRCH_TECH</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SUBMIT_BTN</span>);
-<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">newPage</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_URI</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_LOC_DRPDWN</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_TX_RD_BTN</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SRCH_FRM</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">keyboard</span>.<span style="color:#a6e22e">type</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SRCH_TECH</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_SUBMIT_BTN</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);</span></span></code></pre></div>
 <p><em>After: using constants.</em></p>
 <h2 id="scraping">Scraping</h2>
 <p>We will need to get the job results from multiple pages (if there are many job openings). To do this, find out how many pages of jobs there are. Call this function to get the number of pages.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numPages</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getNumPages</span>(<span style="color:#a6e22e">page</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Number of pages: &#39;</span>, <span style="color:#a6e22e">numPages</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numPages</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getNumPages</span>(<span style="color:#a6e22e">page</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Number of pages: &#39;</span>, <span style="color:#a6e22e">numPages</span>);</span></span></code></pre></div>
 <p>Within this async function, we need to pass <code>page</code>. Next, identify the page selector <code>PAGE_CONTAINTER_SELECTOR</code> that contains all of the page numbers.</p>
 <p><img src="/images/single-blog/search-jobs-inspect2.png" alt="Image"></p>
 <p><em>Using Developer Tools again, to copy the selector of the element.</em></p>
 <p>After we have that selector, we need to pass that as an argument. Notice that <code>pageCount</code> is the first time we&rsquo;ve seen awaitkeyword. <code>PAGE_CONTAINTER_SELECTOR</code> will be passed as sel to <code>document.querySelector(sel)</code>. But that was just the container element, so to select each individual page button, use <code>pageContainer.getElementsByClassName();</code>. Next, loop through each page and get the number of pages. If there is no page button, return &lsquo;1&rsquo; because there is only 1 page. The data will be stored in <code>pageCount</code>, then we return <code>pageCount</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getNumPages</span>(<span style="color:#a6e22e">page</span>) {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PAGE_CONTAINTER_SELECTOR</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_PAGE_CONTAINTER_SELECTOR</span>;
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pageCount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">defaultCount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pageContainer</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>);
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">allPages</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pageContainer</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;pagerLink&#34;</span>);
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">allPages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
-            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">allPages</span>.<span style="color:#a6e22e">length</span>;
-        }
-        <span style="color:#66d9ef">else</span> {
-            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">defaultCount</span>;
-        }
-    }, <span style="color:#a6e22e">PAGE_CONTAINTER_SELECTOR</span>);
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pageCount</span>;
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getNumPages</span>(<span style="color:#a6e22e">page</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PAGE_CONTAINTER_SELECTOR</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_PAGE_CONTAINTER_SELECTOR</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pageCount</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">defaultCount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">pageContainer</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">allPages</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pageContainer</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;pagerLink&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">allPages</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">allPages</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">defaultCount</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }, <span style="color:#a6e22e">PAGE_CONTAINTER_SELECTOR</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pageCount</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><em>Loop through the pages. If there’s only 1 page, return 1. If there are 2 pages, return 2, etc.</em></p>
 <p>After calling <code>getNumPages</code> and returning the number of pages, we can now loop through the pages. Then at each page, loop through the list of job postings on the site. Take a look at how the State Farm website is. It has 1 OR multiple pages. Then a list of job postings.</p>
 <p><img src="/images/single-blog/search-jobs2.png" alt="Image"></p>
 <p><em>What the site looks like when there are multiple results and multiple pages.</em></p>
 <p>Now look at the code to do the actual web scraping. Again, the outer loop is to loop through the pages and the inner loop goes through the list of job postings.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">h</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">numPages</span>; <span style="color:#a6e22e">h</span><span style="color:#f92672">++</span>) {
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Page Number : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">h</span>);
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorID</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">sel</span>);
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorTagName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jobSelectorID</span>.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">jobSelectorTagName</span>.<span style="color:#a6e22e">length</span>;
-}, <span style="color:#a6e22e">JOB_SELECTOR_ID</span>);
-
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">jobListLength</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelector</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">LIST_JOB_SELECTOR</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;INDEX&#34;</span>, <span style="color:#a6e22e">i</span>)
-
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
-        <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>).<span style="color:#a6e22e">innerText</span>;
-    }, <span style="color:#a6e22e">jobSelector</span>);
-
-    <span style="color:#a6e22e">arrayJobResults</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">jobListing</span>);
-}
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numPages</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);
-}
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">h</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">numPages</span>; <span style="color:#a6e22e">h</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Page Number : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">h</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorID</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">sel</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorTagName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jobSelectorID</span>.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">jobSelectorTagName</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>}, <span style="color:#a6e22e">JOB_SELECTOR_ID</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">jobListLength</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelector</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">LIST_JOB_SELECTOR</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;INDEX&#34;</span>, <span style="color:#a6e22e">i</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>).<span style="color:#a6e22e">innerText</span>;
+</span></span><span style="display:flex;"><span>    }, <span style="color:#a6e22e">jobSelector</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">arrayJobResults</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">jobListing</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numPages</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><em>Loop through pages, on each page loop through the list of job postings.</em></p>
 <p><code>jobListLength</code> returns the number of jobs on 1 page. To do this, find the container selector of all the jobs, get each list item and count them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorID</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">sel</span>);
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorTagName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jobSelectorID</span>.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">jobSelectorTagName</span>.<span style="color:#a6e22e">length</span>;
-}, <span style="color:#a6e22e">JOB_SELECTOR_ID</span>);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorID</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">sel</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelectorTagName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jobSelectorID</span>.<span style="color:#a6e22e">getElementsByTagName</span>(<span style="color:#e6db74">&#34;li&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">jobSelectorTagName</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>}, <span style="color:#a6e22e">JOB_SELECTOR_ID</span>);</span></span></code></pre></div>
 <p><em>Finds the number of jobs listed on 1 page.</em></p>
 <p>Now that we know how many jobs are on 1 page, we can loop through them. And push the results to an array.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">jobListLength</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelector</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">LIST_JOB_SELECTOR</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;INDEX&#34;</span>, <span style="color:#a6e22e">i</span>)
-
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
-        <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>).<span style="color:#a6e22e">innerText</span>;
-    }, <span style="color:#a6e22e">jobSelector</span>);
-
-    <span style="color:#a6e22e">arrayJobResults</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">jobListing</span>);
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">jobListLength</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobSelector</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">LIST_JOB_SELECTOR</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;INDEX&#34;</span>, <span style="color:#a6e22e">i</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jobListing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">evaluate</span>((<span style="color:#a6e22e">sel</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">sel</span>).<span style="color:#a6e22e">innerText</span>;
+</span></span><span style="display:flex;"><span>    }, <span style="color:#a6e22e">jobSelector</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">arrayJobResults</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">jobListing</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><em>Looping and adding each job to an array.</em></p>
 <p>We have scraped the data for 1 page, but what if there are multiple pages? We actually need to click on the next page button and scrape the next page. We use a familiar .click() function to click on the next page selector. Let&rsquo;s wait a little while for the next page to load.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numPages</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span>);
-    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);
-}
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">numPages</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">STATE_FARM_NEXT_PAGE_SELECTOR</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">waitFor</span>(<span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><em>If there is more than 1 page, click the next page button.</em></p>
 <p>After we have have gotten the data from all of the pages, we need to close the headless browser. And return all the results to an array.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">close</span>();
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arrayJobResults</span>;
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arrayJobResults</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p>After we have our jobs stored in the array, we will do some formatting and log it to the console. Up until now, we haven’t used File System, but here it comes. <code>.writeFile()</code> will take our data and print it to a text file. Think of <code>.then()</code> to do this after the async function has completed.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">run</span>().<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">value</span>) =&gt; {
-      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>);
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
-      <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#34;state-farm-jobs.txt&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
-          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">SUCCESS_STMT</span>);
-      });
-  });</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">run</span>().<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">value</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#34;state-farm-jobs.txt&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">SUCCESS_STMT</span>);
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>  });</span></span></code></pre></div>
 <p><em>Nicely formatted list of jobs to a text file.</em></p>
 <h2 id="email">Email:</h2>
 <p>So far, we have our results saved to a text file which is pretty cool. But now we want to be notified when the script finishes. We will add some code to send us an automated email with the attached state-farm-jobs.txt file. Create a new file called send-email.js and put this in your src folder.</p>
@@ -471,76 +476,76 @@ run().then((value) =&gt; {
 <pre tabindex="0"><code>$ npm install nodemailer
 $ npm i nodemailer-smtp-transport
 </code></pre><p>Copy this code and fill out the details and file path of state-farm-jobs.txt:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">transporter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nodemailer</span>.<span style="color:#a6e22e">createTransport</span>(<span style="color:#a6e22e">smtpTransport</span>({
-      <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Gmail&#39;</span>,
-      <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;smtp.gmail.com&#39;</span>,
-      <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">465</span>,
-      <span style="color:#a6e22e">auth</span><span style="color:#f92672">:</span> {
-          <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>,
-          <span style="color:#a6e22e">pass</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">password</span>
-      }
-  }));
-
-  <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>({
-      <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>,
-      <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;State Farm Jobs&#34;</span>,
-      <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hey, here are the job searches:&#34;</span>,
-      <span style="color:#a6e22e">attachments</span><span style="color:#f92672">:</span> [
-          {
-              <span style="color:#e6db74">&#39;filename&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;state-farm-jobs.txt&#39;</span>,
-              <span style="color:#e6db74">&#39;path&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;C:/Users/Anthony/Documents/git/automated-job-web-scraping/state-farm-jobs.txt&#39;</span>
-          }
-      ],
-      <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>
-  }, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">info</span>) {
-      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">error</span>) {
-          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
-      }
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Message %s sent: %s&#39;</span>, <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">messageId</span>, <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">response</span>);
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;E-Mail sent successfully to &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>);
-  });</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">transporter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nodemailer</span>.<span style="color:#a6e22e">createTransport</span>(<span style="color:#a6e22e">smtpTransport</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Gmail&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;smtp.gmail.com&#39;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">465</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">auth</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">pass</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">password</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;State Farm Jobs&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hey, here are the job searches:&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">attachments</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#39;filename&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;state-farm-jobs.txt&#39;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#39;path&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;C:/Users/Anthony/Documents/git/automated-job-web-scraping/state-farm-jobs.txt&#39;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>
+</span></span><span style="display:flex;"><span>  }, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">info</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Message %s sent: %s&#39;</span>, <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">messageId</span>, <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;E-Mail sent successfully to &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">credentials</span>.<span style="color:#a6e22e">email</span>);
+</span></span><span style="display:flex;"><span>  });</span></span></code></pre></div>
 <p><em>This sends an email (Gmail) with a file attachment.</em></p>
 <p>What does <code>credentials.email</code> and <code>credentials.password</code> mean? If you wanted to, you could enter a String with your email and password but to protect that, I have stored those in a separate file called <code>credentials.js</code> in the <code>util</code> folder.</p>
 <p>In <code>credentials.js</code>, fill these values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-<span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_EMAIL&#34;</span>,
-    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_PASSWORD&#34;</span>
-}</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_EMAIL&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_PASSWORD&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
 <p><em>Data encapsulation.</em></p>
 <p>In your <code>.gitignore</code> file, add the name of the file you want git to ignore/hide. So you would add <code>credentials.js</code> in that file.</p>
 <p>Now, back to <code>send-email.js</code>, you would import the credentials file at the top like so,</p>
-<pre tabindex="0"><code>const credentials = require('./credentials.js');
+<pre tabindex="0"><code>const credentials = require(&#39;./credentials.js&#39;);
 </code></pre><p>And when you want to access that data, type (name_of_file).(key):</p>
 <pre tabindex="0"><code>credentials.email
 credentials.password
 </code></pre><h2 id="modules">Modules</h2>
 <p>We have 2 main Node.js files (in <code>src</code>) which contains our code, <code>scrape-state-farm.js</code> &amp; <code>send-email.js</code>. To run them together we need to package each of them into separate modules and call them in another file. In each one of the files, wrap the code into functions and export them.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">stateFarmModule</span>() {
-  <span style="color:#75715e">//previous code here
-</span><span style="color:#75715e"></span>}
-<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">stateFarmModule</span>;
-
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">emailModule</span>() {
-  <span style="color:#75715e">//previous code here
-</span><span style="color:#75715e"></span>}
-<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">emailModule</span>;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">stateFarmModule</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//previous code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">stateFarmModule</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">emailModule</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//previous code here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">emailModule</span>;</span></span></code></pre></div>
 <p>scrape-state-farm.js goes in stateFarmModule. send-email.js goes in emailModule.</p>
 <p>Create <code>index.js</code> and import those exported functions.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stateFarmModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./scrape-state-farm.js&#34;</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">emailModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./send-email.js&#34;</span>);
-
-<span style="color:#a6e22e">stateFarmModule</span>();</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stateFarmModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./scrape-state-farm.js&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">emailModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./send-email.js&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">stateFarmModule</span>();</span></span></code></pre></div>
 <p>In <code>scrape-state-farm.js</code>, after <code>.then()</code> I will call the email module so that my results are saved to a text file, THEN the email module is called.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">run</span>().<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">value</span>) =&gt; {
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>);
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
-        <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#34;state-farm-jobs.txt&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
-            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">SUCCESS_STMT</span>);
-        });
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;scrape-state-farm.js - created txt file&#34;</span>)
-        <span style="color:#a6e22e">emailModule</span>();
-    });</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">run</span>().<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">value</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\r\n&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(<span style="color:#e6db74">&#34;state-farm-jobs.txt&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">SUCCESS_STMT</span>);
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;scrape-state-farm.js - created txt file&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">emailModule</span>();
+</span></span><span style="display:flex;"><span>    });</span></span></code></pre></div>
 <p><em>Call the emailModule, to send an email AFTER the results are written on a text file.</em></p>
 <h2 id="output">Output:</h2>
 <ol>

@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -276,28 +281,28 @@
 </li>
 </ul>
 <h4 id="deploy">Deploy</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to Firebase Hosting on merge</span>
-<span style="color:#f92672">&#39;on&#39;</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">master</span>
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build_and_deploy</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
-      - <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">          echo &#39;Deploying to Firebase...&#39;
-</span><span style="color:#e6db74">          cd anthonyjdella</span>          
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
-          <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
-          <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
-          <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
-          <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to Firebase Hosting on merge</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&#39;on&#39;</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build_and_deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          echo &#39;Deploying to Firebase...&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          cd anthonyjdella</span>          
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">FirebaseExtended/action-hosting-deploy@v0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">repoToken</span>: <span style="color:#e6db74">&#39;${{ secrets.GITHUB_TOKEN }}&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">firebaseServiceAccount</span>: <span style="color:#e6db74">&#39;${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANTHONYDELLAVECCHIA }}&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">channelId</span>: <span style="color:#ae81ff">live</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">projectId</span>: <span style="color:#ae81ff">anthonydellavecchia</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">entryPoint</span>: <span style="color:#e6db74">&#34;./anthonyjdella&#34;</span></span></span></code></pre></div>
 <h4 id="build">Build</h4>
 <p>As shown above, there are three code repositories. The Source code for Theme &amp; Static site code are submodules of the source code.</p>
 <ul>

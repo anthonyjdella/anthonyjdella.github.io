@@ -104,6 +104,11 @@
         </li>
         
         <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
           <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
             class="nav-link text-dark text-sm-center p-2 ">Blog</a>
         </li>
@@ -277,30 +282,30 @@
 <h3 id="configure-output-to-json">Configure Output to JSON</h3>
 <p>Hugo can output content into multiple different file formats (like javascript, xml, toml, etc.). So, we want to set up our project to output JSON. Do this by configuring the <code>config.toml/yaml</code>:</p>
 <p><strong>config.toml</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">outputFormats</span>.<span style="color:#a6e22e">Algolia</span>]
-<span style="color:#a6e22e">baseName</span> = <span style="color:#e6db74">&#34;algolia&#34;</span>
-<span style="color:#a6e22e">isPlainText</span> = <span style="color:#66d9ef">true</span>
-<span style="color:#a6e22e">mediaType</span> = <span style="color:#e6db74">&#34;application/json&#34;</span>
-<span style="color:#a6e22e">notAlternative</span> = <span style="color:#66d9ef">true</span>
-
-[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">algolia</span>]
-<span style="color:#a6e22e">vars</span> = [<span style="color:#e6db74">&#34;title&#34;</span>, <span style="color:#e6db74">&#34;summary&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishdate&#34;</span>, <span style="color:#e6db74">&#34;permalink&#34;</span>]
-<span style="color:#a6e22e">params</span> = [<span style="color:#e6db74">&#34;tags&#34;</span>]
-
-[<span style="color:#a6e22e">outputs</span>]
-<span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;Algolia&#34;</span>]</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">outputFormats</span>.<span style="color:#a6e22e">Algolia</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">baseName</span> = <span style="color:#e6db74">&#34;algolia&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">isPlainText</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mediaType</span> = <span style="color:#e6db74">&#34;application/json&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">notAlternative</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">algolia</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">vars</span> = [<span style="color:#e6db74">&#34;title&#34;</span>, <span style="color:#e6db74">&#34;summary&#34;</span>, <span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;publishdate&#34;</span>, <span style="color:#e6db74">&#34;permalink&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">params</span> = [<span style="color:#e6db74">&#34;tags&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;Algolia&#34;</span>]</span></span></code></pre></div>
 <p>Here, we are creating a custom outputFormat called Algolia, which is of type JSON. We&rsquo;re also giving it some variables which will be used later.</p>
 <h3 id="creating-a-search-index-template">Creating a Search Index Template</h3>
 <p>Next, create a file which will generate the JSON search index output. This file is the template for creating our output JSON. In the <code>layouts/</code> directory, create a file like: <code>search-index.json</code>.</p>
 <p><strong>search-index.json</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">slice</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
-
-{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">range</span> <span style="color:#960050;background-color:#1e0010">where</span> <span style="color:#960050;background-color:#1e0010">.Site.RegularPages</span> <span style="color:#f92672">&#34;.Type&#34;</span> <span style="color:#e6db74">&#34;blog&#34;</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
-
-    {<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">(dict</span> <span style="color:#e6db74">&#34;objectID&#34;</span> <span style="color:#960050;background-color:#1e0010">.UniqueID</span> <span style="color:#e6db74">&#34;date&#34;</span> <span style="color:#960050;background-color:#1e0010">.Date.UTC.Unix</span> <span style="color:#e6db74">&#34;fuzzywordcount&#34;</span> <span style="color:#960050;background-color:#1e0010">.FuzzyWordCount</span> <span style="color:#e6db74">&#34;kind&#34;</span> <span style="color:#960050;background-color:#1e0010">.Kind</span> <span style="color:#e6db74">&#34;lastmod&#34;</span> <span style="color:#960050;background-color:#1e0010">.Lastmod.UTC.Unix</span> <span style="color:#e6db74">&#34;permalink&#34;</span> <span style="color:#960050;background-color:#1e0010">.Permalink</span> <span style="color:#e6db74">&#34;publishdate&#34;</span> <span style="color:#960050;background-color:#1e0010">.PublishDate</span> <span style="color:#e6db74">&#34;readingtime&#34;</span> <span style="color:#960050;background-color:#1e0010">.ReadingTime</span> <span style="color:#e6db74">&#34;relpermalink&#34;</span> <span style="color:#960050;background-color:#1e0010">.RelPermalink</span> <span style="color:#e6db74">&#34;summary&#34;</span> <span style="color:#960050;background-color:#1e0010">.Summary</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#960050;background-color:#1e0010">.Title</span> <span style="color:#e6db74">&#34;type&#34;</span> <span style="color:#960050;background-color:#1e0010">.Type</span> <span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#960050;background-color:#1e0010">.RelPermalink</span> <span style="color:#e6db74">&#34;wordcount&#34;</span> <span style="color:#960050;background-color:#1e0010">.WordCount</span> <span style="color:#e6db74">&#34;section&#34;</span> <span style="color:#960050;background-color:#1e0010">.Section</span> <span style="color:#e6db74">&#34;tags&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.Tags</span> <span style="color:#e6db74">&#34;authors&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.Authors</span> <span style="color:#e6db74">&#34;image&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.FeatureImage</span> <span style="color:#e6db74">&#34;writtendate&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.WrittenDate)</span>}<span style="color:#960050;background-color:#1e0010">}</span>
-
-{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">end</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
-{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Get</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">jsonify</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">slice</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">range</span> <span style="color:#960050;background-color:#1e0010">where</span> <span style="color:#960050;background-color:#1e0010">.Site.RegularPages</span> <span style="color:#f92672">&#34;.Type&#34;</span> <span style="color:#e6db74">&#34;blog&#34;</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    {<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Add</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">(dict</span> <span style="color:#e6db74">&#34;objectID&#34;</span> <span style="color:#960050;background-color:#1e0010">.UniqueID</span> <span style="color:#e6db74">&#34;date&#34;</span> <span style="color:#960050;background-color:#1e0010">.Date.UTC.Unix</span> <span style="color:#e6db74">&#34;fuzzywordcount&#34;</span> <span style="color:#960050;background-color:#1e0010">.FuzzyWordCount</span> <span style="color:#e6db74">&#34;kind&#34;</span> <span style="color:#960050;background-color:#1e0010">.Kind</span> <span style="color:#e6db74">&#34;lastmod&#34;</span> <span style="color:#960050;background-color:#1e0010">.Lastmod.UTC.Unix</span> <span style="color:#e6db74">&#34;permalink&#34;</span> <span style="color:#960050;background-color:#1e0010">.Permalink</span> <span style="color:#e6db74">&#34;publishdate&#34;</span> <span style="color:#960050;background-color:#1e0010">.PublishDate</span> <span style="color:#e6db74">&#34;readingtime&#34;</span> <span style="color:#960050;background-color:#1e0010">.ReadingTime</span> <span style="color:#e6db74">&#34;relpermalink&#34;</span> <span style="color:#960050;background-color:#1e0010">.RelPermalink</span> <span style="color:#e6db74">&#34;summary&#34;</span> <span style="color:#960050;background-color:#1e0010">.Summary</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#960050;background-color:#1e0010">.Title</span> <span style="color:#e6db74">&#34;type&#34;</span> <span style="color:#960050;background-color:#1e0010">.Type</span> <span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#960050;background-color:#1e0010">.RelPermalink</span> <span style="color:#e6db74">&#34;wordcount&#34;</span> <span style="color:#960050;background-color:#1e0010">.WordCount</span> <span style="color:#e6db74">&#34;section&#34;</span> <span style="color:#960050;background-color:#1e0010">.Section</span> <span style="color:#e6db74">&#34;tags&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.Tags</span> <span style="color:#e6db74">&#34;authors&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.Authors</span> <span style="color:#e6db74">&#34;image&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.FeatureImage</span> <span style="color:#e6db74">&#34;writtendate&#34;</span> <span style="color:#960050;background-color:#1e0010">.Params.WrittenDate)</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">end</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#960050;background-color:#1e0010">{-</span> <span style="color:#960050;background-color:#1e0010">$.Scratch.Get</span> <span style="color:#f92672">&#34;index&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#960050;background-color:#1e0010">jsonify</span> <span style="color:#960050;background-color:#1e0010">-</span>}<span style="color:#960050;background-color:#1e0010">}</span></span></span></code></pre></div>
 <p>I only want my search to look for blog posts, not every static page. To do this, I loop through my pages with the type &ldquo;blog&rdquo;. Then, I create a dictionary which contains multiple key/value pairs of the data that I want. For instance, I want the title of my blog posts, so I create a key (&ldquo;title&rdquo;) and a value (.Title). You can scroll through the code to get an idea of how to scrape other data (like a description, date, etc).</p>
 <h3 id="generating-the-json">Generating the JSON</h3>
 <p>After the template is created, just re-build the project. Doing this will create a JSON file, which will be used as our search index. In my case, I have a Hugo theme called &ldquo;portio&rdquo;. So, to build my project, I run the command <code>hugo -t portio</code>. After running this command, I have a generated JSON file called <code>algolia.json</code> in my build (public) directory.</p>
@@ -313,7 +318,7 @@
 <p><code>npm install atomic-algolia --save</code></p>
 <p>Within your <code>package.json</code>, add a script called <code>algolia: atomic-algolia</code>.</p>
 <p>If you run <code>npm run algolia</code>, it won&rsquo;t work because Algolia doesn&rsquo;t know which project you&rsquo;re uploading this search index to. To fix this, you&rsquo;ll need to run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ALGOLIA_APP_ID<span style="color:#f92672">={{</span> YOUR_APP_ID <span style="color:#f92672">}}</span> ALGOLIA_ADMIN_KEY<span style="color:#f92672">={{</span> YOUR_ADMIN_KEY <span style="color:#f92672">}}</span> ALGOLIA_INDEX_NAME<span style="color:#f92672">={{</span> YOUR_INDEX NAME <span style="color:#f92672">}}</span> ALGOLIA_INDEX_FILE<span style="color:#f92672">={{</span> PATH/TO/algolia.json <span style="color:#f92672">}}</span> npm run algolia</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ALGOLIA_APP_ID<span style="color:#f92672">={{</span> YOUR_APP_ID <span style="color:#f92672">}}</span> ALGOLIA_ADMIN_KEY<span style="color:#f92672">={{</span> YOUR_ADMIN_KEY <span style="color:#f92672">}}</span> ALGOLIA_INDEX_NAME<span style="color:#f92672">={{</span> YOUR_INDEX NAME <span style="color:#f92672">}}</span> ALGOLIA_INDEX_FILE<span style="color:#f92672">={{</span> PATH/TO/algolia.json <span style="color:#f92672">}}</span> npm run algolia</span></span></code></pre></div>
 <p>Copy the values of your app id, api key, etc into these brackets. Now, when you run that command, you&rsquo;re search index will be uploaded to Algolia! Check the Algolia interface to make sure your data is present in that service. From the UI, you can configure, manage, and view analytics related to your index.</p>
 <p><strong>NOTE:</strong> I&rsquo;ve stored my keys in a .env file, for security reasons. You shouldn&rsquo;t commit this to Git, so if you&rsquo;re doing this on a new computer, you&rsquo;ll need to add another .env file to your root folder.</p>
 <p><img src="/images/blog/algolia-ui.png" alt="Image"></p>
@@ -322,110 +327,110 @@
 <h2 id="displaying-the-search-results">Displaying the Search Results</h2>
 <p>We&rsquo;re going to have to write some Javascript to interact with Algolia API&rsquo;s to interact with our search index. First, we&rsquo;ll have to import Algolia as a module. Easiest way to do this is by adding node modules, but I went with embedding the scripts directly (from a CDN).</p>
 <p>To embed the modules via a CDN, I used JSDelivr, which is a large CDN for Javascript modules. Then I injected these scripts into my HTML:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch.umd.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch.umd.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;</span></span></code></pre></div>
 <p>One of these is for a built-in theme, and the others are the modules to use Algolia search.</p>
 <p>Now, create a <code>search.js</code> file which will interact with the Algolia API&rsquo;s to configure some things you&rsquo;ll need.</p>
 <h3 id="initialize-search">Initialize Search</h3>
 <p>Start by initializing Search, by entering your index credentials.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">instantsearch</span>({
-    <span style="color:#a6e22e">indexName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;your-index-name&#39;</span>,
-    <span style="color:#a6e22e">routing</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-    <span style="color:#a6e22e">searchClient</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">algoliasearch</span>(
-        <span style="color:#e6db74">&#39;your-app-id&#39;</span>,
-        <span style="color:#e6db74">&#39;your-api-key&#39;</span>
-    )
-});</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">search</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">instantsearch</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">indexName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;your-index-name&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">routing</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">searchClient</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">algoliasearch</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;your-app-id&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;your-api-key&#39;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
 <h3 id="display-results">Display Results</h3>
 <p>Go to the HTML page you want your results to be displayed. Then create an empty div which will be where your results are shown:</p>
 <p><code>&lt;div id=&quot;hits&quot;&gt;&lt;/div&gt;</code></p>
 <p>Back in the <code>search.js</code> file, we&rsquo;ll need to link that div to Algolia&rsquo;s API.</p>
 <p>Algolia is built around widgets, one of which is the Hits widget which displays all of your data results. Configure your Hits widget with the below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
-    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">hits</span>({
-        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#hits&#39;</span>,
-        <span style="color:#a6e22e">templates</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">empty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;h3 style=&#34;text-align: center;&#34;&gt;No results found 😔. Search something else.&lt;/h3&gt;&#39;</span>
-        }
-    })
-);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">hits</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#hits&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">templates</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">empty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;h3 style=&#34;text-align: center;&#34;&gt;No results found 😔. Search something else.&lt;/h3&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
 <p>The container finds your HTML element which we defined in our HTML above. After it finds it, it will inject the widget into that HTML.</p>
 <p>An empty template field will display whenever the search results are not found.</p>
 <p>To display the actual results, we&rsquo;ll need to add an item in our template:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
-    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">hits</span>({
-        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#hits&#39;</span>,
-        <span style="color:#a6e22e">templates</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">empty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;h3 style=&#34;text-align: center;&#34;&gt;No results found 😔. Search something else.&lt;/h3&gt;&#39;</span>,
-            <span style="color:#a6e22e">item</span><span style="color:#f92672">:</span>
-            <span style="color:#e6db74">`
-</span><span style="color:#e6db74">            {{ range .Paginator.Pages }}
-</span><span style="color:#e6db74">                &lt;div class=&#34;image&#34;&gt;
-</span><span style="color:#e6db74">                    &lt;img src=&#34;{{ image }}&#34;&gt;
-</span><span style="color:#e6db74">                &lt;/div&gt;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">                &lt;div class=&#34;blog&#34;&gt;
-</span><span style="color:#e6db74">                    &lt;span&gt;{{ writtendate }}&lt;/span&gt;
-</span><span style="color:#e6db74">                    &lt;h4&gt;
-</span><span style="color:#e6db74">                        &lt;a href=&#34;{{ permalink }}&#34;&gt;
-</span><span style="color:#e6db74">                            {{#helpers.highlight}}
-</span><span style="color:#e6db74">                                { &#34;attribute&#34;: &#34;title&#34;, &#34;highlightedTagName&#34;: &#34;mark&#34; }
-</span><span style="color:#e6db74">                            {{/helpers.highlight}}
-</span><span style="color:#e6db74">                        &lt;/a&gt;
-</span><span style="color:#e6db74">                    &lt;/h4&gt;
-</span><span style="color:#e6db74">                    &lt;h6&gt;
-</span><span style="color:#e6db74">                    [ {{tags}} ]
-</span><span style="color:#e6db74">                    &lt;/h6&gt;
-</span><span style="color:#e6db74">                &lt;/div&gt;
-</span><span style="color:#e6db74">            {{ end }}
-</span><span style="color:#e6db74">            {{ partial &#34;pagination&#34; .}}
-</span><span style="color:#e6db74">            `</span>
-        }
-    })
-);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">hits</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#hits&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">templates</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">empty</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;h3 style=&#34;text-align: center;&#34;&gt;No results found 😔. Search something else.&lt;/h3&gt;&#39;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">item</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">`
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            {{ range .Paginator.Pages }}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;div class=&#34;image&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;img src=&#34;{{ image }}&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;div class=&#34;blog&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;span&gt;{{ writtendate }}&lt;/span&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;h4&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                        &lt;a href=&#34;{{ permalink }}&#34;&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                            {{#helpers.highlight}}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                { &#34;attribute&#34;: &#34;title&#34;, &#34;highlightedTagName&#34;: &#34;mark&#34; }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                            {{/helpers.highlight}}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                        &lt;/a&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;/h4&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;h6&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    [ {{tags}} ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    &lt;/h6&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &lt;/div&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            {{ end }}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            {{ partial &#34;pagination&#34; .}}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            `</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
 <p>Here, I&rsquo;m looping through all of my pages, then displaying an image for each page, followed by the date that the blog was written, and the title of each blog.</p>
 <h3 id="search-bar">Search Bar</h3>
 <p>Results should be displayed now. Next, we&rsquo;ll add the search box which will filter our results.</p>
 <p>In the HTML file, add the following div:</p>
 <p><code>&lt;div id=&quot;search-box&quot;&gt;&lt;/div&gt;</code></p>
 <p>Back in the <code>search.js</code> file, we&rsquo;ll initialize a search box widget:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
-    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">searchBox</span>({
-        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#search-box&#39;</span>,
-        <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Search for articles&#34;</span>,
-        <span style="color:#a6e22e">autofocus</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-    })
-);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">searchBox</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#search-box&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Search for articles&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">autofocus</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
 <p>Again, the container will look for the HTML element that you enter, and inject that widget into the HTML.</p>
 <h3 id="adding-other-widgets">Adding Other Widgets</h3>
 <p>As mentioned, Algolia has a <a href="https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/js/">bunch of widgets</a> that you can configure. We&rsquo;ve already added the Hits widget, which displays our results, and the Search Box widget, which displays a search box.</p>
 <p>For my site, I also wanted categories/tags so that users can quickly sort an article by the category. I also wanted pagination below the results so users can navigate through my content.</p>
 <p>Again, we need an empty div in our HTML. So for these, I will add the following in my HTML:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
-&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;menu&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></div>
 <p>For the categories/tags, you can use a Refinement List widget. But I went with the Menu widget which is pretty similar. Initialize it with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
-    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">menu</span>({
-        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#menu&#39;</span>,
-        <span style="color:#a6e22e">attribute</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tags&#39;</span>,
-        <span style="color:#a6e22e">showMore</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-        <span style="color:#a6e22e">limit</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
-        <span style="color:#a6e22e">sortBy</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;count:desc&#39;</span>]
-    })
-);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">menu</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#menu&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">attribute</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tags&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">showMore</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">limit</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sortBy</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;count:desc&#39;</span>]
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
 <p>Here, we are filtering by tags, which is a data attribute in my search index JSON. I also enabled a &ldquo;Show More&rdquo; button that shows all of my tags.</p>
 <p>The Pagination widget was added like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
-    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">pagination</span>({
-        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#pagination&#39;</span>,
-        <span style="color:#a6e22e">scrollTo</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-        <span style="color:#a6e22e">showFirst</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-        <span style="color:#a6e22e">showLast</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-        <span style="color:#a6e22e">showPrevious</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-    })
-);</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">search</span>.<span style="color:#a6e22e">addWidget</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instantsearch</span>.<span style="color:#a6e22e">widgets</span>.<span style="color:#a6e22e">pagination</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#pagination&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">scrollTo</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">showFirst</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">showLast</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">showPrevious</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
 <h3 id="customizing-widgets">Customizing Widgets</h3>
 <p>Finally, we&rsquo;ve got a fully functioning Search. But the CSS may not look the way we want it to. You can customize the CSS by overriding the classes to your needs. Remember to test it out for both mobile and desktop devices!</p>
 <h2 id="finished">Finished!</h2>
