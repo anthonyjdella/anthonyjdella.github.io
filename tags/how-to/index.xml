@@ -6,7 +6,18 @@
     <description>Recent content in how-to on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Sep 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summarize Text from Images Using AI, Python, and Twilio</title>
+      <link>https://anthonydellavecchia.com/blog/summarize-text-from-photos/</link>
+      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/summarize-text-from-photos/</guid>
+      <description>TLDR: This is a tutorial on how to build a Python app that will summarize text that you take from images.
+Overview Content, content, content! There&amp;rsquo;s too much content out there and too much to read. Don&amp;rsquo;t you wish you could pull out your phone -&amp;gt; take a picture of a book -&amp;gt; get texted a summary of what it says?
+I built a Python app that does just this, and I&amp;rsquo;ll teach you how you can build it too.</description>
+    </item>
+    
     <item>
       <title>Get The Latest NBA News Sent to Your Phone via SMS</title>
       <link>https://anthonydellavecchia.com/blog/get-the-latest-nba-news/</link>

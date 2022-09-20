@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Sep 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>api</title>
       <link>https://anthonydellavecchia.com/tags/api/</link>
-      <pubDate>Thu, 21 Jul 2022 12:00:27 +0600</pubDate>
+      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/api/</guid>
       <description></description>
@@ -19,16 +19,25 @@
     <item>
       <title>how-to</title>
       <link>https://anthonydellavecchia.com/tags/how-to/</link>
-      <pubDate>Thu, 21 Jul 2022 12:00:27 +0600</pubDate>
+      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/how-to/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>python</title>
+      <link>https://anthonydellavecchia.com/tags/python/</link>
+      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>twilio</title>
       <link>https://anthonydellavecchia.com/tags/twilio/</link>
-      <pubDate>Thu, 21 Jul 2022 12:00:27 +0600</pubDate>
+      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/twilio/</guid>
       <description></description>
@@ -148,15 +157,6 @@
       <pubDate>Mon, 17 Jan 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/nosql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://anthonydellavecchia.com/tags/python/</link>
-      <pubDate>Mon, 17 Jan 2022 12:00:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/python/</guid>
       <description></description>
     </item>
     

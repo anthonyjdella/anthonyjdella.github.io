@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow" />
+  <title>Summarize Text from Images Using AI, Python, and Twilio</title>
+  <meta name="description" content="Blog and portfolio of Anthony Dellavecchia, a Software Engineer and tech enthusiast">
+  <meta name="author" content="Anthony Dellavecchia" />
+  <meta name="keywords"
+    content="Anthony Dellavecchia anthonyjdella software engineer developer full-stack backend back-end frontend front-end designer UX UI product software app web creative portfolio">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta property="og:type" content="software" />
+  <meta property="og:title" content="Anthony Dellavecchia the Software Engineer" />
+  <meta property="og:description" content="Blog and portfolio of Anthony Dellavecchia, a Software Engineer and tech enthusiast" />
+  <meta property="og:url" content="https://www.anthonydellavecchia.com" />
+  <meta property="og:site_name" content="anthonyjdella" />
+  <meta name="twitter:title" content="Anthony Dellavecchia the Software Engineer">
+  <meta name="twitter:description" content="Blog and portfolio of Anthony Dellavecchia, a Software Engineer and tech enthusiast">
+  <meta name="twitter:site" content="@anthonyjdella">
+  <meta name="twitter:creator" content="@anthonyjdella">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/504412024/1641453154/1500x500">
+  <meta name="twitter:domain" content="anthonydellavecchia.com">
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="https://anthonydellavecchia.com/plugins/slick/slick.css" />
+  <link rel="stylesheet" href="https://anthonydellavecchia.com/plugins/slick/slick-theme.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://anthonydellavecchia.com/plugins/font-awesome/css/font-awesome.min.css" />
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="https://anthonydellavecchia.com/plugins/magnafic-popup/magnific-popup.css" />
+
+  <!-- Stylesheets -->
+  
+  <link href="https://anthonydellavecchia.com/scss/style.min.css" rel="stylesheet" />
+
+  <link rel="canonical" href="https://www.anthonydellavecchia.com/">
+
+  <link rel="preload" href="https://anthonydellavecchia.com/fonts/BogartTrial-Regular.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+
+  <link rel="preload" href="https://anthonydellavecchia.com/fonts/CervanttisRegular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" href="https://anthonydellavecchia.com/fonts/Biotif-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://anthonydellavecchia.com/images/avatar.png" type="image/x-icon" />
+  <link rel="icon" href="https://anthonydellavecchia.com/images/contact/avatar.png" type="image/x-icon" />
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3SHCY6M34"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"> </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X3SHCY6M34');
+  </script>
+  
+  <script src="https://anthonydellavecchia.com/js/darkmode.min.js"></script>
+  
+  <script src="https://anthonydellavecchia.com/js/darktoggle.min.js"></script>
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8838706728408201"
+    crossorigin="anonymous"></script>
+</head>
+
+<body id="purple-cursor-2">
+  <nav class="navbar navbar-expand-lg fixed-top" id="hideNavBar">
+  <div class="container">
+    <a id="purple-cursor" href="https://anthonydellavecchia.com//" class="navbar-brand scroll">
+      <img class="poke" src="https://anthonydellavecchia.com/images/contact/profile-pic.png" alt="site-logo">
+      <img class="bubble" src="https://anthonydellavecchia.com/images/contact/bubble.png" alt="bubble">
+      <div class="hello-there"> Hello! </div>
+    </a>
+    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      <ul class="nav navbar-nav main-navigation my-0 mx-auto">
+        
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com//"
+            class="nav-link text-dark text-sm-center p-2 ">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/about"
+            class="nav-link text-dark text-sm-center p-2 ">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/talks"
+            class="nav-link text-dark text-sm-center p-2 ">Talks</a>
+        </li>
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/blog"
+            class="nav-link text-dark text-sm-center p-2 ">Blog</a>
+        </li>
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/portfolio"
+            class="nav-link text-dark text-sm-center p-2 ">Portfolio</a>
+        </li>
+        
+        <li class="nav-item">
+          <a id="purple-cursor" href="https://anthonydellavecchia.com/contact"
+            class="nav-link text-dark text-sm-center p-2 ">Contact</a>
+        </li>
+        
+      </ul>
+      <style id="i-hate-this"></style>
+      <div id="mobile-dark-toggle" style="vertical-align: middle;">
+      <label id="purple-cursor" style="margin-bottom: 0px !important; vertical-align: middle;">
+        <input class='toggle-checkbox' type='checkbox' onclick="darkToggleButton();"></input>
+        <div class='toggle-slot'>
+          <div class='sun-icon-wrapper'>
+            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+          </div>
+          <div class='toggle-button'></div>
+          <div class='moon-icon-wrapper'>
+            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+          </div>
+        </div>
+      </label>
+    </div>
+    </div>
+  </div>
+</nav>
+  <div class="meny">
+    <strong><u>Follow Anthony @</u></strong><br>
+    <br>
+    <strong>Software & Coding</strong>
+    <ul class="fa-ul">
+        <li><a href="https://github.com/anthonyjdella" target="_blank">GitHub</a></li>
+        <li><a href="https://dev.to/anthonyjdella" target="_blank">Dev Community</a></li>
+        <li><a href="https://anthonyjdella.hashnode.dev/" target="_blank">Hash Node</a></li>
+        <li><a href="https://medium.com/@anthonyjdella" target="_blank">Medium</a></li>
+        <li><a href="https://leetcode.com/anthonyjdella/" target="_blank">Leetcode</a></li>
+        <li><a href="https://stackoverflow.com/users/story/9465781" target="_blank">Stack Overflow</a></li>
+        <li><a href="https://codepen.io/anthonyjdella" target="_blank">CodePen</a></li>
+    </ul>
+
+    <strong>Art & Design</strong>
+    <ul class="fa-ul">
+        <li><a href="https://www.behance.net/anthonyjdella" target="_blank">Behance</a></li>
+        <li><a href="https://dribbble.com/anthonyjdella" target="_blank">Dribbble</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella.photo/" target="_blank">Photography</a></li>
+    </ul>
+
+    <strong>Social Media</strong>
+    <ul class="fa-ul">
+        <li><a href="https://www.linkedin.com/in/anthonydellavecchia/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/anthonyjdella" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/anthonyjdella/" target="_blank">Instagram</a></li>
+    </ul>
+
+    <strong>Schedule A Meeting</strong>
+    <ul class="fa-ul">
+        <li><a href="https://calendly.com/anthonyjdella" target="_blank">Calendly</a></li>
+        <li><a href="mailto:hireme@anthonydellavecchia.com?subject=I Want to Hire Anthony!&body=Hey Anthony, I really like your website and would love to hire you." target="_blank">Gmail</a></li>
+    </ul>
+
+    <strong>Send A Message</strong>
+    <ul class="fa-ul">
+        <li><a href="https://zipmessage.com/xj8msjzr" target="_blank">Zip Message</a></li>
+    </ul>
+
+    <strong>Support Me</strong>
+    <ul class="fa-ul">
+        <li><a href="https://github.com/sponsors/anthonyjdella" target="_blank">Sponsor Me</a></li>
+        <li><a href="https://www.buymeacoffee.com/anthonyjdella" target="_blank">Buy me a Coffee</a></li>
+    </ul>
+
+    <strong>Emergency Only</strong>
+    <ul class="fa-ul">
+        <li><a href="sms:9402421288;?&body=Hey%20Anthony%20I%20am%20interested%20in%20hiring%20you.%20Please%20contact%20me."
+                target="_blank">Text Me</a></li>
+        <li><a href="tel:9402421288" target="_blank">Call Me</a></li>
+    </ul>
+</div>
+<div class="meny-arrow"></div>
+  <div class="contents" id="content">
+    
+    
+
+<header class="breadCrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
+        <h3 class="breadCrumb__title">Summarize Text from Images Using AI, Python, and Twilio</h3>
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+          <ol class="breadcrumb align-items-center">
+            <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
+            <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Summarize Text from Images Using AI, Python, and Twilio</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section singleBlog">
+  <div class="svg-img">
+      <img src=https://anthonydellavecchia.com/images/hero/figure-svg.svg alt="">
+  </div>
+  <div class="animate-shape">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+          <defs>
+              <linearGradient id="d" x1="0.929" y1="0.111" x2="0.263" y2="0.935" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#f1f6f9" />
+                  <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
+              </linearGradient>
+          </defs>
+          <g data-name="blob-shape (3)">
+              <path class="blob" fill="url(#d)"
+                  d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
+          </g>
+      </svg>
+  </div>
+  <div class="animate-pattern">
+      <img src=https://anthonydellavecchia.com/images/service/background-pattern.svg alt="background-shape">
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="singleBlog__feature">
+                  <img src=https://anthonydellavecchia.com/images/blog/summarize-text.png alt="feature-image">
+              </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="blog-by">
+              <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
+                <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
+                <li class="breadcrumb-item">on September 1, 2022</li>
+              </ul>
+              <div class="vertical-line"></div>
+              <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#api &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#twilio &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#how-to &nbsp; </a>
+                
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#python &nbsp; </a>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row mt-5">
+          <div class="col-lg-12">
+              <div class="singleBlog__content">
+                <blockquote>
+<p><strong>TLDR:</strong> This is a tutorial on how to build a Python app that will summarize text that you take from images.</p>
+</blockquote>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>Content, content, content! There&rsquo;s too much content out there and too much to read. Don&rsquo;t you wish you could pull out your phone -&gt; take a picture of a book -&gt; get texted a summary of what it says?</p>
+<p>I built a Python app that does just this, and I&rsquo;ll teach you how you can build it too.</p>
+<p>Here&rsquo;s a gif of using it in action:</p>
+<p><img src="/images/blog/summarize-text.gif" alt="funny gif"></p>
+<hr>
+<h2 id="tutorial">Tutorial</h2>
+<p>Technologies used in this project are <a href="https://twilio.com">Twilio</a>, Google Cloud Vision API, OpenAI, Flask, and ngrok.</p>
+<p><strong>To see the entire tutorial, visit the <a href="https://www.twilio.com/blog/summarize-text-from-images-using-ai-and-twilio">Twilio Blog</a></strong></p>
+<hr>
+
+                <h3>Thanks for reading! 🙌</h3>
+                <div class="row" style="align-items: center; border: 3px outset #5468ff;">
+                  <div id="col-md-2">
+                    <img src=https://anthonydellavecchia.com/images/contact/profile-pic.png style="width: 100px; margin-left: 1em;margin-right: 2em;">
+                  </div>
+                  <div id="col-md-10">
+                    <strong>Follow me for more content:</strong>
+                      <ul>
+                        <li>Twitter <a href src="https://twitter.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>LinkedIn <a href src="https://www.linkedin.com/in/anthonydellavecchia/">@anthonydellavecchia</a></li>
+                        <li>GitHub <a href src="https://github.com/anthonyjdella">@anthonyjdella</a></li>
+                        <li>Medium <a href src="https://medium.com/@anthonyjdella">@anthonyjdella</a></li>
+                        <li>Dev.to <a href src="https://dev.to/anthonyjdella">@anthonyjdella</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <strong>Please react or comment to this article, down below!</strong>
+              </div>
+          </div>
+      </div>
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'anthonydellavecchia-1';
+        console.log('DISQUS SHORTNAME ' + disqus_shortname);
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        console.log(dsq.src);
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>It seems like you're using a Web Browser that doesn't enable JavaScript. If you'd like to view the comments, please use another Browser, like Chrome or Firefox.</noscript>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <nav class="case-details-nav d-flex justify-content-between align-items-center">
+        
+        <div class="previous d-flex align-items-center">
+          <div class="icon mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
+              <g data-name="Group 1243" fill="#2d2d2d">
+                <path data-name="Path 1456" d="M3.391 12.728l9.75 14.142-.982 1.414-9.742-14.142z" />
+                <path data-name="Path 1455" d="M13.137 1.41L3.39 15.558l-.975-1.415L12.166 0z" />
+              </g>
+            </svg>
+          </div>
+          <div class="content">
+            <span class="small">Prev case</span>
+            <h5 class="title"><a class="text-dark"
+                href="https://anthonydellavecchia.com/blog/get-the-latest-nba-news/">Get The Latest NBA News Sent to Your Phone via SMS</a></h5>
+          </div>
+        </div>
+        
+        <div class="social">
+          
+          <ul class="unstyle-list big">
+            <li>
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fsummarize-text-from-photos%2f"><i
+                  class="fa fa-facebook-official btn-zoom"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fsummarize-text-from-photos%2f"><i
+                  class="fa fa-linkedin-square btn-zoom"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2fsummarize-text-from-photos%2f"><i
+                  class="fa fa-twitter-square btn-zoom"></i></a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")))
+
+  if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+    darkToggleButtonNoIncrement();
+  }
+  else {
+    darkToggleButtonNoIncrement();
+      }
+  });
+</script>
+
+<section class="footer" id="contact">
+	<div class="footer__background_shape">
+		<svg viewBox="0 0 1920 79">
+			<path d="M0 0h1920v79L0 0z" data-name="Path 1450" />
+		</svg>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="footer__cta">
+					<div class="shape-1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
+							<path data-name="Path 1449"
+								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
+								transform="translate(217.489 188.626)" />
+						</svg>
+					</div>
+					<div class="shape-2">
+						<svg xmlns="http://www.w3.org/2000/svg" width="357" height="315.029" viewBox="0 0 357 315.029">
+							<path data-name="Path 1449"
+								d="M76.1-157.222C91.746-135.8 87.2-94.273 99.993-61.945c12.7 32.328 42.661 55.459 39.248 73.282-3.318 17.823-40.007 30.337-65.6 43.325-25.5 12.988-39.912 26.545-60.01 42.566-20.1 16.116-46.074 34.6-63.328 27.682-17.349-6.921-25.976-39.153-59.915-59.82s-93.1-29.768-105.325-51.478 22.373-56.028 43.609-93.949c21.331-37.921 29.2-79.35 53.563-96.793 24.459-17.444 65.414-10.9 103.9-6.921 38.396 3.982 74.326 5.404 89.965 26.829z"
+								transform="translate(217.489 188.626)" />
+						</svg>
+					</div>
+					<div class="text-light footer__cta_content">
+						<span>Contact me</span>
+						<h2 class="mb-0">Let’s Talk Business <br> (or Tech)</h2>
+					</div>
+					<div class="footer__cta_action">
+						<a class="btn btn-light btn-zoom" id="purple-cursor" href="https://anthonydellavecchia.com/contact">Hire Me</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row footer__widget">
+			
+			<div class="col-lg-12" id="signature">
+				Anthony Dellavecchia
+			</div>
+		</div>
+		<div class="row footer__footer">
+			<div class="col-lg-7">
+				<div class="footer__footer_copy text-light">
+					<p>
+						<script>
+							document.write("© " + new Date().getFullYear());
+						</script>
+						• Made with ❤️, Hugo, &amp; Firebase by Anthony Dellavecchia
+					</p>
+					<script>
+						const year = () => {return new Date()};
+                    </script>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="footer__footer_social">
+					<ul class="unstyle-list">
+						
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://github.com/anthonyjdella"><i
+									class="fa fa-github"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://www.linkedin.com/in/anthonydellavecchia"><i
+									class="fa fa-linkedin"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://medium.com/@anthonyjdella"><i
+									class="fa fa-medium"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://dev.to/anthonyjdella"><i
+									class="fa fa-file-code-o"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://stackoverflow.com/users/story/9465781"><i
+									class="fa fa fa-stack-overflow"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://codepen.io/anthonyjdella"><i
+									class="fa fa fa-codepen"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://www.instagram.com/anthonyjdella/"><i
+									class="fa fa-instagram"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://twitter.com/anthonyjdella"><i
+									class="fa fa-twitter"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://github.com/sponsors/anthonyjdella"><i
+									class="fa fa fa-heart"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://www.buymeacoffee.com/anthonyjdella"><i
+									class="fa fa fa-coffee"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="mailto:hireme@anthonydellavecchia.com?subject=I%20Want%20to%20Hire%20Anthony!&amp;body=Hey%20Anthony,%20I%20really%20like%20your%20website%20and%20would%20love%20to%20hire%20you."><i
+									class="fa fa-envelope"></i></a>
+						</li>
+						
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="https://calendly.com/anthonyjdella"><i
+									class="fa fa fa-calendar-check-o"></i></a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGIkGQZO9Pz2MpLwaKKS1yq_7LXZQPd3Q&libraries=geometry"></script>
+<script src="https://anthonydellavecchia.com/plugins/jQuery/jquery.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/slick/slick.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/waypoint/jquery.waypoints.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/magnafic-popup/jquery.magnific-popup.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/tweenmax/TweenMax.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/imagesloaded/imagesloaded.min.js"></script>
+<script src="https://anthonydellavecchia.com/plugins/masonry/masonry.min.js"></script>
+
+<script src="https://anthonydellavecchia.com/js/form-handler.min.js"></script>
+
+<script src="https://anthonydellavecchia.com/js/script.min.js"></script>
+
+<script src="https://anthonydellavecchia.com/js/meny.min.js"></script>
+
+<script src="https://anthonydellavecchia.com/js/search.min.js" type="module"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.37.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+
+
+
+  </div>
+  <script>
+    
+    var meny = Meny.create({
+      
+      menuElement: document.querySelector('.meny'),
+
+      
+      contentsElement: document.querySelector('.contents'),
+
+      
+      position: Meny.getQuery().p || 'left',
+
+      
+      height: 200,
+
+      
+      width: 250,
+
+      
+      threshold: 40,
+
+      
+      mouse: true,
+
+      
+      touch: true
+    });
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
+      var contents = document.querySelector('.contents');
+      contents.style.padding = '0px';
+      contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u +
+        '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+    }
+  </script>
+  <script src="//code.tidio.co/d01aab1ff0ban8zr2s3ucbrzzczl4gdf.js" async></script>
+</body>
+
+</html>
