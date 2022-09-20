@@ -3,25 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://anthonydellavecchia.com/</loc>
-    <lastmod>2022-06-02T12:00:27+06:00</lastmod>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/api/</loc>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/</loc>
-    <lastmod>2022-06-02T12:00:27+06:00</lastmod>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/get-the-latest-nba-news/</loc>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/how-to/</loc>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
+    <lastmod>2022-07-21T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/career/</loc>
     <lastmod>2022-06-02T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/introducing-developer-evangelist/</loc>
     <lastmod>2022-06-02T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
-    <lastmod>2022-06-02T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
-    <lastmod>2022-06-02T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/api/</loc>
-    <lastmod>2022-03-10T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/back-end/</loc>
     <lastmod>2022-03-10T12:00:27+06:00</lastmod>
@@ -99,9 +105,6 @@
     <lastmod>2022-01-09T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/</loc>
-    <lastmod>2022-01-08T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/how-to/</loc>
     <lastmod>2022-01-08T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/javascript/</loc>
