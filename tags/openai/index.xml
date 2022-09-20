@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openai on Anthony Dellavecchia</title>
+    <link>https://anthonydellavecchia.com/tags/openai/</link>
+    <description>Recent content in openai on Anthony Dellavecchia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Aug 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summarize Text from Images</title>
+      <link>https://anthonydellavecchia.com/portfolio/summarize-text/</link>
+      <pubDate>Sun, 28 Aug 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/summarize-text/</guid>
+      <description>See some text you don&amp;rsquo;t want to read?
+Pull out your phone -&amp;gt; Take a picture of it -&amp;gt; Get texted a summary of what it says
+Here&amp;rsquo;s a gif of using it in action:
+I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.
+You can check out the code on GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>
