@@ -6,7 +6,17 @@
     <description>Recent content in Blog Posts on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Mar 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jun 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Developer Evangelist Anthony Dellavecchia</title>
+      <link>https://anthonydellavecchia.com/blog/introducing-developer-evangelist/</link>
+      <pubDate>Thu, 02 Jun 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/introducing-developer-evangelist/</guid>
+      <description>I got a job at Twilio! I joined Twilio, an awesome tech company headquarted in the Bay. This is my first time breaking into tech and I&amp;rsquo;m so grateful. I&amp;rsquo;m joining as a Staff level Developer Evangelist.
+Check out my official intro on Twilio&amp;rsquo;s blog What is a Developer Evangelist? Well, the answer varies based on who you ask but my main goal is to inspire and empower software developers around the world.</description>
+    </item>
+    
     <item>
       <title>What are APIs (Part 2)?</title>
       <link>https://anthonydellavecchia.com/blog/what-are-apis-2/</link>
