@@ -6,7 +6,18 @@
     <description>Recent content in twilio on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Sep 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Oct 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do you like scary movies?</title>
+      <link>https://anthonydellavecchia.com/portfolio/halloween-project/</link>
+      <pubDate>Thu, 27 Oct 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/halloween-project/</guid>
+      <description>It&amp;rsquo;s Halloween! Ready to scare your friends and family?
+Have them text anything to (940) 394-8137.
+I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.</description>
+    </item>
+    
     <item>
       <title>Summarize Text from Images Using AI, Python, and Twilio</title>
       <link>https://anthonydellavecchia.com/blog/summarize-text-from-photos/</link>
