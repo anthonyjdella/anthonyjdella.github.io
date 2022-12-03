@@ -6,7 +6,18 @@
     <description>Recent content in Blog Posts on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Nov 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Wrote this Blog Post About Taking Over Your Job</title>
+      <link>https://anthonydellavecchia.com/blog/this-blog-post-is-written-by-ai/</link>
+      <pubDate>Fri, 02 Dec 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/this-blog-post-is-written-by-ai/</guid>
+      <description>TLDR: This blog post was automatically generated using ChatGPT from OpenAI and the prompt &amp;ldquo;Write a viral blog post explaining why software engineers should and shouldn&amp;rsquo;t be worried about AI taking over their jobs&amp;rdquo;.
+The image used in this post was also created by AI from DALL-E 2 with the prompt &amp;ldquo;A dystopian painting of an evil robot with a mean face destroying the world from space&amp;rdquo;.
+It was inspirted from this blog post by Brendan O&amp;rsquo;Leary</description>
+    </item>
+    
     <item>
       <title>Gaining Trust in APIs and What to Look For</title>
       <link>https://anthonydellavecchia.com/blog/gaining_trust_in_apis/</link>
