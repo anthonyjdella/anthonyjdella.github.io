@@ -6,7 +6,18 @@
     <description>Recent content in twilio on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Oct 2022 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</title>
+      <link>https://anthonydellavecchia.com/blog/1password-cli-plugin/</link>
+      <pubDate>Wed, 07 Dec 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/1password-cli-plugin/</guid>
+      <description>TLDR: Learn how to configure 1Password to use your fingerprint to authenticate within the Twilio CLI and reduce how often you manually type in credentials.
+I&amp;rsquo;d like to highlight a 1Password Shell Plugin that makes authentication with the Twilio CLI as easy as scanning your fingerprint.
+You can configure 1Password to securely authenticate the Twilio CLI, so you never have to manually type your credentials in the terminal again.</description>
+    </item>
+    
     <item>
       <title>Do you like scary movies?</title>
       <link>https://anthonydellavecchia.com/portfolio/halloween-project/</link>

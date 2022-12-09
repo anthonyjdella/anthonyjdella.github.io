@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://anthonydellavecchia.com/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/cli/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/developer-experience/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/security/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/1password-cli-plugin/</loc>
+    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
+  </url><url>
     <loc>https://anthonydellavecchia.com/tags/ai/</loc>
     <lastmod>2022-12-02T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/this-blog-post-is-written-by-ai/</loc>
     <lastmod>2022-12-02T12:00:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/</loc>
-    <lastmod>2022-12-02T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/blog/</loc>
-    <lastmod>2022-12-02T12:00:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/tags/career/</loc>
-    <lastmod>2022-12-02T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
     <lastmod>2022-12-02T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/api/</loc>
@@ -29,9 +44,6 @@
     <loc>https://anthonydellavecchia.com/blog/gaining_trust_in_apis/</loc>
     <lastmod>2022-11-02T12:00:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/security/</loc>
-    <lastmod>2022-11-02T12:00:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/portfolio/halloween-project/</loc>
     <lastmod>2022-10-27T12:49:27+06:00</lastmod>
   </url><url>
@@ -39,9 +51,6 @@
     <lastmod>2022-10-27T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/portfolio/</loc>
-    <lastmod>2022-10-27T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
     <lastmod>2022-10-27T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/build-a-halloween-project-with-twilio/</loc>
@@ -103,9 +112,6 @@
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/react/</loc>
     <lastmod>2022-02-08T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/developer-experience/</loc>
-    <lastmod>2022-01-27T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/fonts-for-programmers/</loc>
     <lastmod>2022-01-27T12:00:27+06:00</lastmod>
