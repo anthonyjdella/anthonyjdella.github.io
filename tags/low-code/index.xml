@@ -13,9 +13,11 @@
       <pubDate>Thu, 27 Oct 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/portfolio/halloween-project/</guid>
-      <description>It&amp;rsquo;s Halloween! Ready to scare your friends and family?
-Have them text anything to (940) 394-8137.
-I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.</description>
+      <description>It&amp;rsquo;s Halloween! Want to scare your friends and family with a fun app?
+If you&amp;rsquo;re familiar with Scream, a famous movie from 1996, there&amp;rsquo;s a famous scene where a killer calls a victim. Watch it here:
+I wanted to re-create this scene using Twilio, so I built it with Twilio Studio, a low-code tool from Twilio.
+If you want to try it out, text anything to (940) 394-8137
+I also wrote a tutorial, so you can build this app yourself.</description>
     </item>
     
     <item>
@@ -28,6 +30,16 @@ I also wrote a tutorial, so you can build this app yourself. Check it out on Twi
 Overview Do you like scary movies? Based on the cult-class film, Screm (1996), I re-created a famous scene from the movie. Try it out by texting (940) 394-8137.
 Here&amp;rsquo;s a gif of using it in action:
 Tutorial Technologies used in this project are Twilio Studio. It&amp;rsquo;s pretty simple to create because it&amp;rsquo;s a low-code tool that uses drag n drop.</description>
+    </item>
+    
+    <item>
+      <title>TwilioQuest Booth Extension</title>
+      <link>https://anthonydellavecchia.com/portfolio/twilio-quest/</link>
+      <pubDate>Fri, 14 Oct 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/twilio-quest/</guid>
+      <description>If you&amp;rsquo;ve been a company sponsor at a tech conference, you&amp;rsquo;d know that attracting attendees is difficult. This project solves that issue, because attendees can interact with a video game while also learning about Twilio products &amp;amp; offerings.
+TwilioQuest is Twilio&amp;rsquo;s educational video game. Within the game, you can add your own custom extensions to it. I forked a version of Nathaniel&amp;rsquo;s, another Twilio Developer Evangelist, and added multiple features/improvements to it.</description>
     </item>
     
   </channel>

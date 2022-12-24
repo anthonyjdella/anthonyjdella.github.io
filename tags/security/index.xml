@@ -29,6 +29,17 @@ Intro API security is a huge topic and solving that problem is an even bigger ch
     </item>
     
     <item>
+      <title>Silent Network Authentication (SNA) at Signal 2022</title>
+      <link>https://anthonydellavecchia.com/portfolio/sna/</link>
+      <pubDate>Mon, 26 Sep 2022 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/sna/</guid>
+      <description>OTP (One-Time Password) methods validate user authentication but the user experience is compromised. Users are sent a password which they then must enter to verify their identity. With SNA, the verification happens in the background for a seamless user experience.
+For Twilio Signal 2022, I created a demo iOS application that showcases SNA. It was featured during the keynote here:
+&amp;hellip;Talk about 5 seconds of fame 🤣</description>
+    </item>
+    
+    <item>
       <title>Rogue Dev Purposely Breaks Software 🚫</title>
       <link>https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/</link>
       <pubDate>Sun, 09 Jan 2022 12:49:27 +0600</pubDate>
