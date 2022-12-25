@@ -26,7 +26,7 @@ I built a Python app that does just this, and I&amp;rsquo;ll teach you how you c
       <guid>https://anthonydellavecchia.com/portfolio/summarize-text/</guid>
       <description>See some text you don&amp;rsquo;t want to read?
 Pull out your phone -&amp;gt; Take a picture of it -&amp;gt; Get texted a summary of what it says
-Here&amp;rsquo;s a gif of using it in action:
+Here it is in action:
 I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.
 You can check out the code on GitHub.</description>
     </item>
@@ -49,9 +49,9 @@ Tutorial Technologies used in this project are Twilio, SportsDataIO, Python, Fla
       <pubDate>Mon, 18 Jul 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/portfolio/nba-news/</guid>
-      <description>I built an app that sends you NBA news whenever you text &amp;ldquo;F5&amp;rdquo; to your Twilio phone number. Why? Well, during the NBA offseason, fans want to have up-to-date info about recent trades or trade requests.
-I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.
-You can check out the code on GitHub.</description>
+      <description>F5 Season is an NBA meme that means fans are constantly refreshing their news feeds to learn about breaking news.
+&amp;gt; F5 on your keyboard is the refresh button. I built an app that sends you NBA news whenever you text &amp;ldquo;F5&amp;rdquo; to your Twilio phone number. Why? Well, during the NBA offseason, fans want to have up-to-date info about recent trades or trade requests.
+I also wrote a tutorial, so you can build this app yourself.</description>
     </item>
     
     <item>

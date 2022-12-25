@@ -28,7 +28,7 @@ I also wrote a tutorial, so you can build this app yourself.</description>
       <guid>https://anthonydellavecchia.com/blog/build-a-halloween-project-with-twilio/</guid>
       <description>TLDR: This is a tutorial on how to build a Halloween project that you can use to scare friends and family.
 Overview Do you like scary movies? Based on the cult-class film, Screm (1996), I re-created a famous scene from the movie. Try it out by texting (940) 394-8137.
-Here&amp;rsquo;s a gif of using it in action:
+Here it is in action:
 Tutorial Technologies used in this project are Twilio Studio. It&amp;rsquo;s pretty simple to create because it&amp;rsquo;s a low-code tool that uses drag n drop.</description>
     </item>
     

@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/twilio/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Twitch</title>
+      <link>https://anthonydellavecchia.com/live/twitch/</link>
+      <pubDate>Wed, 07 Dec 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/live/twitch/</guid>
+      <description>TLDR: Learn how to configure 1Password to use your fingerprint to authenticate within the Twilio CLI and reduce how often you manually type in credentials.
+I&amp;rsquo;d like to highlight a 1Password Shell Plugin that makes authentication with the Twilio CLI as easy as scanning your fingerprint.
+You can configure 1Password to securely authenticate the Twilio CLI, so you never have to manually type your credentials in the terminal again.</description>
+    </item>
+    
+    <item>
       <title>Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</title>
       <link>https://anthonydellavecchia.com/blog/1password-cli-plugin/</link>
       <pubDate>Wed, 07 Dec 2022 12:00:27 +0600</pubDate>
@@ -39,7 +50,7 @@ I also wrote a tutorial, so you can build this app yourself.</description>
       <guid>https://anthonydellavecchia.com/blog/build-a-halloween-project-with-twilio/</guid>
       <description>TLDR: This is a tutorial on how to build a Halloween project that you can use to scare friends and family.
 Overview Do you like scary movies? Based on the cult-class film, Screm (1996), I re-created a famous scene from the movie. Try it out by texting (940) 394-8137.
-Here&amp;rsquo;s a gif of using it in action:
+Here it is in action:
 Tutorial Technologies used in this project are Twilio Studio. It&amp;rsquo;s pretty simple to create because it&amp;rsquo;s a low-code tool that uses drag n drop.</description>
     </item>
     
@@ -72,7 +83,7 @@ I built a Python app that does just this, and I&amp;rsquo;ll teach you how you c
       <guid>https://anthonydellavecchia.com/portfolio/summarize-text/</guid>
       <description>See some text you don&amp;rsquo;t want to read?
 Pull out your phone -&amp;gt; Take a picture of it -&amp;gt; Get texted a summary of what it says
-Here&amp;rsquo;s a gif of using it in action:
+Here it is in action:
 I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.
 You can check out the code on GitHub.</description>
     </item>
@@ -95,9 +106,9 @@ Tutorial Technologies used in this project are Twilio, SportsDataIO, Python, Fla
       <pubDate>Mon, 18 Jul 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/portfolio/nba-news/</guid>
-      <description>I built an app that sends you NBA news whenever you text &amp;ldquo;F5&amp;rdquo; to your Twilio phone number. Why? Well, during the NBA offseason, fans want to have up-to-date info about recent trades or trade requests.
-I also wrote a tutorial, so you can build this app yourself. Check it out on Twilio&amp;rsquo;s Blog.
-You can check out the code on GitHub.</description>
+      <description>F5 Season is an NBA meme that means fans are constantly refreshing their news feeds to learn about breaking news.
+&amp;gt; F5 on your keyboard is the refresh button. I built an app that sends you NBA news whenever you text &amp;ldquo;F5&amp;rdquo; to your Twilio phone number. Why? Well, during the NBA offseason, fans want to have up-to-date info about recent trades or trade requests.
+I also wrote a tutorial, so you can build this app yourself.</description>
     </item>
     
     <item>
