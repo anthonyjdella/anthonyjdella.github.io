@@ -5,18 +5,6 @@
     <link>https://anthonydellavecchia.com/live/</link>
     <description>Recent content in Twitch Streams on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 07 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/live/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Twitch</title>
-      <link>https://anthonydellavecchia.com/live/twitch/</link>
-      <pubDate>Wed, 07 Dec 2022 12:00:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/live/twitch/</guid>
-      <description>TLDR: Learn how to configure 1Password to use your fingerprint to authenticate within the Twilio CLI and reduce how often you manually type in credentials.
-I&amp;rsquo;d like to highlight a 1Password Shell Plugin that makes authentication with the Twilio CLI as easy as scanning your fingerprint.
-You can configure 1Password to securely authenticate the Twilio CLI, so you never have to manually type your credentials in the terminal again.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://anthonydellavecchia.com/live/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

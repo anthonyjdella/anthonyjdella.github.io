@@ -204,164 +204,208 @@
     
 
 <head>
-	<style>
-		::placeholder {
-			opacity: .75 !important;
-			font-size: .75em;
-		}
-		.algolia {
+    <style>
+        ::placeholder {
+            opacity: 0.75 !important;
+            font-size: 0.75em;
+        }
+        .algolia {
+            margin: auto;
+            width: 80%;
+        }
+        #search-box {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        .ais-SearchBox-form {
+            background-color: transparent !important;
+        }
+        .ais-SearchBox-input {
+            border-radius: 20px !important;
+            color: #5468ff !important;
+            caret-color: #5468ff !important;
+        }
+        .ais-SearchBox-submit {
+            fill: #5468ff !important;
+        }
+        .ais-SearchBox-reset {
+            fill: #5468ff !important;
+        }
+        .ais-SearchBox-form:before {
+            filter: invert(39%) sepia(45%) saturate(5017%) hue-rotate(222deg)
+                brightness(101%) contrast(101%);
+        }
+        #current-refined-values {
+            padding-left: 2.5em;
+            padding-right: 2.5em;
+            padding-bottom: 1em;
+        }
+        .ais-CurrentRefinements-list {
+            overflow-wrap: anywhere;
+        }
+        .ais-CurrentRefinements-item {
+            gap: 1em !important;
+            border-radius: 20px !important;
+            color: black;
+        }
+        .ais-CurrentRefinements-delete {
+            color: #5468ff !important;
+        }
+        #clear-all {
 			margin: auto;
-			width: 80%;
-		}
-		#search-box {
-			padding-top: 1em;
-			padding-bottom: 1em;
-		}
-		.ais-SearchBox-form {
-			background-color: transparent !important;
-		}
-		.ais-SearchBox-input {
-			border-radius: 20px !important;
-			color: #5468ff !important;
-			caret-color: #5468ff !important;
-		}
-		.ais-SearchBox-submit {
-			fill: #5468ff !important;
-		}
-		.ais-SearchBox-reset {
-			fill: #5468ff !important;
-		}
-		.ais-SearchBox-form:before {
-			filter: invert(39%) sepia(45%) saturate(5017%) hue-rotate(222deg) brightness(101%) contrast(101%);
-		}
-		#current-refined-values {
-			padding-left: 2.5em;
-			padding-right: 2.5em;
-			padding-bottom: 1em;
-		}
-		.ais-CurrentRefinements-list {
-			overflow-wrap: anywhere;
-		}
-		.ais-CurrentRefinements-item {
-			gap: 1em !important;
-			border-radius: 20px !important;
-			color: black;
-		}
-		.ais-CurrentRefinements-delete {
-			color: #5468ff !important;
-		}
-		#clear-all {
-			padding-left: 7.5em;
-			padding-right: 7.5em;
-			padding-bottom: 1em;
-		}
-		.ais-ClearRefinements-button.ais-ClearRefinements-button--disabled {
-			display: none;
-		}
-		.ais-ClearRefinements-button {
-			background-color: #22303c !important;
-			border-radius: 20px !important;
-		}
-		.ais-Menu {
-			padding-left: 1em;
-		}
-		.ais-HierarchicalMenu-item--selected>.ais-HierarchicalMenu-link>.ais-HierarchicalMenu-label, .ais-Menu-item--selected .ais-Menu-label, .ais-RatingMenu-item--selected, .ais-RefinementList-item--selected {
-			font-weight: 1000 !important;
-		}
-		.ais-Menu-list {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-		.ais-RefinementList-item {
-			padding-right: 1em;
-		}
-		.ais-Menu-count {
-			color: #5468ff !important;
-		}
-		.ais-Menu-showMore {
-			border-radius: 1em !important;
-			margin-bottom: 1rem;
-		}
-		.ais-Hits-item {
-			background-color: transparent !important;
-			padding: 0px !important;
-			justify-content: center;
-		}
-		.ais-Pagination-list {
-			padding: 0.75rem 1.5rem !important;
-			font-size: 1.5625rem !important;
-			line-height: 1.5 !important;
-			margin: auto !important;
-			width: 50%;
-		}
-		.ais-Pagination-item--selected .ais-Pagination-link {
-			color: #fff !important;
-			background-color: #5468ff !important;
-			border-color: #5468ff !important;
-			background-image: none !important;
-		}
-	</style>
+            padding-bottom: 1em;
+			width: 20%;
+        }
+        .ais-ClearRefinements-button.ais-ClearRefinements-button--disabled {
+            display: none;
+        }
+        .ais-ClearRefinements-button {
+            background-color: #22303c !important;
+            border-radius: 20px !important;
+        }
+        .ais-Menu {
+            padding-left: 1em;
+        }
+        .ais-HierarchicalMenu-item--selected
+            > .ais-HierarchicalMenu-link
+            > .ais-HierarchicalMenu-label,
+        .ais-Menu-item--selected .ais-Menu-label,
+        .ais-RatingMenu-item--selected,
+        .ais-RefinementList-item--selected {
+            font-weight: 1000 !important;
+        }
+        .ais-Menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .ais-RefinementList-item {
+            padding-right: 1em;
+        }
+        .ais-Menu-count {
+            color: #5468ff !important;
+        }
+        .ais-Menu-showMore {
+            border-radius: 1em !important;
+            margin-bottom: 1rem;
+        }
+        .ais-Hits-item {
+            background-color: transparent !important;
+            padding: 0px !important;
+            justify-content: center;
+        }
+        .ais-Pagination-list {
+            padding: 0.75rem 1.5rem !important;
+            font-size: 1.5625rem !important;
+            line-height: 1.5 !important;
+            margin: auto !important;
+            width: 50%;
+            justify-content: center;
+        }
+        .ais-Pagination-item--selected .ais-Pagination-link {
+            color: #fff !important;
+            background-color: #5468ff !important;
+            border-color: #5468ff !important;
+            background-image: none !important;
+        }
+    </style>
 </head>
 
-
 <header class="breadCrumb">
-	<div class="animate-shape">
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
-			<defs>
-				<linearGradient id="d" x1="0.929" y1="0.111" x2="0.263" y2="0.935" gradientUnits="objectBoundingBox">
-					<stop offset="0" stop-color="#f1f6f9" />
-					<stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
-				</linearGradient>
-			</defs>
-			<g data-name="blob-shape (3)">
-				<path class="blob" fill="url(#d)"
-					d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
-			</g>
-		</svg>
-	</div>
-	<div class="animate-pattern">
-		<img src=https://anthonydellavecchia.com/images/service/background-pattern.svg alt="background-shape">
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-12 text-center">
-				<h3 class="breadCrumb__title">Read My Articles</h3>
-				<nav aria-label="breadcrumb" class="d-flex justify-content-center">
-					<ol class="breadcrumb align-items-center">
-						
-						<li class="breadcrumb-item active" aria-current="page">Blog Posts</li>
-					</ol>
-				</nav>
-			</div>
-		</div>
-	</div>
+    <div class="animate-shape">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 600 600"
+        >
+            <defs>
+                <linearGradient
+                    id="d"
+                    x1="0.929"
+                    y1="0.111"
+                    x2="0.263"
+                    y2="0.935"
+                    gradientUnits="objectBoundingBox"
+                >
+                    <stop offset="0" stop-color="#f1f6f9" />
+                    <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+            <g data-name="blob-shape (3)">
+                <path
+                    class="blob"
+                    fill="url(#d)"
+                    d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z"
+                />
+            </g>
+        </svg>
+    </div>
+    <div class="animate-pattern">
+        <img src=https://anthonydellavecchia.com/images/service/background-pattern.svg
+        alt="background-shape">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="breadCrumb__title">Read My Articles</h3>
+                <nav
+                    aria-label="breadcrumb"
+                    class="d-flex justify-content-center"
+                >
+                    <ol class="breadcrumb align-items-center">
+                        
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Blog Posts
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>
 
-<div class="algolia">
-	<div id="search-box"></div>
-	
-	<div id="topics"><div id="refinement-list"></div></div>
-	<div id="sort-by"></div>
-	
+<div class="row algolia">
+    <div class="col-lg-12" id="search-box"></div>
+    
+    <div id="topics">
+		<div id="refinement-list"></div>
+		<div id="clear-all"></div>
+	</div>
+    <div id="sort-by"></div>
 </div>
 <div id="hits"></div>
 <div id="pagination"></div>
+<div class="row">
+	<div class="col-lg-3" id="rss">
+	<a
+		class="btn btn-sm btn-rss btn-zoom"
+		target="_blank"
+		href="https://anthonydellavecchia.com/blog/index.xml"
+		>Subscribe via RSS
+	</a>
+	</div>
+</div>
 <div id="hits-per-page"></div>
 
 
 <script>
-	document.addEventListener('DOMContentLoaded', function (event) {
-		console.log('blog count: ' + parseInt(localStorage.getItem("toggleCount")))
+    document.addEventListener("DOMContentLoaded", function (event) {
+        console.log(
+            "blog count: " + parseInt(localStorage.getItem("toggleCount"))
+        );
 
-		if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
-			darkToggleButtonNoIncrement();
-		} else {
-			darkToggleButtonNoIncrement();
-		}
-	});
+        if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+            darkToggleButtonNoIncrement();
+        } else {
+            darkToggleButtonNoIncrement();
+        }
+    });
 </script>
-<script id="dsq-count-scr" src="//anthonydellavecchia-1.disqus.com/count.js" async></script>
+<script
+    id="dsq-count-scr"
+    src="//anthonydellavecchia-1.disqus.com/count.js"
+    async
+></script>
 <section class="footer" id="contact">
 	<div class="footer__background_shape">
 		<svg viewBox="0 0 1920 79">
@@ -498,8 +542,7 @@
 <script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-
-
+ 
   </div>
   <script>
     
