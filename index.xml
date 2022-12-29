@@ -30,6 +30,25 @@ It was inspirted from this blog post by Brendan O&amp;rsquo;Leary</description>
     </item>
     
     <item>
+      <title>DjangoCon 2022 Trip Report</title>
+      <link>https://anthonydellavecchia.com/blog/djangocon-report/</link>
+      <pubDate>Thu, 03 Nov 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/djangocon-report/</guid>
+      <description>TLDR: DjangoCon is a six-day developer conference about the Django web framework. This year, it was held in San Diego from October 16-21. Compared to other conferences, attendance was on a smaller scale (~250 attendees) but the primary audience were Django and Python enthusiasts. Since it was a more “mature” audience, I’d say the majority of attendees have heard of and/or used Twilio.
+DjangoCon is organized by the Django community and there were many influential Django contributors in attendance.</description>
+    </item>
+    
+    <item>
+      <title>Halloween Seattle Trip Report</title>
+      <link>https://anthonydellavecchia.com/blog/halloween-report/</link>
+      <pubDate>Thu, 03 Nov 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/halloween-report/</guid>
+      <description>TLDR: Twilio Seattle Meetup organized a Halloween-themed event in Seattle on October 24th! It was our second meetup since August and attendance increased by almost 3x. The goal was to create an event that gets people excited about Halloween by showing them how they can leverage Twilio to build spooky projects. We did this by demoing a project (built with Twilio Studio) that recreates a famous scene from the movie Scream.</description>
+    </item>
+    
+    <item>
       <title>Gaining Trust in APIs and What to Look For</title>
       <link>https://anthonydellavecchia.com/blog/gaining_trust_in_apis/</link>
       <pubDate>Wed, 02 Nov 2022 12:00:27 +0600</pubDate>
@@ -75,6 +94,16 @@ TwilioQuest is Twilio&amp;rsquo;s educational video game. Within the game, you c
     </item>
     
     <item>
+      <title>Spiceworld 2022 Trip Report</title>
+      <link>https://anthonydellavecchia.com/blog/spiceworld-report/</link>
+      <pubDate>Tue, 04 Oct 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/spiceworld-report/</guid>
+      <description>TLDR: Not to be confused with the Spice Girls movie, SpiceWorld is an IT conference in Austin, Texas with three days of technical workshops, networking with peers, and the latest IT products and solutions. It was a hybrid event and their first in-person component since the start of the pandemic. There were roughly 600 attendees and over 75 speakers, however past events saw attendance of over 4,000 people.
+To my knowledge, this is the first time Twilio has sponsored this event.</description>
+    </item>
+    
+    <item>
       <title>Silent Network Authentication (SNA) at Signal 2022</title>
       <link>https://anthonydellavecchia.com/portfolio/sna/</link>
       <pubDate>Mon, 26 Sep 2022 12:49:27 +0600</pubDate>
@@ -83,6 +112,16 @@ TwilioQuest is Twilio&amp;rsquo;s educational video game. Within the game, you c
       <description>OTP (One-Time Password) methods validate user authentication but the user experience is compromised. Users are sent a password which they then must enter to verify their identity. With SNA, the verification happens in the background for a seamless user experience.
 For Twilio Signal 2022, I created a demo iOS application that showcases SNA. It was featured during the keynote here:
 &amp;hellip;Talk about 5 seconds of fame 🤣</description>
+    </item>
+    
+    <item>
+      <title>API Days NYC 2022 Trip Report</title>
+      <link>https://anthonydellavecchia.com/blog/api-days-report/</link>
+      <pubDate>Fri, 02 Sep 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/api-days-report/</guid>
+      <description>TLDR: API Days is an international conference focused on the API landscape, and they are celebrating their 10th anniversary in 2022. They hold events around the globe and this particular event was held in NYC. Twilio has sponsored API Days in the past and Jeff Lawson has been a past speaker!
+Each location has a different tagline, this one was, “Beyond API Regulations for Finance, Insurance, and Healthcare”. What does the tagline mean?</description>
     </item>
     
     <item>
