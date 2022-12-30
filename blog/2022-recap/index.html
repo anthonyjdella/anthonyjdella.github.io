@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="index, follow" />
-  <title>Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</title>
+  <title>2022 Personal Recap</title>
   <meta name="description" content="Blog and portfolio of Anthony Dellavecchia, a Software Engineer and tech enthusiast">
   <meta name="author" content="Anthony Dellavecchia" />
   <meta name="keywords"
@@ -209,12 +209,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-md-12 offset-lg-1 offset-md-0 text-center">
-        <h3 class="breadCrumb__title">Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</h3>
+        <h3 class="breadCrumb__title">2022 Personal Recap</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/>Home</a></li>
             <li class="breadcrumb-item"><a href=https://anthonydellavecchia.com/blog>All Blog Posts</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</li>
+            <li class="breadcrumb-item active" aria-current="page">2022 Personal Recap</li>
           </ol>
         </nav>
       </div>
@@ -248,25 +248,19 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="singleBlog__feature">
-                  <img src=https://anthonydellavecchia.com/images/blog/1password-1.png alt="feature-image">
+                  <img src=https://anthonydellavecchia.com/images/blog/2022-recap.jpg alt="feature-image">
               </div>
           </div>
           <div class="col-lg-12">
             <div class="blog-by">
               <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
                 <li class="breadcrumb-item">Written by Anthony Dellavecchia</li>
-                <li class="breadcrumb-item">on December 7, 2022</li>
+                <li class="breadcrumb-item">on December 30, 2022</li>
               </ul>
               <div class="vertical-line"></div>
               <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:
                 
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#twilio &nbsp; </a>
-                
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#cli &nbsp; </a>
-                
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#security &nbsp; </a>
-                
-                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#developer-experience &nbsp; </a>
+                  <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#career &nbsp; </a>
                 
               </div>
             </div>
@@ -276,176 +270,45 @@
           <div class="col-lg-12">
               <div class="singleBlog__content">
                 <blockquote>
-<p><strong>TLDR:</strong> Learn how to configure 1Password to use your fingerprint to authenticate within the Twilio CLI and reduce how often you manually type in credentials.</p>
+<p><strong>TLDR:</strong> 2022 had it&rsquo;s ups and downs. Here are my accomplishments and reflections on 2022:</p>
 </blockquote>
 <hr>
-<p>I&rsquo;d like to highlight a <a href="https://developer.1password.com/docs/cli/shell-plugins/">1Password Shell Plugin</a> that makes authentication with the <a href="https://www.twilio.com/docs/twilio-cli/quickstart">Twilio CLI</a> as easy as scanning your fingerprint.</p>
-<p>You can configure 1Password to securely authenticate the Twilio CLI, so you never have to manually type your credentials in the terminal again.</p>
-<blockquote>
-<p>Please note that this is currently only available for Mac/Linux.
-Bash and Zsh are the shells currently supported.</p>
-</blockquote>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8snxyl0l84imska6yubg.gif" alt="gif of the CLI in action"></p>
-<p>Currently, developers using the <a href="https://www.twilio.com/blog/twilio-cli-is-now-generally-available">Twilio CLI</a> must first authenticate (login) before they can run commands. This often requires locating credentials in a separate window then manually entering them in the terminal.</p>
-<p>Users are prompted to enter an Account SID and Auth Token, both of which can be found on the dashboard of the <a href="https://www.twilio.com/console">Twilio Console</a>. Then, users are asked to enter them into the terminal like so:</p>
-<pre tabindex="0"><code>$ twilio login
-You can find your Account SID and Auth Token at https://www.twilio.com/console
- » Your Auth Token will be used once to create an API Key for future CLI access to your Twilio Account or Subaccount, and then forgotten.
-? The Account SID for your Twilio Account or Subaccount: ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-? Your Twilio Auth Token for your Twilio Account or Subaccount: [hidden]
-? Shorthand identifier for your profile: dev
-</code></pre><p>This article will walk you through installing the <a href="https://developer.1password.com/docs/cli/shell-plugins/twilio/">1Password Shell Plugin for Twilio</a> on Mac/Linux, so you can benefit from a smoother login experience.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="stats">Stats</h3>
 <ul>
-<li>A free or paid Twilio account - If you haven’t yet, <a href="https://www.twilio.com/try-twilio">sign up for a free Twilio account</a></li>
-<li>Install the latest version of the Twilio CLI - <a href="https://www.twilio.com/docs/twilio-cli/quickstart#install-the-twilio-cli">Get it here</a></li>
-<li>A 1Password account - <a href="https://1password.com/sign-up/">Sign up for a 14 day trial</a></li>
-<li>Install the 1Password 8 app - For <a href="https://1password.com/downloads/mac/">Mac</a> or <a href="https://1password.com/downloads/linux/">Linux</a></li>
-<li>Add your 1Password Account to the app - <a href="https://support.1password.com/add-account/">Add an account</a></li>
-<li>Install the 1Password CLI version 2.9.0 (or above) - <a href="https://app-updates.agilebits.com/product_history/CLI2#beta">Downloads available here</a></li>
-<li>Connect the 1Password CLI with the 1Password 8 app - <a href="https://developer.1password.com/docs/cli/about-biometric-unlock/#step-1-connect-1password-cli-with-the-1password-app">See here</a></li>
+<li>741 <a href="https://github.com/anthonyjdella?tab=overview&amp;from=2022-12-01&amp;to=2022-12-30">GitHub contributions</a></li>
+<li>15 <a href="https://www.npmjs.com/~anthonyjdella">NPM packages</a></li>
+<li>48,272 blog views and 150 followers on <a href="https://medium.com/@anthonyjdella">Medium</a></li>
+<li>16,120 page views and 500 subscribers on <a href="https://dev.to/anthonyjdella">Dev.to</a></li>
+<li>2,113 blog views on <a href="https://www.twilio.com/blog/author/adellavecchia">Twilio.com/blog</a> with 2.78% conversion rate</li>
+<li>724 page views on <a href="https://anthonyjdella.hashnode.dev/">Hashnode</a></li>
+<li>138 members joined my <a href="(https://www.meetup.com/twilio-seattle-meetup-group/)">meetup</a></li>
+<li>2,000 unique visitors to <a href="https://anthonydellavecchia.com">my website</a> with an average engagement time of 1 minute</li>
+<li>11,000 page views on <a href="https://anthonydellavecchia.com">my website</a></li>
 </ul>
-<h2 id="step-1-configure-your-default-credentials">Step 1: Configure your default credentials</h2>
-<p>To ensure you have the correct version of the 1Password CLI, run:</p>
-<pre tabindex="0"><code>op --version
-</code></pre><blockquote>
-<p>It should output version 2.9.0 (or above).</p>
-</blockquote>
-<p>To get started with the Twilio shell plugin, run:</p>
-<pre tabindex="0"><code>op plugin init twilio
-</code></pre><p>You’ll be prompted with two options, to either import new Twilio credentials into 1Password or to search for existing Twilio credentials in 1Password.</p>
-<blockquote>
-<p>If users want to switch to another profile, run <code>op plugin init twilio</code> again and select a new set of credentials.</p>
-</blockquote>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yk99358vjz0z3nz1ckdw.png" alt="Import into 1Password or Search in 1Password"></p>
-<h2 id="step-11-import-or-select-an-item">Step 1.1: Import or select an item</h2>
-<h3 id="import-a-new-item">Import a new item</h3>
-<p>If you haven&rsquo;t saved your Twilio credentials in 1Password yet, select <strong>Import into 1Password</strong>.</p>
-<p>If 1Password detects your credentials in your local development environment, you&rsquo;ll be prompted to import them automatically. Otherwise, you&rsquo;ll need to enter your credentials manually.</p>
-<p>You can find these credentials by <a href="https://www.twilio.com/docs/glossary/what-is-an-api-key#how-can-i-create-api-keys">creating an API Key</a> from the Twilio Console with these steps:</p>
-<ol>
-<li>Navigate to <strong>Settings</strong> and select <strong>API Keys</strong>, or simply follow this link.</li>
-<li>Click the <strong>Create new API Key</strong> button, or click on the plus <strong>(+)</strong> icon if you have other API Keys already.</li>
-<li>Enter a friendly name for your API Key.</li>
-<li>Select the key type — <strong>Standard</strong> or <strong>Main</strong>.</li>
-<li>Click the <strong>Create API Key</strong> button.</li>
-</ol>
-<p>You&rsquo;ll then be prompted to enter a name for the new 1Password item and select the vault where you want to save the item.</p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yebs49vxhn3atnm7ypgo.png" alt="Manually import your credentials if they are not already stored in 1Password"></p>
-<h3 id="select-an-existing-item">Select an existing item</h3>
-<p>If you&rsquo;ve already saved your Twilio credentials in 1Password, select <strong>Search in 1Password</strong>.</p>
-<p>You&rsquo;ll see a list of related items and the vaults where they&rsquo;re saved. If you don&rsquo;t see your credentials, select &ldquo;Expand search&rdquo; to browse all items in your account.</p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/66vcjz6r8x1tkovu1i92.png" alt="If your Twilio credentials are saved in 1Password, Search in 1Password"></p>
-<h3 id="step-12-set-default-credential-scope">Step 1.2: Set default credential scope</h3>
-<p>After you select or import your credentials, you&rsquo;ll be prompted to select which vault to save your API key in; feel free to choose whichever vault you’d like.</p>
-<p>Lastly, you’ll then be asked to configure when to use the item to authenticate the Twilio CLI.</p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3bofjuavmqz7dmzp7t9v.png" alt="Select when to prompt for authentication"></p>
-<blockquote>
+<hr>
+<h3 id="highlights">Highlights</h3>
 <ul>
-<li>&ldquo;<strong>Prompt me for each new terminal session</strong>&rdquo; will only configure the credentials for the duration of the current terminal session. Once you exit the terminal, the default will be removed.</li>
-<li>&ldquo;<strong>Use automatically when in this directory or subdirectories</strong>&rdquo; will make the credentials the default in the current directory and all of its subdirectories, as long as no other directory-specific defaults are set in them. A terminal-session default takes precedence over a directory-specific one.</li>
-<li>&ldquo;<strong>Use as global default on my system</strong>&rdquo; will set the credentials as the default in all terminal sessions and directories. A directory-specific default takes precedence over a global one.</li>
+<li>Left a job with a toxic work environment 🤮</li>
+<li>Found my dream job at a <a href="https://www.twilio.com/">tech company</a> 😃</li>
+<li>Went from making $100k to $250k+ 🤑</li>
+<li>Moved to Seattle ⛰️</li>
+<li>Travelled to 7 cities (8 times) for work ✈️</li>
+<li>Completed my Masters degree from UCLA 🐻</li>
+<li>Started a local <a href="https://www.meetup.com/twilio-seattle-meetup-group/">meetup group</a> for developers 🧑‍🤝‍🧑</li>
+<li>Spoke at <a href="https://anthonydellavecchia.com/talks/">7 in-person events</a> 🗣️</li>
+<li>Taught at an <a href="https://pennapps.devpost.com/">Ivy League university</a> 🎓</li>
+<li>Mentored dozens of early career professionals 🧑‍🏫</li>
+<li>Spoke on the <a href="https://open.spotify.com/episode/56LbtbOKVjRbqLFuRVH3aS?si=6ba8e6d133ad4538">Stackoverflow podcast</a> 🎤</li>
+<li>Built a <a href="https://github.com/anthonyjdella/twilio-quest-booth-mission">video game extension</a> 🕹️</li>
+<li>Published 5 articles on <a href="https://www.twilio.com/blog/author/adellavecchia">Twilio&rsquo;s blog</a> ✍️</li>
+<li>Wrote 10 personal blog posts 📝</li>
+<li>Build an <a href="https://anthonydellavecchia.com/portfolio/sna/">app</a> that was featured on a <a href="https://www.signal2022.com/?reg=NAMER">developer keynote</a> 🎬</li>
+<li>Collaborated with 1Password about their <a href="https://www.twilio.com/blog/use-your-fingerprint-with-1password-to-authenticate-twilio-cli">CLI</a> 🔒</li>
+<li>Started a <a href="https://www.twitch.tv/anthonyjdella">Twitch coding channel</a> 📹</li>
 </ul>
-</blockquote>
-<h2 id="step-2-source-the-pluginssh-file">Step 2: Source the plugins.sh file</h2>
-<p>To make the plugin available, run the following command in your terminal:</p>
+<hr>
 <blockquote>
-<p>The file path for your op folder may vary. <code>op plugin init</code> will output a source command with the correct file path.</p>
-</blockquote>
-<p>If you’re a legacy 1Password CLI user:</p>
-<pre tabindex="0"><code>source ~/.op/plugins.sh
-</code></pre><p>If you’re setting this up the first time:</p>
-<pre tabindex="0"><code>source ~/.config/op/plugins.sh
-</code></pre><blockquote>
-<p>Note: There are other <a href="https://developer.1password.com/docs/cli/shell-plugins/#get-started">supported third-party plugins</a>. If this is your first time installing a shell plugin for 1Password, you&rsquo;ll also need to add the source command to your RC file or shell profile, to persist the plugin beyond the current terminal session.</p>
-</blockquote>
-<p>For Zsh:</p>
-<pre tabindex="0"><code>echo &#34;source /Users/{your_user_name}/.config/op/plugins.sh&#34; &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc
-</code></pre><h2 id="step-3-use-the-cli">Step 3: Use the CLI</h2>
-<p>The next time you enter a command with the Twilio CLI, you&rsquo;ll be prompted to authenticate with fingerprint biometrics or system authentication (logging in with a system account password).</p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gjn2hgipa9jjx1rh2fhr.png" alt="TouchID prompt when running Twilio commands"></p>
-<h2 id="get-help-inspect-or-clear-your-credentials">Get Help: Inspect or clear your credentials</h2>
-<h3 id="inspect-your-configuration">Inspect your configuration</h3>
-<p>To inspect your current Twilio configuration:</p>
-<pre tabindex="0"><code>op plugin inspect twilio
-</code></pre><p>1Password CLI will return a list of the credentials you&rsquo;ve configured to use with Twilio and their default scopes, as well as a list of aliases configured for Twilio.</p>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pwicbprtedhp294wpdw3.png" alt="List of configured credentials"></p>
-<h3 id="clear-your-credentials">Clear your credentials</h3>
-<p>To reset the credentials used with Twilio:</p>
-<pre tabindex="0"><code>op plugin clear twilio
-</code></pre><p>You can clear one configuration at a time, in this order of precedence:</p>
-<ol>
-<li>Terminal session default</li>
-<li>Directory default, from the current directory to $HOME</li>
-<li>Global default</li>
-</ol>
-<p>For example, if you&rsquo;re in the directory <code>$HOME/projects/awesomeProject</code> and you have a terminal session default, directory defaults for <code>$HOME</code> and <code>$HOME/projects/awesomeProject</code>, and a global default credential configured, you would need to run <code>op plugin clear twilio</code> four times to clear all of your defaults.</p>
-<p>To clear your global default credentials, terminal session default, and the defaults for your current directory at the same time, run <code>op plugin clear twilio --all</code>.</p>
-<h2 id="reference-for-more-information">Reference: For more information</h2>
-<p>1Password authenticates with Twilio by injecting environment variables with the credentials required by the Twilio CLI commands directly from your 1Password account.</p>
-<h3 id="how-long-is-the-timeout">How long is the timeout?</h3>
-<p>You’ll be asked to re-authenticate via fingerprint after 10 minutes of inactivity.</p>
-<h3 id="add-twilio-credentials-in-the-1password-8-app">Add Twilio credentials in the 1Password 8 app</h3>
-<p>Another way to input your credentials in 1Password is through the app (rather than the CLI).</p>
-<ol>
-<li>Open the 1Password 8 application</li>
-<li>Create a <strong>+New Item</strong></li>
-<li>Select <strong>API Credential</strong> and name it <strong>Twilio API Key</strong></li>
-<li><strong>+Add another field</strong> as <strong>Password</strong></li>
-<li>The titles should match the Field names from the table below</li>
-<li>The values should match your Twilio credentials</li>
-</ol>
-<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0co2fc1q06e3jdqrq0h7.png" alt="Add Twilio credentials in the 1Password 8 app"></p>
-<p>If you saved your Twilio credentials in the 1Password 8 app manually rather than using <code>op plugin</code> to import a new item, make sure that your field names match the table below.</p>
-<table>
-<thead>
-<tr>
-<th> 1Password Field names      </th>
-<th>Environment variables</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Account SID      </td>
-<td>  TWILIO_ACCOUNT_SID    </td>
-</tr>
-<tr>
-<td>API Key  </td>
-<td>    TWILIO_API_KEY  </td>
-</tr>
-<tr>
-<td>API Secret  </td>
-<td>   TWILIO_API_SECRET    </td>
-</tr>
-<tr>
-<td>Region (optional)  </td>
-<td>   TWILIO_REGION  </td>
-</tr>
-</tbody>
-</table>
-<p>If your credentials are stored in a different field, you&rsquo;ll be prompted to select the field manually. Field names are case insensitive. Field name tokens can be separated by whitespaces, underscores, dashes, or nothing.</p>
-<h2 id="next-steps-explore-other-twilio-cli-plugins">Next Steps: Explore other Twilio CLI plugins</h2>
-<p>The Twilio CLI can be extended through plugins which give access to new commands. You can publish your own plugins to share with the wider Twilio community, or make them private for your own—or your clients’—business workflows.</p>
-<p>You can also explore a list of <a href="https://www.twilio.com/docs/twilio-cli/plugins#available-plugins">available plugins</a>, which include:</p>
-<ul>
-<li><a href="https://github.com/twilio-labs/dev-phone">Dev Phone</a> — A developer tool for testing Twilio SMS and Voice applications, even if you don&rsquo;t have service.</li>
-<li><a href="https://github.com/twilio-labs/serverless-toolkit/tree/main/packages/plugin-serverless">Serverless Toolkit</a> — Use this to streamline your development workflow with Twilio Functions &amp; Assets.</li>
-<li><a href="https://github.com/twilio-labs/serverless-toolkit/tree/main/packages/plugin-assets">Twilio Assets Plugin</a> — Allows you to upload and manage static assets in a Twilio Assets service.</li>
-<li><a href="https://github.com/twilio-labs/plugin-webhook">Twilio Webhook Plugi</a>n — Allows you to emulate webhook events to validate your applications and TwiML Bins.</li>
-<li><a href="https://github.com/twilio-labs/plugin-watch">twilio watch</a> — Allows you to watch debugger alerts, voice calls, and messages as they come in, in real time.</li>
-<li><a href="https://github.com/twilio-labs/plugin-token">twilio token</a> — Install and use this plugin to generate a token for use in a client-side SDK, e.g., a chat application.</li>
-<li><a href="https://github.com/twilio/flex-plugin-builder/tree/main/packages/plugin-flex">twilio flex</a> — Allows you to create, build, and deploy Flex plugins.</li>
-</ul>
-<h3 id="try-other-third-party-clis-with-the-plugin">Try other third-party CLIs with the plugin</h3>
-<p>Interested in authentication with other CLI tools? 1Password Shell Plugins support <a href="https://developer.1password.com/docs/cli/shell-plugins">over a dozen third-party CLIs</a>. To see a list of supported CLIs:</p>
-<pre tabindex="0"><code>op plugin list
-</code></pre><p>To choose another plugin to get started with:</p>
-<pre tabindex="0"><code>op plugin init
-</code></pre><p>For more information about the 1Password Shell Plugin, <a href="https://developer.1password.com/docs/cli/shell-plugins/twilio/">check out the official documentation</a>.</p>
-<p>You can find the code for the shell plugins on this <a href="https://github.com/1Password/shell-plugins">GitHub repo</a>.</p>
-<p>Or contact 1Password via Twitter <a href="https://twitter.com/1password">@1password</a> or via Slack at <a href="https://1password-devs.slack.com">https://join.slack.com/t/1password-devs/shared_invite/zt-1halo11ps-6o9pEv96xZ3LtX_VE0fJQA</a></p>
-<blockquote>
-<p>Anthony Dellavecchia is a Staff Developer Evangelist at Twilio who writes code on stage in front of a crowd. He is an experienced software developer who teaches thousands of people how to build cool things with code. His goal is to help you build deep experiences and connections with technology so that they stick with you forever. Check him out on <a href="https://twitter.com/anthonyjdella">Twitter</a>, <a href="https://github.com/anthonyjdella">GitHub</a>, <a href="https://dev.to/anthonyjdella">Dev.to</a>, or <a href="https://www.linkedin.com/in/anthonydellavecchia/">LinkedIn</a></p>
+<p>I am so grateful for all of the opportunities that came my way in 2022. I hope that 2023 is even better.</p>
 </blockquote>
 <hr>
 
@@ -508,7 +371,7 @@ You can find your Account SID and Auth Token at https://www.twilio.com/console
           <div class="content">
             <span class="small">Prev blog</span>
             <h5 class="title"><a class="text-dark"
-                href="https://anthonydellavecchia.com/blog/this-blog-post-is-written-by-ai/">AI Wrote this Blog Post About Taking Over Your Job</a></h5>
+                href="https://anthonydellavecchia.com/blog/1password-cli-plugin/">Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</a></h5>
           </div>
         </div>
         
@@ -516,35 +379,18 @@ You can find your Account SID and Auth Token at https://www.twilio.com/console
           
           <ul class="unstyle-list big">
             <li>
-              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f1password-cli-plugin%2f"><i
+              <a href=" https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f2022-recap%2f"><i
                   class="fa fa-facebook-official btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f1password-cli-plugin%2f"><i
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f2022-recap%2f"><i
                   class="fa fa-linkedin-square btn-zoom"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f1password-cli-plugin%2f"><i
+              <a href="https://twitter.com/intent/tweet?&url=https%3a%2f%2fanthonydellavecchia.com%2fblog%2f2022-recap%2f"><i
                   class="fa fa-twitter-square btn-zoom"></i></a>
             </li>
           </ul>
-        </div>
-        
-        <div class="next d-flex align-items-center">
-          <div class=" content text-right">
-            <span class="small">Next blog</span>
-            <h5 class="title">
-              <a class="text-dark" href="https://anthonydellavecchia.com/blog/2022-recap/">2022 Personal Recap</a>
-            </h5>
-          </div>
-          <div class="icon ml-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15.556" height="28.285" viewBox="0 0 15.556 28.285">
-              <g data-name="Group 1244" fill="#2d2d2d">
-                <path data-name="Path 1456" d="M12.162 12.725L2.416 26.87l.978 1.41 9.746-14.138z" />
-                <path data-name="Path 1455" d="M2.416 1.415l9.743 14.141.975-1.414L3.39 0z" />
-              </g>
-            </svg>
-          </div>
         </div>
         
       </nav>

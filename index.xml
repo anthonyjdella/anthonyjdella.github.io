@@ -6,7 +6,17 @@
     <description>Recent content on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022 Personal Recap</title>
+      <link>https://anthonydellavecchia.com/blog/2022-recap/</link>
+      <pubDate>Fri, 30 Dec 2022 12:00:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/blog/2022-recap/</guid>
+      <description>TLDR: 2022 had it&amp;rsquo;s ups and downs. Here are my accomplishments and reflections on 2022:
+Stats 741 GitHub contributions 15 NPM packages 48,272 blog views and 150 followers on Medium 16,120 page views and 500 subscribers on Dev.to 2,113 blog views on Twilio.com/blog with 2.78% conversion rate 724 page views on Hashnode 138 members joined my meetup 2,000 unique visitors to my website with an average engagement time of 1 minute 11,000 page views on my website Highlights Left a job with a toxic work environment 🤮 Found my dream job at a tech company 😃 Went from making $100k to $250k+ 🤑 Moved to Seattle ⛰️ Travelled to 7 cities (8 times) for work ✈️ Completed my Masters degree from UCLA 🐻 Started a local meetup group for developers 🧑‍🤝‍🧑 Spoke at 7 in-person events 🗣️ Taught at an Ivy League university 🎓 Mentored dozens of early career professionals 🧑‍🏫 Spoke on the Stackoverflow podcast 🎤 Built a video game extension 🕹️ Published 5 articles on Twilio&amp;rsquo;s blog ✍️ Wrote 10 personal blog posts 📝 Build an app that was featured on a developer keynote 🎬 Collaborated with 1Password about their CLI 🔒 Started a Twitch coding channel 📹 I am so grateful for all of the opportunities that came my way in 2022.</description>
+    </item>
+    
     <item>
       <title>Use Your Fingerprint with 1Password to Authenticate the Twilio CLI</title>
       <link>https://anthonydellavecchia.com/blog/1password-cli-plugin/</link>
