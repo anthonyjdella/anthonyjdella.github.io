@@ -275,7 +275,7 @@
 <p>Each location has a different tagline, this one was, “Beyond API Regulations for Finance, Insurance, and Healthcare”. What does the tagline mean? As large organizations are shifting to API-driven models, regulations present challenges to companies in these industries. So, this event was to educate and bring awareness to people within these organizations. Due to the nature of the topic, many attendees came from business/finance backgrounds and were just getting started with APIs.</p>
 <p>The majority of the attendees had never heard of Twilio and many were just learning about APIs, so it was a great opportunity to showcase our platform and drive Twilio awareness.</p>
 <p>Over the two-day period, there were over 80 speakers. It was my first time attending a Twilio-sponsored conference, and my first time giving a Twilio demo as well as a workshop. In addition, I was able to drive awareness to my first technical blog, incorporated as part of the demo. Big shout out to Alina Rakhmatoullina, Lizzie Siegle, and Sam Agnew for supporting me at my first event! You can view the workshop and talk on Youtube.</p>
-<p><img src="/images/trip-report/apidays1.jpg" alt="Image"></p>
+<p><img src="/images/trip-report/api-days/apidays1.jpg" alt="Image"></p>
 <hr>
 <table>
   <tr>
@@ -375,12 +375,185 @@
 </ul>
 <hr>
 <h4 id="photos">Photos:</h4>
-<p><img src="/images/trip-report/apidays2.JPG" alt="Image">
-<img src="/images/trip-report/apidays3.JPG" alt="Image">
-<img src="/images/trip-report/apidays4.JPG" alt="Image">
-<img src="/images/trip-report/apidays5.JPG" alt="Image">
-<img src="/images/trip-report/apidays6.JPG" alt="Image">
-<img src="/images/trip-report/apidays7.JPG" alt="Image"></p>
+
+
+
+
+
+
+
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+
+
+
+<style>
+#slide-window {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 445px) {
+    #slide-window {
+        max-width: 350px;
+    }
+}
+
+#slides-list {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.slide {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 500px;
+    background: #ccc;
+    text-align: center;
+    line-height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform-style: preserve-3d;
+}
+
+.nav {
+    position: relative;
+    z-index: 9;
+    top: 45%;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.nav:hover {
+    opacity: 1.0;
+}
+
+#left {
+    left: 3%;
+    float: left;
+}
+
+#right {
+    right: 3%;
+    float: right;
+}
+</style>
+
+
+<div id="slide-window">
+    <ol id="slides-list">
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays1.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays2.JPG);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays3.JPG);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays4.JPG);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays5.JPG);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays6.JPG);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/api-days/apidays7.JPG);"></li>
+    </ol>
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+</div>
+
+<script>
+sliderJQuery = jQuery.noConflict();
+sliderJQuery(function( $ ) {
+    $.global = new Object();
+    $.global.total = 0;
+
+    $(document).ready(function () {
+        var slideWindowWidth = $('#slide-window').width();
+        var slideCount = $('#slides-list li').length;
+        var totalSlidesWidth = slideCount * slideWindowWidth;
+
+        $.global.item = 0;
+        $.global.total = slideCount;
+
+        $('.slide').css('width', slideWindowWidth + 'px');
+        $('#slides-list').css('width', totalSlidesWidth + 'px');
+
+        $('#left').click(function () {
+            resetAutoSlide();
+            performSlide('back');
+        });
+
+        $('#right').click(function () {
+            resetAutoSlide();
+            performSlide('forward');
+        });
+
+    });
+
+    function performSlide(direction) {
+        if (direction == 'back') {
+            var nextSlideId = $.global.item - 1;
+        }
+        if (direction == 'forward') {
+            var nextSlideId = $.global.item + 1;
+        }
+
+        if (nextSlideId == -1) {
+             
+            moveCss($.global.total - 1);
+        } else if (nextSlideId == $.global.total) {
+             
+            moveCss(0);
+        } else {
+             
+            moveCss(nextSlideId);
+        }
+    }
+
+    function moveCss(nextSlideId) {
+        var slideWindowWidth = $('#slide-window').width();
+        var margin = slideWindowWidth * nextSlideId;
+
+        $('#slides-list').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
+
+        $.global.item = nextSlideId;
+    }
+
+    
+      var autoSlide = parseInt("3000", 10);
+      var autoSlideInterval;
+      function resetAutoSlide(){
+        if(autoSlide) {
+          if(autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+          }
+          autoSlideInterval = setInterval(function(){
+            performSlide('forward');
+          }, autoSlide)
+        }
+      }
+      resetAutoSlide();
+});
+</script>
 <hr>
 
                 <h3>Thanks for reading! 🙌</h3>
@@ -582,11 +755,6 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 <script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-
-
-<script type="text/javascript" src="https://anthonydellavecchia.com/js/carousel.min.js"></script>
-
-<link rel="stylesheet" href="/css/carousel.css">
 
 
 

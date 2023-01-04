@@ -282,7 +282,7 @@
 </ul>
 <p>During the event, I didn’t give a talk, but I did build a cool TwilioQuest extension and had great interactions with attendees. Plus, I got to interact with Django board members and they shared some valuable feedback (keep reading to find out more).</p>
 <p>To my knowledge, this is the first time Twilio has sponsored this event.</p>
-<p><img src="/images/trip-report/django1.jpg" alt="Image"></p>
+<p><img src="/images/trip-report/djangocon/django1.jpg" alt="Image"></p>
 <hr>
 <table>
   <tr>
@@ -390,10 +390,183 @@
 </ul>
 <hr>
 <h4 id="photos">Photos:</h4>
-<p><img src="/images/trip-report/django2.jpg" alt="Image">
-<img src="/images/trip-report/django3.jpg" alt="Image">
-<img src="/images/trip-report/django4.jpg" alt="Image">
-<img src="/images/trip-report/django5.jpg" alt="Image"></p>
+
+
+
+
+
+
+
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+
+
+
+<style>
+#slide-window {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 445px) {
+    #slide-window {
+        max-width: 350px;
+    }
+}
+
+#slides-list {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.slide {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 500px;
+    background: #ccc;
+    text-align: center;
+    line-height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform-style: preserve-3d;
+}
+
+.nav {
+    position: relative;
+    z-index: 9;
+    top: 45%;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.nav:hover {
+    opacity: 1.0;
+}
+
+#left {
+    left: 3%;
+    float: left;
+}
+
+#right {
+    right: 3%;
+    float: right;
+}
+</style>
+
+
+<div id="slide-window">
+    <ol id="slides-list">
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/djangocon/django1.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/djangocon/django2.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/djangocon/django3.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/djangocon/django4.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/djangocon/django5.jpg);"></li>
+    </ol>
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+</div>
+
+<script>
+sliderJQuery = jQuery.noConflict();
+sliderJQuery(function( $ ) {
+    $.global = new Object();
+    $.global.total = 0;
+
+    $(document).ready(function () {
+        var slideWindowWidth = $('#slide-window').width();
+        var slideCount = $('#slides-list li').length;
+        var totalSlidesWidth = slideCount * slideWindowWidth;
+
+        $.global.item = 0;
+        $.global.total = slideCount;
+
+        $('.slide').css('width', slideWindowWidth + 'px');
+        $('#slides-list').css('width', totalSlidesWidth + 'px');
+
+        $('#left').click(function () {
+            resetAutoSlide();
+            performSlide('back');
+        });
+
+        $('#right').click(function () {
+            resetAutoSlide();
+            performSlide('forward');
+        });
+
+    });
+
+    function performSlide(direction) {
+        if (direction == 'back') {
+            var nextSlideId = $.global.item - 1;
+        }
+        if (direction == 'forward') {
+            var nextSlideId = $.global.item + 1;
+        }
+
+        if (nextSlideId == -1) {
+             
+            moveCss($.global.total - 1);
+        } else if (nextSlideId == $.global.total) {
+             
+            moveCss(0);
+        } else {
+             
+            moveCss(nextSlideId);
+        }
+    }
+
+    function moveCss(nextSlideId) {
+        var slideWindowWidth = $('#slide-window').width();
+        var margin = slideWindowWidth * nextSlideId;
+
+        $('#slides-list').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
+
+        $.global.item = nextSlideId;
+    }
+
+    
+      var autoSlide = parseInt("3000", 10);
+      var autoSlideInterval;
+      function resetAutoSlide(){
+        if(autoSlide) {
+          if(autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+          }
+          autoSlideInterval = setInterval(function(){
+            performSlide('forward');
+          }, autoSlide)
+        }
+      }
+      resetAutoSlide();
+});
+</script>
 <hr>
 
                 <h3>Thanks for reading! 🙌</h3>
@@ -595,11 +768,6 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 <script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-
-
-<script type="text/javascript" src="https://anthonydellavecchia.com/js/carousel.min.js"></script>
-
-<link rel="stylesheet" href="/css/carousel.css">
 
 
 

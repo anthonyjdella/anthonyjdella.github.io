@@ -274,7 +274,7 @@
 </blockquote>
 <p>We also had a guest speaker from Microsoft who demonstrated how to build Halloween-style Snapchat filters. Because the meetup was Halloween-themed, some dressed in costume (pictures down below). We also provided free food and prizes!</p>
 <p>Unfortunately, I don’t have an exact count but I think there were around 34 attendees (including our very own Gervis Cash, Lizzie Siegle, and Sarah Liu). With 20 survey results (for a response rate ~58%) the event had an NPS of 85.</p>
-<p><img src="/images/trip-report/halloween1.jpg" alt="Image"></p>
+<p><img src="/images/trip-report/halloween/halloween1.jpg" alt="Image"></p>
 <hr>
 <table>
   <tr>
@@ -393,17 +393,190 @@
 </ul>
 <hr>
 <h4 id="photos">Photos:</h4>
-<p><img src="/images/trip-report/halloween2.jpg" alt="Image">
-<img src="/images/trip-report/halloween3.jpg" alt="Image">
-<img src="/images/trip-report/halloween4.jpg" alt="Image">
-<img src="/images/trip-report/halloween5.jpg" alt="Image">
-<img src="/images/trip-report/halloween6.jpg" alt="Image">
-<img src="/images/trip-report/halloween7.jpg" alt="Image">
-<img src="/images/trip-report/halloween8.jpg" alt="Image">
-<img src="/images/trip-report/halloween9.jpg" alt="Image">
-<img src="/images/trip-report/halloween10.jpg" alt="Image">
-<img src="/images/trip-report/halloween11.jpg" alt="Image">
-<img src="/images/trip-report/halloween12.jpg" alt="Image"></p>
+
+
+
+
+
+
+
+
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+
+
+
+<style>
+#slide-window {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 445px) {
+    #slide-window {
+        max-width: 350px;
+    }
+}
+
+#slides-list {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.slide {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 500px;
+    background: #ccc;
+    text-align: center;
+    line-height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform-style: preserve-3d;
+}
+
+.nav {
+    position: relative;
+    z-index: 9;
+    top: 45%;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.nav:hover {
+    opacity: 1.0;
+}
+
+#left {
+    left: 3%;
+    float: left;
+}
+
+#right {
+    right: 3%;
+    float: right;
+}
+</style>
+
+
+<div id="slide-window">
+    <ol id="slides-list">
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween1.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween10.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween11.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween12.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween2.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween3.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween4.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween5.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween6.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween7.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween8.jpg);"></li>
+                <li class="slide" style="background-image:url(https://anthonydellavecchia.com/images/trip-report/halloween/halloween9.jpg);"></li>
+    </ol>
+    <span class="nav fa fa-chevron-left fa-3x" id="left"></span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right"></span>
+</div>
+
+<script>
+sliderJQuery = jQuery.noConflict();
+sliderJQuery(function( $ ) {
+    $.global = new Object();
+    $.global.total = 0;
+
+    $(document).ready(function () {
+        var slideWindowWidth = $('#slide-window').width();
+        var slideCount = $('#slides-list li').length;
+        var totalSlidesWidth = slideCount * slideWindowWidth;
+
+        $.global.item = 0;
+        $.global.total = slideCount;
+
+        $('.slide').css('width', slideWindowWidth + 'px');
+        $('#slides-list').css('width', totalSlidesWidth + 'px');
+
+        $('#left').click(function () {
+            resetAutoSlide();
+            performSlide('back');
+        });
+
+        $('#right').click(function () {
+            resetAutoSlide();
+            performSlide('forward');
+        });
+
+    });
+
+    function performSlide(direction) {
+        if (direction == 'back') {
+            var nextSlideId = $.global.item - 1;
+        }
+        if (direction == 'forward') {
+            var nextSlideId = $.global.item + 1;
+        }
+
+        if (nextSlideId == -1) {
+             
+            moveCss($.global.total - 1);
+        } else if (nextSlideId == $.global.total) {
+             
+            moveCss(0);
+        } else {
+             
+            moveCss(nextSlideId);
+        }
+    }
+
+    function moveCss(nextSlideId) {
+        var slideWindowWidth = $('#slide-window').width();
+        var margin = slideWindowWidth * nextSlideId;
+
+        $('#slides-list').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
+
+        $.global.item = nextSlideId;
+    }
+
+    
+      var autoSlide = parseInt("3000", 10);
+      var autoSlideInterval;
+      function resetAutoSlide(){
+        if(autoSlide) {
+          if(autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+          }
+          autoSlideInterval = setInterval(function(){
+            performSlide('forward');
+          }, autoSlide)
+        }
+      }
+      resetAutoSlide();
+});
+</script>
 <hr>
 
                 <h3>Thanks for reading! 🙌</h3>
@@ -605,11 +778,6 @@ console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")
 <script src="https://cdn.jsdelivr.net/npm/search-insights@2.2.1/dist/search-insights.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-
-
-<script type="text/javascript" src="https://anthonydellavecchia.com/js/carousel.min.js"></script>
-
-<link rel="stylesheet" href="/css/carousel.css">
 
 
 
