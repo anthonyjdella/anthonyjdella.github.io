@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://anthonydellavecchia.com/blog/2022-recap/</loc>
-    <lastmod>2022-12-30T12:00:27+06:00</lastmod>
+    <loc>https://anthonydellavecchia.com/tags/airtable/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/api/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/portfolio/daily-sit-down/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/flask/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/low-code/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/portfolio/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/python/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
+    <lastmod>2023-01-26T12:49:27+06:00</lastmod>
+  </url><url>
+    <loc>https://anthonydellavecchia.com/blog/2022-recap/</loc>
     <lastmod>2022-12-30T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/</loc>
     <lastmod>2022-12-30T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/career/</loc>
-    <lastmod>2022-12-30T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/</loc>
     <lastmod>2022-12-30T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/cli/</loc>
@@ -24,9 +48,6 @@
     <lastmod>2022-12-07T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/security/</loc>
-    <lastmod>2022-12-07T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/twilio/</loc>
     <lastmod>2022-12-07T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/1password-cli-plugin/</loc>
@@ -47,9 +68,6 @@
     <loc>https://anthonydellavecchia.com/tags/trip-report/</loc>
     <lastmod>2022-11-03T12:00:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/api/</loc>
-    <lastmod>2022-11-02T12:00:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/tags/best-practices/</loc>
     <lastmod>2022-11-02T12:00:27+06:00</lastmod>
   </url><url>
@@ -57,12 +75,6 @@
     <lastmod>2022-11-02T12:00:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/portfolio/halloween-project/</loc>
-    <lastmod>2022-10-27T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/low-code/</loc>
-    <lastmod>2022-10-27T12:49:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/portfolio/</loc>
     <lastmod>2022-10-27T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/blog/build-a-halloween-project-with-twilio/</loc>
@@ -92,14 +104,8 @@
     <loc>https://anthonydellavecchia.com/blog/api-days-report/</loc>
     <lastmod>2022-09-02T12:00:27+06:00</lastmod>
   </url><url>
-    <loc>https://anthonydellavecchia.com/tags/python/</loc>
-    <lastmod>2022-09-01T12:00:27+06:00</lastmod>
-  </url><url>
     <loc>https://anthonydellavecchia.com/blog/summarize-text-from-photos/</loc>
     <lastmod>2022-09-01T12:00:27+06:00</lastmod>
-  </url><url>
-    <loc>https://anthonydellavecchia.com/tags/flask/</loc>
-    <lastmod>2022-08-28T12:49:27+06:00</lastmod>
   </url><url>
     <loc>https://anthonydellavecchia.com/tags/google-cloud/</loc>
     <lastmod>2022-08-28T12:49:27+06:00</lastmod>

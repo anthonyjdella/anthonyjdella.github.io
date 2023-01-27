@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 12:00:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>airtable</title>
+      <link>https://anthonydellavecchia.com/tags/airtable/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/airtable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://anthonydellavecchia.com/tags/api/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://anthonydellavecchia.com/tags/flask/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>low-code</title>
+      <link>https://anthonydellavecchia.com/tags/low-code/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/low-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://anthonydellavecchia.com/tags/python/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twilio</title>
+      <link>https://anthonydellavecchia.com/tags/twilio/</link>
+      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/twilio/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>career</title>
       <link>https://anthonydellavecchia.com/tags/career/</link>
@@ -44,15 +98,6 @@
     </item>
     
     <item>
-      <title>twilio</title>
-      <link>https://anthonydellavecchia.com/tags/twilio/</link>
-      <pubDate>Wed, 07 Dec 2022 12:00:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/twilio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ai</title>
       <link>https://anthonydellavecchia.com/tags/ai/</link>
       <pubDate>Fri, 02 Dec 2022 12:00:27 +0600</pubDate>
@@ -71,29 +116,11 @@
     </item>
     
     <item>
-      <title>api</title>
-      <link>https://anthonydellavecchia.com/tags/api/</link>
-      <pubDate>Wed, 02 Nov 2022 12:00:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>best-practices</title>
       <link>https://anthonydellavecchia.com/tags/best-practices/</link>
       <pubDate>Wed, 02 Nov 2022 12:00:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/best-practices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>low-code</title>
-      <link>https://anthonydellavecchia.com/tags/low-code/</link>
-      <pubDate>Thu, 27 Oct 2022 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/low-code/</guid>
       <description></description>
     </item>
     
@@ -130,24 +157,6 @@
       <pubDate>Mon, 26 Sep 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/sna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://anthonydellavecchia.com/tags/python/</link>
-      <pubDate>Thu, 01 Sep 2022 12:00:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>flask</title>
-      <link>https://anthonydellavecchia.com/tags/flask/</link>
-      <pubDate>Sun, 28 Aug 2022 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/flask/</guid>
       <description></description>
     </item>
     
