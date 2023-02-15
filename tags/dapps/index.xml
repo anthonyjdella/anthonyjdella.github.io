@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dApps on Anthony Dellavecchia</title>
+    <link>https://anthonydellavecchia.com/tags/dapps/</link>
+    <description>Recent content in dApps on Anthony Dellavecchia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Feb 2023 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/dapps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web5 Self Service Identity</title>
+      <link>https://anthonydellavecchia.com/portfolio/web5-ssi/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/portfolio/web5-ssi/</guid>
+      <description>What is a Decentralized Identity? When you log into Facebook, you have to create an account and identity with them. When you log into Instagram, you have to do the same thing. When you log into TikTok, you do it again. For every website you use, you create an identity and that is stored and controlled by that corporation. What if you could create 1 identity and share it across all platforms?</description>
+    </item>
+    
+  </channel>
+</rss>

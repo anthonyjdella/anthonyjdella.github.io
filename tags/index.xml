@@ -6,7 +6,70 @@
     <description>Recent content in Tags on Anthony Dellavecchia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Jan 2023 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Feb 2023 12:49:27 +0600</lastBuildDate><atom:link href="https://anthonydellavecchia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>api</title>
+      <link>https://anthonydellavecchia.com/tags/api/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dApps</title>
+      <link>https://anthonydellavecchia.com/tags/dapps/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/dapps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://anthonydellavecchia.com/tags/flask/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextjs</title>
+      <link>https://anthonydellavecchia.com/tags/nextjs/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/nextjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://anthonydellavecchia.com/tags/python/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://anthonydellavecchia.com/tags/react/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web5</title>
+      <link>https://anthonydellavecchia.com/tags/web5/</link>
+      <pubDate>Mon, 06 Feb 2023 12:49:27 +0600</pubDate>
+      
+      <guid>https://anthonydellavecchia.com/tags/web5/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>airtable</title>
       <link>https://anthonydellavecchia.com/tags/airtable/</link>
@@ -17,38 +80,11 @@
     </item>
     
     <item>
-      <title>api</title>
-      <link>https://anthonydellavecchia.com/tags/api/</link>
-      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>flask</title>
-      <link>https://anthonydellavecchia.com/tags/flask/</link>
-      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/flask/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>low-code</title>
       <link>https://anthonydellavecchia.com/tags/low-code/</link>
       <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/low-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://anthonydellavecchia.com/tags/python/</link>
-      <pubDate>Thu, 26 Jan 2023 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -220,15 +256,6 @@
       <pubDate>Tue, 08 Feb 2022 12:49:27 +0600</pubDate>
       
       <guid>https://anthonydellavecchia.com/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>https://anthonydellavecchia.com/tags/react/</link>
-      <pubDate>Tue, 08 Feb 2022 12:49:27 +0600</pubDate>
-      
-      <guid>https://anthonydellavecchia.com/tags/react/</guid>
       <description></description>
     </item>
     
